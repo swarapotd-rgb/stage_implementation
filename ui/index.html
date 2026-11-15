@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>StoryLens: Checkpoint State Viewer</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="header-title-row">
+        <div>
+          <h1>StoryLens: STAGE Paper Implementation Demo</h1>
+          <div class="subtitle">StoryLens capstone prototype tracking character states, epistemic knowledge, and temporal graphs from STAGE benchmark annotations</div>
+        </div>
+        <div>
+          <span class="movie-badge" id="movie-badge">The Fault in Our Stars (2014) &bull; Scenes 1–20 Demo Scope</span>
+        </div>
+      </div>
+      <div class="provenance-banner">
+        <div style="margin-bottom: 6px;">
+          <strong>Scope &amp; Benchmark Provenance:</strong> This demo is an implementation of the <strong>STAGE benchmark paper</strong> (<a href="https://arxiv.org/abs/2601.08510" target="_blank" style="color:var(--teal);">arXiv:2601.08510</a>) over its released annotations for <em>The Fault in Our Stars</em>.
+        </div>
+        <div style="display: flex; gap: 24px; flex-wrap: wrap; margin-top: 8px; font-size: 12.5px;">
+          <div><span class="scope-implemented">&#10003; Implemented:</span> Task 1 checkpoint state claims &amp; developments; Task 3 character memories, persona phases, and relationship phases; as-of temporal story knowledge graph.</div>
+          <div><span class="scope-unimplemented">&#10007; Not Currently Implemented:</span> Raw screenplay text extraction (screenplay excluded from STAGE release), Task 2 QA evaluation, in-script role-playing, book&ndash;film comparison, or Navarasa detection.</div>
+        </div>
+      </div>
+    </header>
+
+    <section class="selector-panel">
+      <h2>1. Select Official Task 1 Checkpoint</h2>
+      <div class="checkpoint-pills" id="checkpoint-pills"></div>
+
+      <div class="custom-picker-row">
+        <span class="custom-picker-label">Or Probe Any Scene (Test Non-Checkpoint Boundaries):</span>
+        <div class="custom-controls">
+          <label for="char-select" style="color: var(--text-muted); font-size: 12px;">Character:</label>
+          <select id="char-select">
+            <option value="Hazel Grace">Hazel Grace</option>
+            <option value="Augustus Waters">Augustus Waters</option>
+          </select>
+          <label for="scene-input" style="color: var(--text-muted); font-size: 12px;">Scene (1–20):</label>
+          <input type="number" id="scene-input" min="1" max="20" value="1" style="width: 70px;">
+          <button id="btn-inspect" class="btn-secondary">Inspect Scene</button>
+        </div>
+      </div>
+    </section>
+
+    <div class="checkpoint-status-bar" id="status-bar">
+      <div class="status-main">
+        <strong id="status-char" style="font-size: 16px; color: #fff;">Hazel Grace</strong>
+        <span style="color: var(--text-muted);">&bull;</span>
+        <span id="status-scene" style="font-weight: 500;">Scene 1</span>
+        <span id="status-badge" class="badge badge-official">Official Checkpoint</span>
+      </div>
+      <div class="status-meta" id="status-meta"></div>
+    </div>
+
+    <section class="graph-panel" id="graph-panel">
+      <div class="graph-header">
+        <div class="graph-title-group">
+          <h2>
+            <span id="graph-heading">Story Graph as of Scene 1</span>
+            <span class="count-pill" id="graph-node-count">0 nodes</span>
+            <span class="count-pill" id="graph-edge-count">0 edges</span>
+          </h2>
+          <div class="graph-subtitle" id="graph-subtitle">Visualizing verified entities, knowledge boundaries, and relations for Hazel Grace up to Scene 1</div>
+        </div>
+      </div>
+
+      <div class="graph-toolbar">
+        <div class="layer-filters">
+          <span class="layer-filters-label">Graph Layers:</span>
+          <button class="filter-btn active" data-layer="all">All Elements</button>
+          <button class="filter-btn" data-layer="checkpoint">Task 1 Checkpoint &amp; Claims</button>
+          <button class="filter-btn" data-layer="phases">Persona &amp; Relationships</button>
+          <button class="filter-btn" data-layer="memories">Memories &amp; Facts</button>
+          <button class="filter-btn" data-layer="scenes">Timeline &amp; Scenes</button>
+        </div>
+        <div class="zoom-controls">
+          <button class="zoom-btn" id="btn-zoom-in" title="Zoom in">+</button>
+          <button class="zoom-btn" id="btn-zoom-out" title="Zoom out">&minus;</button>
+          <button class="zoom-btn" id="btn-zoom-reset" title="Reset view">&#x21ba;</button>
+        </div>
+      </div>
+
+      <div class="graph-stage-wrapper">
+        <div class="graph-canvas-box" id="graph-canvas-box">
+          <div id="graph-non-checkpoint-notice" class="non-checkpoint-notice" style="display: none;">&bull; Non-Checkpoint Scene: No Task 1 Claims or Developments</div>
+          <svg id="graph-svg" class="graph-svg">
+            <defs>
+              <marker id="arrow" viewBox="0 0 10 10" refX="22" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+                <path d="M 0 0 L 10 5 L 0 10 z" fill="#62929E" />
+              </marker>
+              <marker id="arrow-highlight" viewBox="0 0 10 10" refX="22" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+                <path d="M 0 0 L 10 5 L 0 10 z" fill="#E7DECD" />
+              </marker>
+            </defs>
+            <g id="graph-viewport">
+              <g id="graph-edges-group"></g>
+              <g id="graph-nodes-group"></g>
+            </g>
+          </svg>
+        </div>
+        <div class="graph-inspector" id="graph-inspector">
+          <div class="inspector-header">
+            <span class="inspector-type-badge badge-official" id="inspector-badge">Node Inspector</span>
+            <div class="inspector-title" id="inspector-title">Click any node to view details</div>
+          </div>
+          <div class="inspector-body" id="inspector-body">
+            <div class="inspector-empty">Select a node in the graph to inspect its properties, evidence citations, event origin time, knowledge availability time, and source provenance.</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="graph-legend">
+        <span class="legend-title">Legend:</span>
+        <span class="legend-item"><span class="legend-dot" style="background:#142F40; border:1.5px solid #A6445D;"></span> Character</span>
+        <span class="legend-item"><span class="legend-dot" style="background:#1B3B50; border:1px solid #62929E;"></span> Scene</span>
+        <span class="legend-item"><span class="legend-dot" style="background:#393A10; border:1px solid #E7DECD; transform:rotate(45deg); border-radius:1px;"></span> Checkpoint</span>
+        <span class="legend-item"><span class="legend-dot" style="background:#484A1A; border:1px solid #E7DECD;"></span> State Claim</span>
+        <span class="legend-item"><span class="legend-dot" style="background:#62929E; border:1px solid #142F40;"></span> Development</span>
+        <span class="legend-item"><span class="legend-dot" style="background:#E7DECD; border:1.5px solid #393A10;"></span> Persona Phase</span>
+        <span class="legend-item"><span class="legend-dot" style="background:#A6445D; border:1px solid #62929E;"></span> Relationship Phase</span>
+        <span class="legend-item"><span class="legend-dot" style="background:#62929E; border:1px solid #E7DECD;"></span> Memory</span>
+        <span class="legend-item"><span class="legend-dot" style="background:#E7DECD; border:1px solid #393A10; width:8px; height:8px;"></span> Grounded Fact</span>
+        <span class="legend-item"><span class="legend-dot" style="background:#142F40; border:1px dashed #62929E;"></span> Target Entity</span>
+        <span class="legend-item"><span class="legend-dot" style="background:#A6445D; border:1px solid #E7DECD; border-radius:2px;"></span> Story</span>
+      </div>
+    </section>
+
+    <div class="dashboard-grid">
+      <div style="display: flex; flex-direction: column; gap: 24px;">
+        <div class="panel">
+          <div class="panel-header">
+            <div class="panel-title">
+              <span>Task 1: Current State Claims</span>
+              <span class="count-pill" id="current-states-count">0</span>
+            </div>
+          </div>
+          <div id="current-states-container"></div>
+        </div>
+
+        <div class="panel">
+          <div class="panel-header">
+            <div class="panel-title">
+              <span>Task 1: Developments Since Previous Checkpoint</span>
+              <span class="count-pill" id="developments-count">0</span>
+            </div>
+          </div>
+          <div id="developments-container"></div>
+        </div>
+
+        <div class="panel">
+          <div class="panel-header">
+            <div class="panel-title">
+              <span>Active Persona &amp; Relationship Stances</span>
+            </div>
+          </div>
+          <h3 class="section-subhead">Persona Traits &amp; Constraints (valid_from &le; Scene &le; valid_until)</h3>
+          <div id="persona-container" style="margin-bottom: 18px;"></div>
+          <h3 class="section-subhead">Interpersonal Stances (valid_from &le; Scene &le; valid_until)</h3>
+          <div id="relationships-container"></div>
+        </div>
+      </div>
+
+      <div class="panel">
+        <div class="panel-header">
+          <div class="panel-title">
+            <span>Cumulative Epistemic Memories</span>
+            <span class="count-pill" id="memories-count">0</span>
+          </div>
+          <span style="font-size: 12px; color: var(--text-muted); font-family: var(--font-mono);">available_from.scene_order &le; <span id="current-scene-limit">1</span></span>
+        </div>
+        <div class="filter-bar">
+          <input type="text" id="memory-search" class="filter-input" placeholder="Search memory text or grounded facts...">
+          <select id="access-filter" class="filter-select">
+            <option value="all">All Access Types</option>
+            <option value="witnessed">witnessed</option>
+            <option value="involved">involved</option>
+            <option value="told">told</option>
+            <option value="inferred">inferred</option>
+          </select>
+        </div>
+        <div id="memories-container"></div>
+      </div>
+    </div>
+  </div>
+
+  <script src="demo_data.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

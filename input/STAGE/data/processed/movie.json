@@ -1,0 +1,2300 @@
+{
+  "movie": "The Fault in Our Stars (film)",
+  "movie_id": "en3f51f126ac684887812de45cc7f2c35e",
+  "release_year": 2014,
+  "genres": [
+    "Romance",
+    "Drama",
+    "Youth"
+  ],
+  "total_screenplay_scenes": 107,
+  "demo_scene_count": 20,
+  "source": {
+    "repository": "https://github.com/roytian1992/STAGE_v0",
+    "commit": "809ea665783879da77f4f30bf7f5be771525f514",
+    "paper": "STAGE: Evolving Stories (arXiv:2601.08510)",
+    "license": "Research evaluation assets released by STAGE authors"
+  },
+  "scenes": [
+    {
+      "scene_id": 1,
+      "scene_title": "INT. DOCTOR'S OFFICE / EXAM ROOM - DAY",
+      "characters": [
+        "Frannie Lancaster",
+        "Hazel Grace"
+      ],
+      "events": [
+        "The doctor asserts that Hazel is depressed despite her repeated denials.",
+        "A medical appointment where Hazel's condition is discussed by her mother and the doctor.",
+        "Hazel narrates that her depression is not due to cancer but to the fact of dying.",
+        "Hazel repeatedly insists she is not depressed, countering the doctor's diagnosis.",
+        "Hazel briefly watches a playful couple at Starbucks before returning to her book."
+      ],
+      "character_states": {
+        "Frannie Lancaster": {
+          "goal": [
+            "Support and protect Hazel while encouraging her to engage socially and attend support group."
+          ],
+          "belief": [
+            "Frannie believes Hazel is emotionally withdrawn and needs external social interaction beyond doctors and reading."
+          ],
+          "knowledge": [
+            "I remember standing there, telling the doctor how she eats so little and never goes out, how she just sits and reads that same book over and over—my voice felt tight, like I was trying to hold something together just by speaking it into place."
+          ],
+          "relationships": [
+            {
+              "target": "Hazel Grace",
+              "polarity": "positive",
+              "description": "Loving, protective mother dedicated to managing Hazel's care and emotional wellbeing."
+            }
+          ]
+        },
+        "Hazel Grace": {
+          "goal": [
+            "Hazel Grace engages in repetitive reading behavior, indicating a need for control or comfort in familiarity.",
+            "Hazel Grace relies on supplemental oxygen, indicating a physical limitation due to her medical condition."
+          ],
+          "belief": [
+            "Hazel Grace defines her emotional state as a consequence of mortality rather than illness, distinguishing it from clinical depression.",
+            "Hazel Grace resists being labeled as depressed, attributing her emotional state to the reality of her illness rather than mental health.",
+            "Hazel Grace denies being depressed despite external observations suggesting otherwise.",
+            "Hazel Grace exhibits emotional detachment and isolation, observing moments of others' joy without engagement.",
+            "Hazel Grace attributes her emotional state to the physical reality of terminal illness rather than clinical depression.",
+            "Hazel positions herself as an outsider to moments of youthful joy, reinforcing her sense of emotional isolation.",
+            "Hazel is officially diagnosed as depressed by medical authority"
+          ],
+          "knowledge": [
+            "I heard the doctor say I'm depressed, even though I kept saying I'm not, and it felt like no one was listening to me.",
+            "I was there in the living room with my mom and the doctor, sitting through another appointment where they talked about my condition while I just wanted to go back to my book.",
+            "I narrated that my depression isn't a side effect of cancer—it's a side effect of dying.",
+            "I kept telling myself and everyone else that I'm not depressed, because I know my feelings come from the reality of dying, not from the cancer itself.",
+            "I looked up from my book when I heard a laugh, saw a guy spinning a girl around playfully, and then I went back to reading.",
+            "I sat on the exam table, my legs dangling, repeating 'I'm not depressed' while Mom listed off everything I did wrong and the doctor ignored me, like my words didn't even matter."
+          ],
+          "relationships": [
+            {
+              "target": "the doctor",
+              "polarity": "mixed",
+              "description": "Hazel resists the doctor's diagnostic authority and uses sarcasm to deflect medical authority while remaining in a position of obligation."
+            },
+            {
+              "target": "Young Couple",
+              "polarity": "mixed",
+              "description": "Hazel observes the couple's interaction with detached curiosity but does not engage."
+            }
+          ]
+        }
+      }
+    },
+    {
+      "scene_id": 2,
+      "scene_title": "INT. CHURCH BASEMENT - DAY",
+      "characters": [
+        "Frannie Lancaster",
+        "Hazel Grace"
+      ],
+      "events": [
+        "The doctor considers switching Hazel's medication to Zoloft or Lexapro with increased frequency.",
+        "Hazel sarcastically responds to the doctor's suggestion of increasing medication, comparing herself to Keith Richards.",
+        "A medical consultation involving Hazel, her mother Frannie, and the doctor, focusing on mental health and treatment options.",
+        "Hazel challenges the doctor's use of the word 'journey' to describe illness, showing resistance to euphemistic language.",
+        "The doctor raises the topic of Hazel attending the suggested support group, prompting resistance and skepticism.",
+        "The doctor dismisses Hazel's protest and insists she try the support group, appealing to personal obligation."
+      ],
+      "character_states": {
+        "Frannie Lancaster": {
+          "goal": [
+            "Support and protect Hazel while encouraging her to engage socially and attend support group."
+          ],
+          "belief": [
+            "Frannie believes Hazel is emotionally withdrawn and needs external social interaction beyond doctors and reading."
+          ],
+          "knowledge": [],
+          "relationships": [
+            {
+              "target": "Hazel Grace",
+              "polarity": "positive",
+              "description": "Loving, protective mother dedicated to managing Hazel's care and emotional wellbeing."
+            }
+          ]
+        },
+        "Hazel Grace": {
+          "goal": [
+            "Hazel Grace engages in repetitive reading behavior, indicating a need for control or comfort in familiarity.",
+            "Hazel Grace relies on supplemental oxygen, indicating a physical limitation due to her medical condition.",
+            "Hazel Grace disengages non-verbally when she feels defeated in a conversation.",
+            "Hazel Grace avoids direct confrontation by deferring to her mother when uncomfortable.",
+            "Hazel Grace concedes to authority figures under persistent emotional appeal despite skepticism."
+          ],
+          "belief": [
+            "Hazel Grace defines her emotional state as a consequence of mortality rather than illness, distinguishing it from clinical depression.",
+            "Hazel Grace resists being labeled as depressed, attributing her emotional state to the reality of her illness rather than mental health.",
+            "Hazel Grace denies being depressed despite external observations suggesting otherwise.",
+            "Hazel Grace exhibits emotional detachment and isolation, observing moments of others' joy without engagement.",
+            "Hazel Grace attributes her emotional state to the physical reality of terminal illness rather than clinical depression.",
+            "Hazel Grace resists medical authority and euphemistic language regarding her condition.",
+            "Hazel Grace uses dark humor as a defense mechanism when confronted with emotional pressure.",
+            "Hazel Grace uses dark humor as a defense mechanism when confronted with medical suggestions."
+          ],
+          "knowledge": [
+            "The doctor told me he might switch me to Zoloft or Lexapro and have me take it twice a day instead of once.",
+            "When the doctor suggested increasing my medication, I shot back with 'Why stop there?' and said I could take it—I'm like the Keith Richards of cancer kids.",
+            "I was there with my mom and the doctor, talking about my mental health and treatment options, and later he asked if I’d been going to that support group.",
+            "I challenged the doctor when he called my illness a 'journey'—I said, 'Journey? Really?'—because that word felt fake and overused, like it was supposed to make everything sound meaningful.",
+            "I remember the doctor asking me again about going to that support group he suggested, and I told him I wasn't sure it was for me, but he kept pushing, saying it would help me connect with others.",
+            "I remember the doctor dismissing what I said and insisting I try the support group, ending with 'For me'—so I felt I had to agree, even though I didn't want to.",
+            "I said I wasn't depressed, but the doctor just talked over me, calling it a 'journey' like it was some kind of adventure—Mom and he had already decided for me, and I could tell there was no point fighting it."
+          ],
+          "relationships": [
+            {
+              "target": "the doctor",
+              "polarity": "mixed",
+              "description": "Hazel resists the doctor's diagnostic authority and uses sarcasm to deflect medical authority while remaining in a position of obligation."
+            },
+            {
+              "target": "Young Couple",
+              "polarity": "mixed",
+              "description": "Hazel observes the couple's interaction with detached curiosity but does not engage."
+            }
+          ]
+        }
+      }
+    },
+    {
+      "scene_id": 3,
+      "scene_title": "INT. CHURCH BASEMENT - SUPPORT GROUP",
+      "characters": [
+        "Hazel Grace"
+      ],
+      "events": [
+        "Hazel participates in a cancer support group meeting in a church basement, where members share their cancer stories.",
+        "Hazel and Isaac exchange a knowing look of disapproval toward Patrick's speech.",
+        "Patrick calls on Hazel to share her story during the support group session.",
+        "Hazel verbally discloses her thyroid cancer with lung metastases during the support group session.",
+        "The group collectively says 'We're here for you' after Hazel shares her story.",
+        "A gathering of young cancer patients in a church basement led by Patrick, where members share personal experiences with cancer."
+      ],
+      "character_states": {
+        "Hazel Grace": {
+          "goal": [
+            "Hazel Grace disengages non-verbally when she feels defeated in a conversation.",
+            "Hazel Grace avoids direct confrontation by deferring to her mother when uncomfortable.",
+            "Hazel Grace concedes to authority figures under persistent emotional appeal despite skepticism.",
+            "Hazel Grace speaks reluctantly when prompted by authority figures in group settings.",
+            "Hazel Grace minimizes her participation in the support group, speaking only when prompted and with reluctance."
+          ],
+          "belief": [
+            "Hazel Grace resists medical authority and euphemistic language regarding her condition.",
+            "Hazel Grace uses dark humor as a defense mechanism when confronted with emotional pressure.",
+            "Hazel Grace uses dark humor as a defense mechanism when confronted with medical suggestions.",
+            "Hazel Grace exhibits a cynical and detached attitude toward the support group and its rituals.",
+            "Hazel Grace exhibits cynicism toward the support group and its leader, Patrick.",
+            "Hazel Grace exhibits a sardonic and detached attitude toward the support group and its rituals.",
+            "Hazel Grace internally questions prompts with dry irony, indicating a skeptical worldview.",
+            "Hazel Grace is reluctant to participate in the support group's emotional sharing norms.",
+            "Hazel Grace shares a bond of mutual skepticism with Isaac, communicated nonverbally."
+          ],
+          "knowledge": [
+            "I sat in the church basement during the support group, listening to Patrick talk about being in the heart of Jesus 'literally' while I thought about how he's just exploiting his cancer past, surviving ball cancer but now divorced and addicted to video games, and expecting us to believe we could be like him one day.",
+            "I shared a knowing look with Isaac, my only friend here, when Patrick was speaking—we both rolled our eyes at how insincere it felt.",
+            "I remember Patrick gesturing for me to speak, and I felt that familiar dread as I reluctantly stood up.",
+            "I told the group, 'I'm, uh, Hazel. 16. Thyroid originally but with quite the impressive satellite colony in my lungs,' and my voice sounded distant to me.",
+            "After I shared, I heard everyone say together, 'We're here for you,' and I remember thinking how strange it was that they said it like they meant it.",
+            "I was in the church basement with the others, going through the motions of the support group while Patrick led us in saying 'We're here for you'—first for him, then for me."
+          ],
+          "relationships": [
+            {
+              "target": "the doctor",
+              "polarity": "mixed",
+              "description": "Hazel resists the doctor's diagnostic authority and uses sarcasm to deflect medical authority while remaining in a position of obligation."
+            },
+            {
+              "target": "Young Couple",
+              "polarity": "mixed",
+              "description": "Hazel observes the couple's interaction with detached curiosity but does not engage."
+            },
+            {
+              "target": "Patrick",
+              "polarity": "mixed",
+              "description": "Hazel views Patrick as a cautionary figure who uses his cancer survivor status to lead the support group."
+            },
+            {
+              "target": "Isaac",
+              "polarity": "positive",
+              "description": "Hazel shares a moment of mutual disapproval with Isaac, indicating a bond of shared skepticism."
+            },
+            {
+              "target": "the support group",
+              "polarity": "positive",
+              "description": "receives collective verbal support after disclosure"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "scene_id": 4,
+      "scene_title": "INT. CHURCH BASEMENT - CIRCLE ROOM",
+      "characters": [
+        "Hazel Grace"
+      ],
+      "events": [
+        "Hazel comes out of the church and gets into the car without speaking, only exhaling in response to Frannie's silent question.",
+        "Frannie looks at Hazel with a questioning expression; Hazel responds only with an exhale, conveying ambivalence or fatigue.",
+        "A group session takes place inside the church, which Frannie waits for to end and Hazel participates in."
+      ],
+      "character_states": {
+        "Hazel Grace": {
+          "goal": [
+            "Hazel Grace speaks reluctantly when prompted by authority figures in group settings.",
+            "Hazel Grace minimizes her participation in the support group, speaking only when prompted and with reluctance.",
+            "Hazel Grace communicates emotional ambivalence or fatigue through non-verbal cues when prompted about her experience."
+          ],
+          "belief": [
+            "Hazel Grace exhibits a cynical and detached attitude toward the support group and its rituals.",
+            "Hazel Grace exhibits cynicism toward the support group and its leader, Patrick.",
+            "Hazel Grace exhibits a sardonic and detached attitude toward the support group and its rituals.",
+            "Hazel Grace internally questions prompts with dry irony, indicating a skeptical worldview.",
+            "Hazel Grace is reluctant to participate in the support group's emotional sharing norms.",
+            "Hazel Grace shares a bond of mutual skepticism with Isaac, communicated nonverbally."
+          ],
+          "knowledge": [
+            "I came out of the church and got in the car, and when Frannie looked at me like she wanted to know how it went, I just exhaled—I didn’t have the energy to say anything.",
+            "I just exhaled and got in the car after the group session inside the church."
+          ],
+          "relationships": [
+            {
+              "target": "the doctor",
+              "polarity": "mixed",
+              "description": "Hazel resists the doctor's diagnostic authority and uses sarcasm to deflect medical authority while remaining in a position of obligation."
+            },
+            {
+              "target": "Young Couple",
+              "polarity": "mixed",
+              "description": "Hazel observes the couple's interaction with detached curiosity but does not engage."
+            },
+            {
+              "target": "Patrick",
+              "polarity": "mixed",
+              "description": "Hazel views Patrick as a cautionary figure who uses his cancer survivor status to lead the support group."
+            },
+            {
+              "target": "Isaac",
+              "polarity": "positive",
+              "description": "Hazel shares a moment of mutual disapproval with Isaac, indicating a bond of shared skepticism."
+            },
+            {
+              "target": "the support group",
+              "polarity": "positive",
+              "description": "receives collective verbal support after disclosure"
+            },
+            {
+              "target": "Frannie",
+              "polarity": "mixed",
+              "description": "Hazel responds to Frannie's unspoken question with non-verbal ambivalence, indicating emotional distance or reluctance to engage."
+            }
+          ]
+        }
+      }
+    },
+    {
+      "scene_id": 5,
+      "scene_title": "INT. CHURCH BASEMENT - MEETING CONTINUES",
+      "characters": [
+        "Hazel Grace"
+      ],
+      "events": [
+        "Frannie suggests Hazel call her friends, but Hazel dismisses the idea indifferently.",
+        "Hazel proposes that her parents go to a movie, encouraging them to take a break from staying home and attending to her.",
+        "Michael asks if Hazel wants to see a movie, but she redirects the idea to her parents instead.",
+        "A Friday night family gathering in the living room, centered around passive TV watching and unspoken concern for Hazel."
+      ],
+      "character_states": {
+        "Hazel Grace": {
+          "goal": [
+            "Hazel Grace communicates emotional ambivalence or fatigue through non-verbal cues when prompted about her experience.",
+            "Hazel's daily routine is structured around medical regimens and passive entertainment, limiting her participation in social activities."
+          ],
+          "belief": [
+            "Hazel Grace demonstrates concern for her parents' emotional well-being by suggesting they take a break.",
+            "Hazel Grace demonstrates a tendency to redirect attention away from herself by suggesting her parents go to a movie instead.",
+            "Hazel Grace exhibits disinterest in social engagement, as shown by her rejection of her parent's suggestion to contact friends.",
+            "Hazel redirects Michael's attempt at connection toward his well-being.",
+            "Hazel shifts from being a passive recipient of care to an active agent attempting to care for her parents"
+          ],
+          "knowledge": [
+            "I remember my mom suggesting I call my friends, but I told her that's okay, I didn't feel like it.",
+            "I suggested to my parents that they go to a movie, telling them they haven't been out in a while and they should take the night off to have fun.",
+            "When my dad asked if I wanted to see a movie, I told them they should go instead and have some time to themselves.",
+            "I remember sitting on the couch with my book while 'America's Next Top Model' played, and my parents watched me quietly, not saying much."
+          ],
+          "relationships": [
+            {
+              "target": "the doctor",
+              "polarity": "mixed",
+              "description": "Hazel resists the doctor's diagnostic authority and uses sarcasm to deflect medical authority while remaining in a position of obligation."
+            },
+            {
+              "target": "Young Couple",
+              "polarity": "mixed",
+              "description": "Hazel observes the couple's interaction with detached curiosity but does not engage."
+            },
+            {
+              "target": "Patrick",
+              "polarity": "mixed",
+              "description": "Hazel views Patrick as a cautionary figure who uses his cancer survivor status to lead the support group."
+            },
+            {
+              "target": "Isaac",
+              "polarity": "positive",
+              "description": "Hazel shares a moment of mutual disapproval with Isaac, indicating a bond of shared skepticism."
+            },
+            {
+              "target": "the support group",
+              "polarity": "positive",
+              "description": "receives collective verbal support after disclosure"
+            },
+            {
+              "target": "Frannie",
+              "polarity": "mixed",
+              "description": "Hazel responds to Frannie's unspoken question with non-verbal ambivalence, indicating emotional distance or reluctance to engage."
+            },
+            {
+              "target": "Frannie",
+              "polarity": "negative",
+              "description": "Hazel responds to Frannie's suggestion with emotional distance."
+            },
+            {
+              "target": "Hazel's parents",
+              "polarity": "positive",
+              "description": "Hazel demonstrates concern for her parents' emotional well-being by encouraging them to take time away from caretaking"
+            },
+            {
+              "target": "Michael",
+              "polarity": "positive",
+              "description": "Hazel redirects Michael's attempt at connection toward his well-being."
+            }
+          ]
+        }
+      }
+    },
+    {
+      "scene_id": 6,
+      "scene_title": "INT. CHURCH HALLWAY - LATER",
+      "characters": [
+        "Frannie Lancaster",
+        "Hazel Grace"
+      ],
+      "events": [
+        "A scheduled gathering for individuals with shared experiences to provide mutual support, which Hazel is being sent to attend.",
+        "Hazel's parents insist she attend a support group, overriding her objections.",
+        "Hazel sarcastically rejects the idea of attending support group and suggests getting a fake ID instead.",
+        "Frannie ends the discussion by ordering Hazel to get in the car."
+      ],
+      "character_states": {
+        "Frannie Lancaster": {
+          "goal": [
+            "Support and protect Hazel while encouraging her to engage socially and attend support group."
+          ],
+          "belief": [
+            "Frannie believes Hazel is emotionally withdrawn and needs external social interaction beyond doctors and reading."
+          ],
+          "knowledge": [
+            "I said 'Get in the car' after Hazel mocked the idea of support group again—I could feel my voice cut through the room, firm and final."
+          ],
+          "relationships": [
+            {
+              "target": "Hazel Grace",
+              "polarity": "positive",
+              "description": "Loving, protective mother dedicated to managing Hazel's care and emotional wellbeing."
+            }
+          ]
+        },
+        "Hazel Grace": {
+          "goal": [
+            "Hazel's daily routine is structured around medical regimens and passive entertainment, limiting her participation in social activities.",
+            "Hazel Grace complies with parental demands despite visible resistance."
+          ],
+          "belief": [
+            "Hazel Grace demonstrates concern for her parents' emotional well-being by suggesting they take a break.",
+            "Hazel Grace demonstrates a tendency to redirect attention away from herself by suggesting her parents go to a movie instead.",
+            "Hazel Grace exhibits disinterest in social engagement, as shown by her rejection of her parent's suggestion to contact friends.",
+            "Hazel Grace resists parental authority when faced with activities she dislikes."
+          ],
+          "knowledge": [
+            "I remember thinking that support group was the worst idea, and I told my parents they couldn't make me go, though I guess they can since they're my parents.",
+            "My parents insisted I needed to get out of the house and be a teenager, so they made me go to support group despite my objections.",
+            "I told my parents that if they really wanted me to be a teenager, they should buy me a fake ID so I could go to clubs and drink gimlets instead of going to support group.",
+            "Frannie ended the argument by telling me to get in the car, so I knew the discussion was over.",
+            "I said, 'You can't make me,' even though I knew they would win — it was just another stupid support group they thought would fix me.",
+            "Before leaving, I pretended to stab myself in the stomach with an invisible sword — a dumb joke, but it was the only way I could make myself move."
+          ],
+          "relationships": [
+            {
+              "target": "Frannie",
+              "polarity": "negative",
+              "description": "Hazel responds to Frannie's suggestion with emotional distance."
+            },
+            {
+              "target": "Frannie",
+              "polarity": "negative",
+              "description": "Frannie ends discussion with a direct command to Hazel"
+            },
+            {
+              "target": "the doctor",
+              "polarity": "mixed",
+              "description": "Hazel resists the doctor's diagnostic authority and uses sarcasm to deflect medical authority while remaining in a position of obligation."
+            },
+            {
+              "target": "Young Couple",
+              "polarity": "mixed",
+              "description": "Hazel observes the couple's interaction with detached curiosity but does not engage."
+            },
+            {
+              "target": "Patrick",
+              "polarity": "mixed",
+              "description": "Hazel views Patrick as a cautionary figure who uses his cancer survivor status to lead the support group."
+            },
+            {
+              "target": "Isaac",
+              "polarity": "positive",
+              "description": "Hazel shares a moment of mutual disapproval with Isaac, indicating a bond of shared skepticism."
+            },
+            {
+              "target": "the support group",
+              "polarity": "positive",
+              "description": "receives collective verbal support after disclosure"
+            },
+            {
+              "target": "Hazel's parents",
+              "polarity": "positive",
+              "description": "Hazel demonstrates concern for her parents' emotional well-being by encouraging them to take time away from caretaking"
+            },
+            {
+              "target": "Michael",
+              "polarity": "positive",
+              "description": "Hazel redirects Michael's attempt at connection toward his well-being."
+            }
+          ]
+        }
+      }
+    },
+    {
+      "scene_id": 7,
+      "scene_title": "INT. CHURCH - SAME",
+      "characters": [
+        "Augustus Waters",
+        "Frannie Lancaster",
+        "Hazel Grace"
+      ],
+      "events": [
+        "A church service taking place at an Episcopalian sanctuary in suburban Indianapolis.",
+        "Hazel goes to a church service at an Episcopalian sanctuary, not out of personal desire but to please her parents.",
+        "Frannie shouts a suggestion to Hazel to make friends before leaving."
+      ],
+      "character_states": {
+        "Augustus Waters": {
+          "goal": [
+            "Connect authentically with Hazel through humor, charm, and shared perspective."
+          ],
+          "belief": [
+            "Augustus values leaving a mark and finding meaning beyond illness."
+          ],
+          "knowledge": [],
+          "relationships": []
+        },
+        "Frannie Lancaster": {
+          "goal": [
+            "Support and protect Hazel while encouraging her to engage socially and attend support group."
+          ],
+          "belief": [
+            "Frannie believes Hazel is emotionally withdrawn and needs external social interaction beyond doctors and reading."
+          ],
+          "knowledge": [
+            "I said 'Love you' to Hazel as she got out of the car, and she said it back—her voice soft, like she was tired but trying.",
+            "I called out 'Make some friends!' after her as I got back in the car, and she just shook her head—didn't even turn around."
+          ],
+          "relationships": [
+            {
+              "target": "Hazel Grace",
+              "polarity": "positive",
+              "description": "Loving, protective mother dedicated to managing Hazel's care and emotional wellbeing."
+            }
+          ]
+        },
+        "Hazel Grace": {
+          "goal": [
+            "Hazel Grace complies with parental demands despite visible resistance.",
+            "Hazel requires physical assistance and uses an oxygen tank when moving, indicating physical limitation due to illness.",
+            "Hazel Grace relies on assistance for mobility, as she exits the car with her mother's help while managing an oxygen tank."
+          ],
+          "belief": [
+            "Hazel Grace resists parental authority when faced with activities she dislikes.",
+            "Hazel is aware of her mother's dishonesty about leaving her alone at the church but chooses not to confront it.",
+            "Hazel Grace exhibits skepticism toward making friends, as shown by her nonverbal dismissal of her mother's suggestion.",
+            "Hazel demonstrates concern for her parents' emotional well-being, particularly the pain of losing a child to cancer.",
+            "Hazel attends the church meeting primarily to fulfill her parents' emotional needs rather than her own desire.",
+            "Hazel Grace prioritizes making her parents happy over her own desires, indicating a sense of emotional responsibility toward them.",
+            "Hazel identifies herself as someone whose actions are primarily oriented toward minimizing her parents' emotional suffering.",
+            "Hazel complies with her mother's expectations despite lacking personal investment in the activity."
+          ],
+          "knowledge": [
+            "I saw the small Episcopalian sanctuary in suburban Indianapolis when I got out of the car with my mom's help, oxygen tank in tow.",
+            "I went to the church service not because I wanted to or thought it would help, but to make my parents happy, like most things I did these days.",
+            "I heard my mom shout 'Make some friends!' as she got back in the car, but I didn't feel like engaging with anyone."
+          ],
+          "relationships": [
+            {
+              "target": "Frannie",
+              "polarity": "negative",
+              "description": "Frannie ends discussion with a direct command to Hazel"
+            },
+            {
+              "target": "Frannie",
+              "polarity": "mixed",
+              "description": "Hazel complies with her mother's expectations despite lacking personal investment in the activity.; Hazel passively dismisses Frannie's encouragement"
+            },
+            {
+              "target": "the doctor",
+              "polarity": "mixed",
+              "description": "Hazel resists the doctor's diagnostic authority and uses sarcasm to deflect medical authority while remaining in a position of obligation."
+            },
+            {
+              "target": "Young Couple",
+              "polarity": "mixed",
+              "description": "Hazel observes the couple's interaction with detached curiosity but does not engage."
+            },
+            {
+              "target": "Patrick",
+              "polarity": "mixed",
+              "description": "Hazel views Patrick as a cautionary figure who uses his cancer survivor status to lead the support group."
+            },
+            {
+              "target": "Isaac",
+              "polarity": "positive",
+              "description": "Hazel shares a moment of mutual disapproval with Isaac, indicating a bond of shared skepticism."
+            },
+            {
+              "target": "the support group",
+              "polarity": "positive",
+              "description": "receives collective verbal support after disclosure"
+            },
+            {
+              "target": "Hazel's parents",
+              "polarity": "positive",
+              "description": "Hazel demonstrates concern for her parents' emotional well-being by encouraging them to take time away from caretaking"
+            },
+            {
+              "target": "Michael",
+              "polarity": "positive",
+              "description": "Hazel redirects Michael's attempt at connection toward his well-being."
+            }
+          ]
+        }
+      }
+    },
+    {
+      "scene_id": 8,
+      "scene_title": "INT. CHURCH HALLWAY / STAIRS - SAME",
+      "characters": [
+        "Augustus Waters",
+        "Hazel Grace"
+      ],
+      "events": [
+        "Hazel chooses to take the stairs instead of the elevator after encountering a very sick child.",
+        "After bumping into each other, Gus and Hazel exchange brief, polite apologies.",
+        "Hazel collides with Gus, a strikingly attractive boy, leading to a moment of mutual awareness and speechlessness."
+      ],
+      "character_states": {
+        "Augustus Waters": {
+          "goal": [
+            "Connect authentically with Hazel through humor, charm, and shared perspective."
+          ],
+          "belief": [
+            "Augustus Waters is perceived as strikingly attractive, eliciting a moment of speechless mutual awareness from Hazel upon their first encounter.",
+            "Augustus Waters has made initial eye contact with Hazel, creating mutual awareness after a physical collision.",
+            "Augustus Waters is perceived as a supremely beautiful boy who commands attention upon first appearance."
+          ],
+          "knowledge": [
+            "After we collided, I said 'My bad. No, it's...' and she apologized too, so I know we both meant to be polite in that awkward moment.",
+            "I bumped into a girl as I was walking, and for a moment we just looked at each other—I could tell she noticed me, and I felt this sudden awareness between us, like something shifted.",
+            "I held the elevator for a girl who looked about as sick as I felt, but she passed—then walked right into me. For a second, the world just stopped. I couldn’t look away."
+          ],
+          "relationships": [
+            {
+              "target": "Hazel Grace",
+              "polarity": "positive",
+              "description": "Augustus Waters has made initial eye contact with Hazel, creating mutual awareness after a physical collision."
+            }
+          ]
+        },
+        "Hazel Grace": {
+          "goal": [
+            "Hazel requires physical assistance and uses an oxygen tank when moving, indicating physical limitation due to illness.",
+            "Hazel Grace relies on assistance for mobility, as she exits the car with her mother's help while managing an oxygen tank.",
+            "Hazel Grace avoids situations that remind her of her own illness, as shown by her choice to take the stairs after encountering a sick child in the elevator."
+          ],
+          "belief": [
+            "Hazel is aware of her mother's dishonesty about leaving her alone at the church but chooses not to confront it.",
+            "Hazel Grace exhibits skepticism toward making friends, as shown by her nonverbal dismissal of her mother's suggestion.",
+            "Hazel demonstrates concern for her parents' emotional well-being, particularly the pain of losing a child to cancer.",
+            "Hazel attends the church meeting primarily to fulfill her parents' emotional needs rather than her own desire.",
+            "Hazel Grace prioritizes making her parents happy over her own desires, indicating a sense of emotional responsibility toward them.",
+            "Hazel Grace is self-aware of her physical limitations and feels self-conscious in social interactions.",
+            "Hazel Grace experiences strong emotional reactions upon encountering Gus, including speechlessness and mutual awareness.",
+            "Hazel Grace demonstrates empathy upon seeing a very sick child, which influences her decision to avoid the elevator."
+          ],
+          "knowledge": [
+            "I decided to take the stairs instead of the elevator after seeing that very sick child.",
+            "I said 'Sorry!' when we bumped into each other, and he replied with 'My bad. No, it's...'—we both apologized so quickly, like we were trying to fix it before it even started.",
+            "I walked right into a supremely beautiful boy, and for a moment, I couldn't speak—I just felt this intense awareness between us before I managed to shuffle away.",
+            "I walked right into him—this impossibly good-looking boy—and all I could manage was a clumsy 'Ooph. Sorry!' before he smiled and said it was okay, but I couldn't even form a real sentence.",
+            "For a second, everything just stopped—we were staring at each other and I couldn’t move or speak, like the world had narrowed down to just him watching me with that faint smile."
+          ],
+          "relationships": [
+            {
+              "target": "Augustus Waters",
+              "polarity": "positive",
+              "description": "Hazel has made initial physical and visual contact with Gus, marking the beginning of mutual awareness.; Hazel and Gus exchange brief, polite apologies following their physical collision."
+            },
+            {
+              "target": "the doctor",
+              "polarity": "mixed",
+              "description": "Hazel resists the doctor's diagnostic authority and uses sarcasm to deflect medical authority while remaining in a position of obligation."
+            },
+            {
+              "target": "Young Couple",
+              "polarity": "mixed",
+              "description": "Hazel observes the couple's interaction with detached curiosity but does not engage."
+            },
+            {
+              "target": "Patrick",
+              "polarity": "mixed",
+              "description": "Hazel views Patrick as a cautionary figure who uses his cancer survivor status to lead the support group."
+            },
+            {
+              "target": "Isaac",
+              "polarity": "positive",
+              "description": "Hazel shares a moment of mutual disapproval with Isaac, indicating a bond of shared skepticism."
+            },
+            {
+              "target": "the support group",
+              "polarity": "positive",
+              "description": "receives collective verbal support after disclosure"
+            },
+            {
+              "target": "Frannie",
+              "polarity": "mixed",
+              "description": "Hazel complies with her mother's expectations despite lacking personal investment in the activity.; Hazel passively dismisses Frannie's encouragement"
+            },
+            {
+              "target": "Frannie",
+              "polarity": "mixed",
+              "description": "Hazel complies with her mother's expectations despite lacking personal investment in the activity."
+            },
+            {
+              "target": "Hazel's parents",
+              "polarity": "positive",
+              "description": "Hazel demonstrates concern for her parents' emotional well-being by encouraging them to take time away from caretaking"
+            },
+            {
+              "target": "Michael",
+              "polarity": "positive",
+              "description": "Hazel redirects Michael's attempt at connection toward his well-being."
+            }
+          ]
+        }
+      }
+    },
+    {
+      "scene_id": 9,
+      "scene_title": "INT. CHURCH BASEMENT - LATER",
+      "characters": [
+        "Augustus Waters",
+        "Frannie Lancaster",
+        "Hazel Grace"
+      ],
+      "events": [
+        "Augustus Waters shares his existential fear of oblivion during the support group meeting, prompting Hazel to respond.",
+        "Hazel looks in the mirror and reacts negatively to her own appearance, indicating self-disapproval or distress."
+      ],
+      "character_states": {
+        "Augustus Waters": {
+          "goal": [
+            "Connect authentically with Hazel through humor, charm, and shared perspective."
+          ],
+          "belief": [
+            "Augustus Waters is perceived as strikingly attractive, eliciting a moment of speechless mutual awareness from Hazel upon their first encounter."
+          ],
+          "knowledge": [],
+          "relationships": [
+            {
+              "target": "Hazel Grace",
+              "polarity": "positive",
+              "description": "Augustus Waters has made initial eye contact with Hazel, creating mutual awareness after a physical collision."
+            }
+          ]
+        },
+        "Frannie Lancaster": {
+          "goal": [
+            "Support and protect Hazel while encouraging her to engage socially and attend support group."
+          ],
+          "belief": [
+            "Frannie believes Hazel is emotionally withdrawn and needs external social interaction beyond doctors and reading."
+          ],
+          "knowledge": [],
+          "relationships": [
+            {
+              "target": "Hazel Grace",
+              "polarity": "positive",
+              "description": "Loving, protective mother dedicated to managing Hazel's care and emotional wellbeing."
+            }
+          ]
+        },
+        "Hazel Grace": {
+          "goal": [
+            "Hazel Grace avoids situations that remind her of her own illness, as shown by her choice to take the stairs after encountering a sick child in the elevator.",
+            "Hazel Grace reacts to her reflection with visible emotional distress and surprise"
+          ],
+          "belief": [
+            "Hazel Grace is self-aware of her physical limitations and feels self-conscious in social interactions.",
+            "Hazel Grace experiences strong emotional reactions upon encountering Gus, including speechlessness and mutual awareness.",
+            "Hazel Grace demonstrates empathy upon seeing a very sick child, which influences her decision to avoid the elevator.",
+            "Hazel Grace experiences self-disgust or discomfort when seeing her reflection"
+          ],
+          "knowledge": [
+            "I looked in the mirror and didn't like what I saw, feeling a wave of discomfort and self-disapproval."
+          ],
+          "relationships": [
+            {
+              "target": "Frannie",
+              "polarity": "mixed",
+              "description": "Hazel complies with her mother's expectations despite lacking personal investment in the activity."
+            },
+            {
+              "target": "Augustus Waters",
+              "polarity": "positive",
+              "description": "Hazel has made initial physical and visual contact with Gus, marking the beginning of mutual awareness.; Hazel and Gus exchange brief, polite apologies following their physical collision."
+            },
+            {
+              "target": "the doctor",
+              "polarity": "mixed",
+              "description": "Hazel resists the doctor's diagnostic authority and uses sarcasm to deflect medical authority while remaining in a position of obligation."
+            },
+            {
+              "target": "Young Couple",
+              "polarity": "mixed",
+              "description": "Hazel observes the couple's interaction with detached curiosity but does not engage."
+            },
+            {
+              "target": "Patrick",
+              "polarity": "mixed",
+              "description": "Hazel views Patrick as a cautionary figure who uses his cancer survivor status to lead the support group."
+            },
+            {
+              "target": "Isaac",
+              "polarity": "positive",
+              "description": "Hazel shares a moment of mutual disapproval with Isaac, indicating a bond of shared skepticism."
+            },
+            {
+              "target": "the support group",
+              "polarity": "positive",
+              "description": "receives collective verbal support after disclosure"
+            },
+            {
+              "target": "Hazel's parents",
+              "polarity": "positive",
+              "description": "Hazel demonstrates concern for her parents' emotional well-being by encouraging them to take time away from caretaking"
+            },
+            {
+              "target": "Michael",
+              "polarity": "positive",
+              "description": "Hazel redirects Michael's attempt at connection toward his well-being."
+            },
+            {
+              "target": "herself",
+              "polarity": "negative",
+              "description": "Hazel experiences self-disapproval"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "scene_id": 10,
+      "scene_title": "EXT. OUTSIDE THE CHURCH - LATER",
+      "characters": [
+        "Augustus Waters",
+        "Frannie Lancaster",
+        "Hazel Grace"
+      ],
+      "events": [
+        "A gathering of cancer patients in a church basement for sharing experiences and emotional support.",
+        "Isaac reveals he will undergo another surgery soon and will likely become blind as a result.",
+        "Hazel meets Augustus's persistent stare with equal intensity, initiating a silent contest of wills.",
+        "Hazel initiates and wins a silent staring contest with Augustus after feeling his persistent gaze.",
+        "Augustus reveals his name, age, and cancer history, including losing a leg to osteosarcoma and being in remission.",
+        "Augustus states that his greatest fear is oblivion, because he wants to live an extraordinary life and be remembered.",
+        "Hazel argues that oblivion is inevitable for everyone, and that fearing it is pointless because even great historical figures will eventually be forgotten.",
+        "Hazel publicly responds to Augustus's fear of oblivion by arguing it is inevitable and should be ignored."
+      ],
+      "character_states": {
+        "Augustus Waters": {
+          "goal": [
+            "Augustus Waters uses a prosthetic leg due to osteosarcoma."
+          ],
+          "belief": [
+            "Augustus Waters is perceived as strikingly attractive, eliciting a moment of speechless mutual awareness from Hazel upon their first encounter.",
+            "Augustus Waters has survived osteosarcoma and lost a leg to the disease.",
+            "Augustus Waters fears oblivion and not leaving a lasting legacy.",
+            "Augustus Waters desires to live an extraordinary life and be remembered.",
+            "Augustus Waters fears oblivion and being forgotten, instead valuing a legacy of being remembered for an extraordinary life.",
+            "Augustus Waters is persistent in maintaining eye contact, demonstrating intense focus on Hazel.",
+            "Augustus Waters is self-aware about his desire for an extraordinary life and being remembered.",
+            "Augustus Waters is self-assured and projects confidence despite his cancer history.",
+            "Augustus Waters is motivated by a desire to live an extraordinary life and be remembered.",
+            "Augustus Waters is intensely observant and focused on Hazel Grace during the support group.",
+            "Augustus Waters displays confidence and flirtatiousness through his gaze and facial expressions.",
+            "Augustus Waters uses humor and metaphor to express optimism about his life trajectory.",
+            "Augustus presents a confident and self-assured demeanor, masking deeper fears with upbeat declarations."
+          ],
+          "knowledge": [
+            "I was in the church basement with the others, part of this cancer support group where we all come together to share our experiences and offer each other emotional support.",
+            "I heard Isaac say he was going to have another surgery soon and that he’d likely be blind afterward, and he admitted it was going to suck even though he didn’t want to complain.",
+            "I locked eyes with Hazel, holding my gaze steady because I wasn't going to look away first.",
+            "I think Hazel started the staring contest by meeting my stare, and I must've blinked first because she seemed to win it.",
+            "I introduced myself, telling them I'm Augustus Waters, 17 years old, and that I lost a leg to osteosarcoma about a year and a half ago but am now in remission.",
+            "I shared that I want to live an extraordinary life and be remembered, and that my greatest fear is oblivion—failing to leave a lasting mark.",
+            "I remember Hazel telling me that oblivion is inevitable for everyone, even great figures like Cleopatra or Mozart, and that fearing it is pointless because no one remembers them forever anyway."
+          ],
+          "relationships": [
+            {
+              "target": "Hazel Grace",
+              "polarity": "positive",
+              "description": "Augustus Waters has made initial eye contact with Hazel, creating mutual awareness after a physical collision."
+            },
+            {
+              "target": "Hazel Grace",
+              "polarity": "mixed",
+              "description": "Hazel challenges Augustus's fear of oblivion with a philosophical counter-argument; Augustus maintains an intense, unbroken gaze toward Hazel, prompting mutual eye contact and a contest of wills"
+            }
+          ]
+        },
+        "Frannie Lancaster": {
+          "goal": [
+            "Support and protect Hazel while encouraging her to engage socially and attend support group."
+          ],
+          "belief": [
+            "Frannie believes Hazel is emotionally withdrawn and needs external social interaction beyond doctors and reading."
+          ],
+          "knowledge": [],
+          "relationships": [
+            {
+              "target": "Hazel Grace",
+              "polarity": "positive",
+              "description": "Loving, protective mother dedicated to managing Hazel's care and emotional wellbeing."
+            }
+          ]
+        },
+        "Hazel Grace": {
+          "goal": [
+            "Hazel Grace reacts to her reflection with visible emotional distress and surprise",
+            "Hazel Grace is initially self-conscious under prolonged attention.",
+            "Hazel Grace engages in subtle acts of defiance or playfulness to regain control in uncomfortable social situations.",
+            "Hazel Grace is easily distracted by social discomfort, particularly sustained attention from others.",
+            "Hazel Grace is responsive to social challenges, such as prolonged eye contact, by engaging in assertive but playful resistance.",
+            "Aim: Confront him about his hypocrisy"
+          ],
+          "belief": [
+            "Hazel Grace experiences self-disgust or discomfort when seeing her reflection",
+            "Hazel Grace has a preoccupation with mortality and the impermanence of human legacy.",
+            "Hazel Grace displays quiet confidence in nonverbal social challenges.",
+            "Hazel Grace believes that oblivion is inevitable for everyone and considers fear of it to be pointless.",
+            "Hazel Grace exhibits a defiant attitude when faced with intimidation, choosing to confront it directly.",
+            "Hazel positions herself as a philosophical challenger to existential fear, moving from observer to active participant.",
+            "Hazel engages with Augustus's expressed fear by offering a philosophical counterpoint.",
+            "Hazel Grace becomes intrigued by Augustus Waters due to his philosophical concern about legacy and oblivion."
+          ],
+          "knowledge": [
+            "I sat in the Circle of Sick, surrounded by others who, like me, were just trying to get through another day.",
+            "I heard Isaac say he was facing another surgery soon and that it would likely leave him blind, and I remember how he tried to downplay it, but I could feel how much it weighed on him.",
+            "I felt the Beautiful Boy's gaze on me while Isaac was talking, and it was hard to focus, so I decided to meet his stare head-on.",
+            "I think I won the staring contest with him because I held my gaze just as firmly, even though I can't be totally sure he gave up first.",
+            "I remember Augustus introducing himself, saying he was 17 and had lost a leg to osteosarcoma a year and a half ago, but was now in remission.",
+            "I heard Augustus say he wants to live an extraordinary life and be remembered, and that his greatest fear is not doing that — it's oblivion.",
+            "I told Augustus that oblivion is inevitable for everyone, even people like Cleopatra or Mozart, and that fearing it doesn't make sense because eventually no one will remember any of us anyway.",
+            "I locked eyes with that boy—Augustus—and refused to look away, even though his stare made my skin prickle. I won that stupid silent contest without blinking, and for a second, I felt something sharp and real cut through the numbness.",
+            "I don’t remember exactly when I raised my hand, but Patrick’s surprise told me it was out of character. The words about oblivion just came out—cold and clear—and for once, I didn’t care if it scared people."
+          ],
+          "relationships": [
+            {
+              "target": "Frannie",
+              "polarity": "mixed",
+              "description": "Hazel complies with her mother's expectations despite lacking personal investment in the activity."
+            },
+            {
+              "target": "Augustus Waters",
+              "polarity": "positive",
+              "description": "Hazel has made initial physical and visual contact with Gus, marking the beginning of mutual awareness.; Hazel and Gus exchange brief, polite apologies following their physical collision."
+            },
+            {
+              "target": "Augustus Waters",
+              "polarity": "mixed",
+              "description": "Hazel engages with Augustus's expressed fear by offering a philosophical counterpoint.; Hazel Grace becomes intrigued by Augustus Waters due to his philosophical concern about legacy and oblivion.; Hazel shifts from feeling intimidated to actively challenging Augustus"
+            },
+            {
+              "target": "the doctor",
+              "polarity": "mixed",
+              "description": "Hazel resists the doctor's diagnostic authority and uses sarcasm to deflect medical authority while remaining in a position of obligation."
+            },
+            {
+              "target": "Young Couple",
+              "polarity": "mixed",
+              "description": "Hazel observes the couple's interaction with detached curiosity but does not engage."
+            },
+            {
+              "target": "Patrick",
+              "polarity": "mixed",
+              "description": "Hazel views Patrick as a cautionary figure who uses his cancer survivor status to lead the support group."
+            },
+            {
+              "target": "Isaac",
+              "polarity": "positive",
+              "description": "Hazel shares a moment of mutual disapproval with Isaac, indicating a bond of shared skepticism."
+            },
+            {
+              "target": "Isaac",
+              "polarity": "mixed",
+              "description": "Hazel shares a moment of mutual disapproval with Isaac, indicating a bond of shared skepticism.; Hazel Grace perceives Isaac's emotional burden regarding his impending blindness."
+            },
+            {
+              "target": "the support group",
+              "polarity": "positive",
+              "description": "receives collective verbal support after disclosure"
+            },
+            {
+              "target": "Hazel's parents",
+              "polarity": "positive",
+              "description": "Hazel demonstrates concern for her parents' emotional well-being by encouraging them to take time away from caretaking"
+            },
+            {
+              "target": "Michael",
+              "polarity": "positive",
+              "description": "Hazel redirects Michael's attempt at connection toward his well-being."
+            },
+            {
+              "target": "herself",
+              "polarity": "negative",
+              "description": "Hazel experiences self-disapproval"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "scene_id": 11,
+      "scene_title": "EXT. OUTSIDE THE CHURCH - SIDEWALK - LATER",
+      "characters": [
+        "Augustus Waters",
+        "Hazel Grace"
+      ],
+      "events": [
+        "Augustus tells Hazel she is beautiful, marking the beginning of their romantic tension.",
+        "Hazel encounters Augustus (Gus) for the first time outside the church; he approaches her, compliments her, and initiates conversation that leads to a connection.",
+        "A casual gathering outside the church after an event, where teens socialize and couples interact.",
+        "Augustus invites Hazel to watch a movie immediately, proposing an impromptu outing.",
+        "Hazel criticizes Augustus for holding a cigarette, seeing it as self-destructive and hypocritical given his cancer history.",
+        "Augustus shocks Hazel by pulling out a cigarette but explains it is unlit and symbolic — representing control over one's fate despite danger.",
+        "Hazel declines her mother's offer to go home, choosing instead to follow through on impromptu plans with Augustus."
+      ],
+      "character_states": {
+        "Augustus Waters": {
+          "goal": [
+            "Augustus Waters uses a prosthetic leg due to osteosarcoma.",
+            "Augustus avoids lighting the cigarette in his mouth, adhering to a self-imposed rule that distinguishes symbolic gesture from actual harm.",
+            "Avoids lighting cigarettes as a rule to maintain symbolic mastery over death."
+          ],
+          "belief": [
+            "Augustus Waters has survived osteosarcoma and lost a leg to the disease.",
+            "Augustus Waters fears oblivion and not leaving a lasting legacy.",
+            "Augustus Waters desires to live an extraordinary life and be remembered.",
+            "Augustus Waters fears oblivion and being forgotten, instead valuing a legacy of being remembered for an extraordinary life.",
+            "Augustus Waters is persistent in maintaining eye contact, demonstrating intense focus on Hazel.",
+            "Augustus Waters is self-aware about his desire for an extraordinary life and being remembered.",
+            "Augustus Waters is self-assured and projects confidence despite his cancer history.",
+            "Augustus Waters is motivated by a desire to live an extraordinary life and be remembered.",
+            "Augustus Waters is intensely observant and focused on Hazel Grace during the support group.",
+            "Augustus Waters displays confidence and flirtatiousness through his gaze and facial expressions.",
+            "Augustus Waters uses humor and metaphor to express optimism about his life trajectory.",
+            "Augustus presents a confident and self-assured demeanor, masking deeper fears with upbeat declarations.",
+            "Augustus Waters exhibits confidence in social interactions.",
+            "Augustus actively initiates social connection by inviting Hazel to a movie, demonstrating assertiveness in pursuing relationships.",
+            "Augustus uses metaphor and abstract thinking to reframe personal risks, as demonstrated by his unlit cigarette symbolizing control over danger.",
+            "Maintains outward confidence even when confronted with moral judgment.",
+            "Augustus exhibits a desire to engage with beauty as a conscious life choice, citing it as a simple pleasure worth pursuing despite mortality.",
+            "Augustus uses metaphorical thinking to frame personal choices.",
+            "Augustus encourages risk-taking and living boldly despite mortality.",
+            "Uses metaphor to reframe personal vulnerability as symbolic control over fate.",
+            "Augustus Waters displays confidence in social interactions, as shown by his direct approach and sustained eye contact when initiating conversation with Hazel.",
+            "Identifies as someone who confronts mortality without surrendering to it."
+          ],
+          "knowledge": [
+            "I noticed the other teens hanging out and socializing after the event, like Isaac and Monica being all over each other near her car.",
+            "I was told that Hazel thought I was being hypocritical and self-destructive by holding a cigarette, especially after surviving cancer.",
+            "I pulled out a cigarette in front of Hazel and saw her shock, so I explained it’s unlit and just a metaphor—putting the thing that could kill me between my teeth without ever giving it the power to do so.",
+            "I approached Hazel, asked for her full name, told her she was beautiful because I meant it, and then suggested we watch a movie right then—just an impromptu idea to seize the moment.",
+            "I was told Hazel turned down her mom’s ride home because she’d made plans with me.",
+            "I stood next to her after group and just said it—'What's your name?'—then told her she was beautiful, because she was, and I wasn't going to pretend I didn't see it.",
+            "I remember holding that unlit cigarette between my teeth, not lighting it, just letting it sit there while I talked—putting the thing that could kill me in my mouth but not letting it win."
+          ],
+          "relationships": [
+            {
+              "target": "Hazel Grace",
+              "polarity": "mixed",
+              "description": "Hazel challenges Augustus's fear of oblivion with a philosophical counter-argument; Augustus maintains an intense, unbroken gaze toward Hazel, prompting mutual eye contact and a contest of wills"
+            },
+            {
+              "target": "Hazel Grace",
+              "polarity": "positive",
+              "description": "Augustus Waters has initiated a connection with Hazel that leads to shared plans.; Seeks to impress or reframe perception in Hazel by transforming a potentially negative act into a meaningful gesture.; Augustus initiates direct personal interaction with Hazel, showing focused interest in her identity and appearance."
+            }
+          ]
+        },
+        "Hazel Grace": {
+          "goal": [
+            "Hazel Grace is initially self-conscious under prolonged attention.",
+            "Hazel Grace engages in subtle acts of defiance or playfulness to regain control in uncomfortable social situations.",
+            "Hazel Grace is easily distracted by social discomfort, particularly sustained attention from others.",
+            "Hazel Grace is responsive to social challenges, such as prolonged eye contact, by engaging in assertive but playful resistance.",
+            "Hazel Grace is cautious about personal risk and trust, questioning Augustus's intentions and highlighting potential danger in emotional connections.",
+            "Hazel Grace experiences physical limitations due to her illness, particularly difficulty breathing."
+          ],
+          "belief": [
+            "Hazel Grace has a preoccupation with mortality and the impermanence of human legacy.",
+            "Hazel Grace displays quiet confidence in nonverbal social challenges.",
+            "Hazel Grace believes that oblivion is inevitable for everyone and considers fear of it to be pointless.",
+            "Hazel Grace exhibits a defiant attitude when faced with intimidation, choosing to confront it directly.",
+            "Hazel Grace is intellectually engaged and critical, referencing literary concepts like 'hamartia' in conversation.",
+            "Hazel Grace values intellectual honesty and is quick to challenge symbolic gestures she views as self-deceptive.",
+            "Hazel Grace is self-deprecating about her appearance and rejects compliments on beauty.",
+            "Hazel Grace reacts with moral indignation to perceived hypocrisy, especially regarding health risks.",
+            "Hazel Grace is cautious in social interactions, especially with unfamiliar people.",
+            "Hazel Grace asserts personal autonomy by rejecting her mother's ride to spend time with Augustus Waters.",
+            "Hazel Grace is capable of shifting from anger to admiration when presented with a compelling metaphorical justification.",
+            "Hazel Grace is intellectually sharp and quick to critique metaphors and ideas.",
+            "Hazel Grace is initially reluctant to engage socially but becomes intrigued by intellectual rapport.",
+            "Hazel asserts personal agency by declining her mother's ride and making an independent choice.",
+            "Hazel begins to form a personal connection with Augustus after his direct approach and compliment",
+            "Hazel acknowledges Augustus as someone she has plans with, indicating a developing connection."
+          ],
+          "knowledge": [
+            "He told me I was beautiful, and I remember thinking he must be joking or being sarcastic, but he seemed serious, and it made me feel seen in a way I wasn’t expecting.",
+            "I turned and found this boy, Augustus, standing next to me, and he asked for my full name, which felt intense, and then he told me I was beautiful and said he likes looking at beautiful people because we’re all going to die soon, which caught me off guard.",
+            "I was waiting for my mom's car when I saw Isaac making out with Monica across the parking lot, and we both just stood there watching them, which felt kind of awkward and gross.",
+            "He told me we should watch a movie, and when I didn’t respond right away, he clarified that he meant right then, which surprised me because I hadn’t even agreed to go yet.",
+            "I called out Augustus when I saw him with a cigarette, telling him how stupid it was to risk more cancer after everything he'd already been through.",
+            "I saw Augustus pull out a cigarette and got shocked, but then he explained it was never lit—that it was just a metaphor, a way of showing he's in control of his fate even with danger in his mouth.",
+            "I told my mom I couldn't go home with her because I'd made plans with Augustus Waters.",
+            "He just looked at me and said, 'Because you're beautiful,' like it was the most natural thing in the world. I froze—I didn’t know what to do with that. No one had ever said it to me before, not like that.",
+            "He kept staring, not looking away, like he actually saw me—really saw me—and didn’t flinch. I wanted to look down, to disappear, but part of me wanted to let him keep looking, like maybe I could believe it if he said it long enough."
+          ],
+          "relationships": [
+            {
+              "target": "Augustus Waters",
+              "polarity": "mixed",
+              "description": "Hazel engages with Augustus's expressed fear by offering a philosophical counterpoint.; Hazel Grace becomes intrigued by Augustus Waters due to his philosophical concern about legacy and oblivion.; Hazel shifts from feeling intimidated to actively challenging Augustus"
+            },
+            {
+              "target": "Augustus Waters",
+              "polarity": "positive",
+              "description": "Hazel acknowledges Augustus as someone she has plans with, indicating a developing connection.; Hazel begins to form a personal connection with Augustus after his direct approach and compliment; Hazel's perception of Augustus shifts from disapproval to respect due to his symbolic use of the unlit cigarette."
+            },
+            {
+              "target": "the doctor",
+              "polarity": "mixed",
+              "description": "Hazel resists the doctor's diagnostic authority and uses sarcasm to deflect medical authority while remaining in a position of obligation."
+            },
+            {
+              "target": "Young Couple",
+              "polarity": "mixed",
+              "description": "Hazel observes the couple's interaction with detached curiosity but does not engage."
+            },
+            {
+              "target": "Patrick",
+              "polarity": "mixed",
+              "description": "Hazel views Patrick as a cautionary figure who uses his cancer survivor status to lead the support group."
+            },
+            {
+              "target": "Isaac",
+              "polarity": "mixed",
+              "description": "Hazel shares a moment of mutual disapproval with Isaac, indicating a bond of shared skepticism.; Hazel Grace perceives Isaac's emotional burden regarding his impending blindness."
+            },
+            {
+              "target": "the support group",
+              "polarity": "positive",
+              "description": "receives collective verbal support after disclosure"
+            },
+            {
+              "target": "Frannie",
+              "polarity": "mixed",
+              "description": "Hazel complies with her mother's expectations despite lacking personal investment in the activity."
+            },
+            {
+              "target": "Hazel's parents",
+              "polarity": "positive",
+              "description": "Hazel demonstrates concern for her parents' emotional well-being by encouraging them to take time away from caretaking"
+            },
+            {
+              "target": "Michael",
+              "polarity": "positive",
+              "description": "Hazel redirects Michael's attempt at connection toward his well-being."
+            },
+            {
+              "target": "herself",
+              "polarity": "negative",
+              "description": "Hazel experiences self-disapproval"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "scene_id": 12,
+      "scene_title": "EXT. SUBURBAN STREET / CAR - LATER",
+      "characters": [
+        "Augustus Waters",
+        "Hazel Grace"
+      ],
+      "events": [
+        "Hazel reacts with sarcasm and dry humor to Gus's admission of being a bad driver.",
+        "Gus admits to failing his driving test multiple times and jokes about his poor driving being a 'cancer perk.'",
+        "Gus discloses that he failed his driving test multiple times and barely passed on the fourth attempt, with an instructor deeming his driving 'unpleasant but not technically unsafe.'",
+        "Hazel takes a deep breath and begins recounting the discovery of her cancer, signaling a moment of emotional significance.",
+        "A car ride during which Hazel and Gus engage in personal conversation while traveling together."
+      ],
+      "character_states": {
+        "Augustus Waters": {
+          "goal": [
+            "Augustus avoids lighting the cigarette in his mouth, adhering to a self-imposed rule that distinguishes symbolic gesture from actual harm.",
+            "Avoids lighting cigarettes as a rule to maintain symbolic mastery over death."
+          ],
+          "belief": [
+            "Augustus Waters exhibits confidence in social interactions.",
+            "Augustus actively initiates social connection by inviting Hazel to a movie, demonstrating assertiveness in pursuing relationships.",
+            "Augustus uses metaphor and abstract thinking to reframe personal risks, as demonstrated by his unlit cigarette symbolizing control over danger.",
+            "Maintains outward confidence even when confronted with moral judgment.",
+            "Augustus exhibits a desire to engage with beauty as a conscious life choice, citing it as a simple pleasure worth pursuing despite mortality.",
+            "Augustus uses metaphorical thinking to frame personal choices.",
+            "Augustus encourages risk-taking and living boldly despite mortality.",
+            "Uses metaphor to reframe personal vulnerability as symbolic control over fate.",
+            "Augustus Waters displays confidence in social interactions, as shown by his direct approach and sustained eye contact when initiating conversation with Hazel.",
+            "Augustus Waters uses humor to frame his cancer-related challenges.",
+            "Augustus Waters is self-aware about his poor driving skills.",
+            "Augustus Waters demonstrates openness to personal disclosure by prompting Hazel to share her cancer story.",
+            "Augustus Waters shows self-awareness about his limitations by acknowledging his repeated failure to pass the driving test.",
+            "Augustus Waters uses humor to address serious topics, as seen in his 'cancer perk' remark."
+          ],
+          "knowledge": [
+            "I remember Hazel responding with sarcasm when I admitted my driving history, saying 'You don't say' and later 'I'm surprised you have a license,' her dry humor making me laugh despite the vulnerability.",
+            "I remember driving with Hazel and having a real conversation, opening up about my struggles with the test while she sat beside me, reacting with her dry wit.",
+            "I told Hazel I failed the driving test a couple of times and only passed on the fourth try, remembering how the instructor said my driving was 'unpleasant but not technically unsafe,' and I joked that getting my license was a total cancer perk.",
+            "I saw Hazel take a deep breath, and then she told me, 'I was 13 when they found it,' starting to share her story in a way that felt different and important."
+          ],
+          "relationships": [
+            {
+              "target": "Hazel Grace",
+              "polarity": "positive",
+              "description": "Augustus Waters has initiated a connection with Hazel that leads to shared plans.; Seeks to impress or reframe perception in Hazel by transforming a potentially negative act into a meaningful gesture.; Augustus initiates direct personal interaction with Hazel, showing focused interest in her identity and appearance."
+            },
+            {
+              "target": "Hazel Grace",
+              "polarity": "positive",
+              "description": "Gus shares a personal vulnerability with Hazel, inviting mutual openness."
+            }
+          ]
+        },
+        "Hazel Grace": {
+          "goal": [
+            "Hazel Grace is cautious about personal risk and trust, questioning Augustus's intentions and highlighting potential danger in emotional connections.",
+            "Hazel Grace experiences physical limitations due to her illness, particularly difficulty breathing.",
+            "Hazel Grace's physical movement is restricted by a seatbelt during sudden car movements, indicating dependence on safety restraints."
+          ],
+          "belief": [
+            "Hazel Grace is intellectually engaged and critical, referencing literary concepts like 'hamartia' in conversation.",
+            "Hazel Grace values intellectual honesty and is quick to challenge symbolic gestures she views as self-deceptive.",
+            "Hazel Grace is self-deprecating about her appearance and rejects compliments on beauty.",
+            "Hazel Grace reacts with moral indignation to perceived hypocrisy, especially regarding health risks.",
+            "Hazel Grace is cautious in social interactions, especially with unfamiliar people.",
+            "Hazel Grace asserts personal autonomy by rejecting her mother's ride to spend time with Augustus Waters.",
+            "Hazel Grace is capable of shifting from anger to admiration when presented with a compelling metaphorical justification.",
+            "Hazel Grace is intellectually sharp and quick to critique metaphors and ideas.",
+            "Hazel Grace is initially reluctant to engage socially but becomes intrigued by intellectual rapport.",
+            "Hazel Grace shows hesitation and emotional vulnerability when beginning to share her cancer story.",
+            "Hazel Grace exhibits sarcasm as a coping mechanism in tense situations.",
+            "Hazel Grace demonstrates emotional resilience by engaging in self-deprecating humor about cancer-related challenges.",
+            "Hazel Grace demonstrates wry humor when discussing her cancer diagnosis.",
+            "Hazel Grace is reflective about past experiences, acknowledging familiarity with recounting her diagnosis."
+          ],
+          "knowledge": [
+            "When Gus admitted he was a bad driver, I responded with dry sarcasm, saying 'You don't say' and 'I'm surprised you have a license,' because that’s how I cope with vulnerability.",
+            "Gus told me he failed his driving test multiple times and only passed on the fourth try after the instructor said his driving was 'unpleasant but not technically unsafe,' and he joked that having a license was a 'cancer perk.'",
+            "I take a deep breath and begin to tell the story of how I was diagnosed with cancer, feeling that even though I've told it before, this time is different.",
+            "I was in the car with Gus, riding together while we talked about personal things, and I could feel the weight of our growing closeness."
+          ],
+          "relationships": [
+            {
+              "target": "Augustus Waters",
+              "polarity": "positive",
+              "description": "Hazel acknowledges Augustus as someone she has plans with, indicating a developing connection.; Hazel begins to form a personal connection with Augustus after his direct approach and compliment; Hazel's perception of Augustus shifts from disapproval to respect due to his symbolic use of the unlit cigarette."
+            },
+            {
+              "target": "Augustus Waters",
+              "polarity": "mixed",
+              "description": "Hazel begins to form a personal connection with Augustus after his direct approach and compliment; Hazel's perception of Augustus shifts from disapproval to respect due to his symbolic use of the unlit cigarette.; Hazel responds to Gus with sarcastic humor, indicating a growing comfort and mutual vulnerability in their interaction.; Hazel begins to develop emotional intimacy with Gus by sharing personal history."
+            },
+            {
+              "target": "the doctor",
+              "polarity": "mixed",
+              "description": "Hazel resists the doctor's diagnostic authority and uses sarcasm to deflect medical authority while remaining in a position of obligation."
+            },
+            {
+              "target": "Young Couple",
+              "polarity": "mixed",
+              "description": "Hazel observes the couple's interaction with detached curiosity but does not engage."
+            },
+            {
+              "target": "Patrick",
+              "polarity": "mixed",
+              "description": "Hazel views Patrick as a cautionary figure who uses his cancer survivor status to lead the support group."
+            },
+            {
+              "target": "Isaac",
+              "polarity": "mixed",
+              "description": "Hazel shares a moment of mutual disapproval with Isaac, indicating a bond of shared skepticism.; Hazel Grace perceives Isaac's emotional burden regarding his impending blindness."
+            },
+            {
+              "target": "the support group",
+              "polarity": "positive",
+              "description": "receives collective verbal support after disclosure"
+            },
+            {
+              "target": "Frannie",
+              "polarity": "mixed",
+              "description": "Hazel complies with her mother's expectations despite lacking personal investment in the activity."
+            },
+            {
+              "target": "Hazel's parents",
+              "polarity": "positive",
+              "description": "Hazel demonstrates concern for her parents' emotional well-being by encouraging them to take time away from caretaking"
+            },
+            {
+              "target": "Michael",
+              "polarity": "positive",
+              "description": "Hazel redirects Michael's attempt at connection toward his well-being."
+            },
+            {
+              "target": "herself",
+              "polarity": "negative",
+              "description": "Hazel experiences self-disapproval"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "scene_id": 13,
+      "scene_title": "FLASHBACK - INT. HOSPITAL CLINIC - DAY",
+      "characters": [
+        "Hazel Grace"
+      ],
+      "events": [
+        "I remember the needle, the cold table, the pressure in my neck—and then just one sentence, spoken like it was final: Stage IV thyroid cancer."
+      ],
+      "character_states": {
+        "Hazel Grace": {
+          "goal": [
+            "Hazel Grace's physical movement is restricted by a seatbelt during sudden car movements, indicating dependence on safety restraints."
+          ],
+          "belief": [
+            "Hazel Grace shows hesitation and emotional vulnerability when beginning to share her cancer story.",
+            "Hazel Grace exhibits sarcasm as a coping mechanism in tense situations.",
+            "Hazel Grace demonstrates emotional resilience by engaging in self-deprecating humor about cancer-related challenges.",
+            "Hazel Grace demonstrates wry humor when discussing her cancer diagnosis.",
+            "Hazel Grace is reflective about past experiences, acknowledging familiarity with recounting her diagnosis.",
+            "Hazel Grace is aware of her Stage IV thyroid cancer diagnosis."
+          ],
+          "knowledge": [
+            "I remember the needle, the cold table, the pressure in my neck—and then just one sentence, spoken like it was final: Stage IV thyroid cancer."
+          ],
+          "relationships": [
+            {
+              "target": "the doctor",
+              "polarity": "mixed",
+              "description": "Hazel resists the doctor's diagnostic authority and uses sarcasm to deflect medical authority while remaining in a position of obligation."
+            },
+            {
+              "target": "Young Couple",
+              "polarity": "mixed",
+              "description": "Hazel observes the couple's interaction with detached curiosity but does not engage."
+            },
+            {
+              "target": "Patrick",
+              "polarity": "mixed",
+              "description": "Hazel views Patrick as a cautionary figure who uses his cancer survivor status to lead the support group."
+            },
+            {
+              "target": "Isaac",
+              "polarity": "mixed",
+              "description": "Hazel shares a moment of mutual disapproval with Isaac, indicating a bond of shared skepticism.; Hazel Grace perceives Isaac's emotional burden regarding his impending blindness."
+            },
+            {
+              "target": "the support group",
+              "polarity": "positive",
+              "description": "receives collective verbal support after disclosure"
+            },
+            {
+              "target": "Frannie",
+              "polarity": "mixed",
+              "description": "Hazel complies with her mother's expectations despite lacking personal investment in the activity."
+            },
+            {
+              "target": "Hazel's parents",
+              "polarity": "positive",
+              "description": "Hazel demonstrates concern for her parents' emotional well-being by encouraging them to take time away from caretaking"
+            },
+            {
+              "target": "Michael",
+              "polarity": "positive",
+              "description": "Hazel redirects Michael's attempt at connection toward his well-being."
+            },
+            {
+              "target": "Augustus Waters",
+              "polarity": "mixed",
+              "description": "Hazel begins to form a personal connection with Augustus after his direct approach and compliment; Hazel's perception of Augustus shifts from disapproval to respect due to his symbolic use of the unlit cigarette.; Hazel responds to Gus with sarcastic humor, indicating a growing comfort and mutual vulnerability in their interaction.; Hazel begins to develop emotional intimacy with Gus by sharing personal history."
+            },
+            {
+              "target": "Augustus Waters",
+              "polarity": "positive",
+              "description": "Hazel begins to form a personal connection with Augustus after his direct approach and compliment; Hazel's perception of Augustus shifts from disapproval to respect due to his symbolic use of the unlit cigarette."
+            },
+            {
+              "target": "herself",
+              "polarity": "negative",
+              "description": "Hazel experiences self-disapproval"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "scene_id": 14,
+      "scene_title": "FLASHBACK - INT. HAZEL'S BEDROOM - NIGHT",
+      "characters": [
+        "Hazel Grace"
+      ],
+      "events": [
+        "Hazel experiences acute respiratory distress as fluid accumulates in her lungs, escalating into a medical emergency between initial diagnosis and intensive care hospitalization."
+      ],
+      "character_states": {
+        "Hazel Grace": {
+          "goal": [
+            "Manage physical energy and preserve emotional boundaries."
+          ],
+          "belief": [
+            "Hazel Grace is aware of her Stage IV thyroid cancer diagnosis."
+          ],
+          "knowledge": [],
+          "relationships": [
+            {
+              "target": "the doctor",
+              "polarity": "mixed",
+              "description": "Hazel resists the doctor's diagnostic authority and uses sarcasm to deflect medical authority while remaining in a position of obligation."
+            },
+            {
+              "target": "Young Couple",
+              "polarity": "mixed",
+              "description": "Hazel observes the couple's interaction with detached curiosity but does not engage."
+            },
+            {
+              "target": "Patrick",
+              "polarity": "mixed",
+              "description": "Hazel views Patrick as a cautionary figure who uses his cancer survivor status to lead the support group."
+            },
+            {
+              "target": "Isaac",
+              "polarity": "mixed",
+              "description": "Hazel shares a moment of mutual disapproval with Isaac, indicating a bond of shared skepticism.; Hazel Grace perceives Isaac's emotional burden regarding his impending blindness."
+            },
+            {
+              "target": "the support group",
+              "polarity": "positive",
+              "description": "receives collective verbal support after disclosure"
+            },
+            {
+              "target": "Frannie",
+              "polarity": "mixed",
+              "description": "Hazel complies with her mother's expectations despite lacking personal investment in the activity."
+            },
+            {
+              "target": "Hazel's parents",
+              "polarity": "positive",
+              "description": "Hazel demonstrates concern for her parents' emotional well-being by encouraging them to take time away from caretaking"
+            },
+            {
+              "target": "Michael",
+              "polarity": "positive",
+              "description": "Hazel redirects Michael's attempt at connection toward his well-being."
+            },
+            {
+              "target": "Augustus Waters",
+              "polarity": "positive",
+              "description": "Hazel begins to form a personal connection with Augustus after his direct approach and compliment; Hazel's perception of Augustus shifts from disapproval to respect due to his symbolic use of the unlit cigarette."
+            },
+            {
+              "target": "herself",
+              "polarity": "negative",
+              "description": "Hazel experiences self-disapproval"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "scene_id": 15,
+      "scene_title": "FLASHBACK - INT. HOSPITAL ICU - NIGHT",
+      "characters": [
+        "Frannie Lancaster",
+        "Hazel Grace"
+      ],
+      "events": [
+        "Dad calls emergency services as Hazel struggles to breathe.",
+        "Frannie comforts Hazel by running her fingers through her hair as Hazel prepares for a medical procedure.",
+        "Frannie tearfully asks Hazel if she is ready, likely referring to a medical procedure or transition.",
+        "Michael becomes overwhelmed with emotion and breaks down, unable to contain his feelings any longer."
+      ],
+      "character_states": {
+        "Frannie Lancaster": {
+          "goal": [
+            "Support and protect Hazel while encouraging her to engage socially and attend support group."
+          ],
+          "belief": [
+            "Frannie believes Hazel is emotionally withdrawn and needs external social interaction beyond doctors and reading."
+          ],
+          "knowledge": [
+            "I ran my fingers through Hazel's hair while she lay in bed, struggling to breathe, trying to soothe her as the fluid filled her lungs."
+          ],
+          "relationships": [
+            {
+              "target": "Hazel Grace",
+              "polarity": "positive",
+              "description": "Loving, protective mother dedicated to managing Hazel's care and emotional wellbeing."
+            }
+          ]
+        },
+        "Hazel Grace": {
+          "goal": [
+            "Hazel Grace is undergoing chemotherapy with a PICC line, indicating medical dependency.",
+            "Hazel Grace is physically dependent on medical interventions, as indicated by her presence in a chemo chair with a PICC line.",
+            "Hazel Grace is physically limited due to respiratory distress, requiring emergency medical intervention and ICU admission."
+          ],
+          "belief": [
+            "Hazel Grace is aware of her Stage IV thyroid cancer diagnosis.",
+            "Hazel Grace experiences respiratory failure requiring emergency intervention.",
+            "Hazel Grace demonstrates awareness of her medical treatment timeline and its ineffectiveness.",
+            "Hazel Grace perceives her survival as unexpected given the severity of her condition.",
+            "Hazel Grace demonstrates awareness of her deteriorating medical condition and the failure of prior treatments.",
+            "Hazel Grace demonstrates awareness of her mortality, referencing the failure of her body and prior medical interventions.",
+            "Hazel Grace acknowledges the progressive escalation of medical interventions in her treatment history.",
+            "Hazel Grace reflects on her medical history with a sense of resignation.",
+            "Hazel Grace reflects on near-death experiences with a sense of fatalism.",
+            "Hazel Grace experiences fear and vulnerability during medical crises."
+          ],
+          "knowledge": [
+            "I could barely breathe, and I saw my dad call 9-1-1 while Frannie stroked my hair.",
+            "I felt Frannie running her fingers through my hair as I struggled to breathe, trying to calm me down before the procedure.",
+            "I remember my mom Frannie asking me tearfully if I was ready, her voice trembling as she leaned close, and I could tell she was trying to stay strong for me.",
+            "I saw my dad Michael break down completely, unable to hold back his emotions any longer, and it hurt me to see him so overwhelmed while I was lying there.",
+            "I remember lying in that hospital bed, gasping like a fish out of water, and knowing I couldn't fight it anymore—Frannie stroking my hair, Dad’s voice cracking as he dialed 911, and then the cold fear that this was it."
+          ],
+          "relationships": [
+            {
+              "target": "Frannie",
+              "polarity": "mixed",
+              "description": "Hazel complies with her mother's expectations despite lacking personal investment in the activity."
+            },
+            {
+              "target": "Frannie",
+              "polarity": "mixed",
+              "description": "Hazel complies with her mother's expectations despite lacking personal investment in the activity.; Hazel receives comfort from Frannie during a medical crisis, indicating a close, trusting relationship with her mother."
+            },
+            {
+              "target": "the doctor",
+              "polarity": "mixed",
+              "description": "Hazel resists the doctor's diagnostic authority and uses sarcasm to deflect medical authority while remaining in a position of obligation."
+            },
+            {
+              "target": "Young Couple",
+              "polarity": "mixed",
+              "description": "Hazel observes the couple's interaction with detached curiosity but does not engage."
+            },
+            {
+              "target": "Patrick",
+              "polarity": "mixed",
+              "description": "Hazel views Patrick as a cautionary figure who uses his cancer survivor status to lead the support group."
+            },
+            {
+              "target": "Isaac",
+              "polarity": "mixed",
+              "description": "Hazel shares a moment of mutual disapproval with Isaac, indicating a bond of shared skepticism.; Hazel Grace perceives Isaac's emotional burden regarding his impending blindness."
+            },
+            {
+              "target": "the support group",
+              "polarity": "positive",
+              "description": "receives collective verbal support after disclosure"
+            },
+            {
+              "target": "Hazel's parents",
+              "polarity": "positive",
+              "description": "Hazel demonstrates concern for her parents' emotional well-being by encouraging them to take time away from caretaking"
+            },
+            {
+              "target": "Michael",
+              "polarity": "positive",
+              "description": "Hazel redirects Michael's attempt at connection toward his well-being."
+            },
+            {
+              "target": "Augustus Waters",
+              "polarity": "positive",
+              "description": "Hazel begins to form a personal connection with Augustus after his direct approach and compliment; Hazel's perception of Augustus shifts from disapproval to respect due to his symbolic use of the unlit cigarette."
+            },
+            {
+              "target": "herself",
+              "polarity": "negative",
+              "description": "Hazel experiences self-disapproval"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "scene_id": 16,
+      "scene_title": "FLASHBACK - INT. HOSPITAL ICU - MORNING",
+      "characters": [
+        "Hazel Grace"
+      ],
+      "events": [
+        "A morning period in the ICU where Hazel shows visible signs of recovery.",
+        "Hazel begins to recover from her illness as the antibiotics take effect and fluid is drained from her lungs."
+      ],
+      "character_states": {
+        "Hazel Grace": {
+          "goal": [
+            "Hazel Grace is undergoing chemotherapy with a PICC line, indicating medical dependency.",
+            "Hazel Grace is physically dependent on medical interventions, as indicated by her presence in a chemo chair with a PICC line.",
+            "Hazel Grace is physically limited due to respiratory distress, requiring emergency medical intervention and ICU admission."
+          ],
+          "belief": [
+            "Hazel Grace experiences respiratory failure requiring emergency intervention.",
+            "Hazel Grace demonstrates awareness of her medical treatment timeline and its ineffectiveness.",
+            "Hazel Grace perceives her survival as unexpected given the severity of her condition.",
+            "Hazel Grace demonstrates awareness of her deteriorating medical condition and the failure of prior treatments.",
+            "Hazel Grace demonstrates awareness of her mortality, referencing the failure of her body and prior medical interventions.",
+            "Hazel Grace acknowledges the progressive escalation of medical interventions in her treatment history.",
+            "Hazel Grace reflects on her medical history with a sense of resignation.",
+            "Hazel Grace reflects on near-death experiences with a sense of fatalism.",
+            "Hazel Grace experiences fear and vulnerability during medical crises."
+          ],
+          "knowledge": [
+            "I remember that morning in the ICU when I started feeling a little more like myself—I was able to eat ice chips, and I noticed the color had come back to my cheeks.",
+            "I know I began to recover because the antibiotics finally kicked in and the doctors drained the fluid from my lungs; I could feel myself getting stronger over time."
+          ],
+          "relationships": [
+            {
+              "target": "the doctor",
+              "polarity": "mixed",
+              "description": "Hazel resists the doctor's diagnostic authority and uses sarcasm to deflect medical authority while remaining in a position of obligation."
+            },
+            {
+              "target": "Young Couple",
+              "polarity": "mixed",
+              "description": "Hazel observes the couple's interaction with detached curiosity but does not engage."
+            },
+            {
+              "target": "Patrick",
+              "polarity": "mixed",
+              "description": "Hazel views Patrick as a cautionary figure who uses his cancer survivor status to lead the support group."
+            },
+            {
+              "target": "Isaac",
+              "polarity": "mixed",
+              "description": "Hazel shares a moment of mutual disapproval with Isaac, indicating a bond of shared skepticism.; Hazel Grace perceives Isaac's emotional burden regarding his impending blindness."
+            },
+            {
+              "target": "the support group",
+              "polarity": "positive",
+              "description": "receives collective verbal support after disclosure"
+            },
+            {
+              "target": "Frannie",
+              "polarity": "mixed",
+              "description": "Hazel complies with her mother's expectations despite lacking personal investment in the activity.; Hazel receives comfort from Frannie during a medical crisis, indicating a close, trusting relationship with her mother."
+            },
+            {
+              "target": "Frannie",
+              "polarity": "mixed",
+              "description": "Hazel complies with her mother's expectations despite lacking personal investment in the activity."
+            },
+            {
+              "target": "Hazel's parents",
+              "polarity": "positive",
+              "description": "Hazel demonstrates concern for her parents' emotional well-being by encouraging them to take time away from caretaking"
+            },
+            {
+              "target": "Michael",
+              "polarity": "positive",
+              "description": "Hazel redirects Michael's attempt at connection toward his well-being."
+            },
+            {
+              "target": "Augustus Waters",
+              "polarity": "positive",
+              "description": "Hazel begins to form a personal connection with Augustus after his direct approach and compliment; Hazel's perception of Augustus shifts from disapproval to respect due to his symbolic use of the unlit cigarette."
+            },
+            {
+              "target": "herself",
+              "polarity": "negative",
+              "description": "Hazel experiences self-disapproval"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "scene_id": 17,
+      "scene_title": "INT. GUS'S CAR - SAME",
+      "characters": [
+        "Augustus Waters",
+        "Hazel Grace"
+      ],
+      "events": [
+        "During the drive to Gus's house, Hazel shares that her tumors have shrunk and her metastases have remained nearly unchanged, but she emphasizes that her lungs still do not function well. This revelation contextualizes her difficulty breathing as she descends the stairs to Gus's basement bedroom, where she labors noticeably while carrying her oxygen tank and needs time to recover once seated on the bed.",
+        "During the car ride to Gus's house, Hazel discusses her tumor stability and compromised lung capacity, explaining the physical reality of her breathing challenges."
+      ],
+      "character_states": {
+        "Augustus Waters": {
+          "goal": [
+            "Connect authentically with Hazel through humor, charm, and shared perspective."
+          ],
+          "belief": [
+            "Augustus Waters uses humor to frame his cancer-related challenges.",
+            "Augustus Waters is self-aware about his poor driving skills.",
+            "Augustus Waters demonstrates openness to personal disclosure by prompting Hazel to share her cancer story.",
+            "Augustus Waters shows self-awareness about his limitations by acknowledging his repeated failure to pass the driving test.",
+            "Augustus Waters uses humor to address serious topics, as seen in his 'cancer perk' remark."
+          ],
+          "knowledge": [],
+          "relationships": [
+            {
+              "target": "Hazel Grace",
+              "polarity": "positive",
+              "description": "Gus shares a personal vulnerability with Hazel, inviting mutual openness."
+            }
+          ]
+        },
+        "Hazel Grace": {
+          "goal": [
+            "Hazel Grace is undergoing chemotherapy with a PICC line, indicating medical dependency.",
+            "Hazel Grace is physically dependent on medical interventions, as indicated by her presence in a chemo chair with a PICC line.",
+            "Hazel Grace is physically limited due to respiratory distress, requiring emergency medical intervention and ICU admission."
+          ],
+          "belief": [
+            "Hazel Grace experiences respiratory failure requiring emergency intervention.",
+            "Hazel Grace demonstrates awareness of her medical treatment timeline and its ineffectiveness.",
+            "Hazel Grace perceives her survival as unexpected given the severity of her condition.",
+            "Hazel Grace demonstrates awareness of her deteriorating medical condition and the failure of prior treatments.",
+            "Hazel Grace demonstrates awareness of her mortality, referencing the failure of her body and prior medical interventions.",
+            "Hazel Grace acknowledges the progressive escalation of medical interventions in her treatment history.",
+            "Hazel Grace reflects on her medical history with a sense of resignation.",
+            "Hazel Grace reflects on near-death experiences with a sense of fatalism.",
+            "Hazel Grace experiences fear and vulnerability during medical crises.",
+            "Hazel Grace demonstrates resilience by enrolling in a low-efficacy experimental drug trial despite its poor success rate.",
+            "Hazel Grace exhibits self-awareness regarding her rare positive response to Phalanxifor, acknowledging it as an anomaly."
+          ],
+          "knowledge": [],
+          "relationships": [
+            {
+              "target": "Augustus Waters",
+              "polarity": "positive",
+              "description": "Hazel begins to form a personal connection with Augustus after his direct approach and compliment; Hazel's perception of Augustus shifts from disapproval to respect due to his symbolic use of the unlit cigarette."
+            },
+            {
+              "target": "the doctor",
+              "polarity": "mixed",
+              "description": "Hazel resists the doctor's diagnostic authority and uses sarcasm to deflect medical authority while remaining in a position of obligation."
+            },
+            {
+              "target": "Young Couple",
+              "polarity": "mixed",
+              "description": "Hazel observes the couple's interaction with detached curiosity but does not engage."
+            },
+            {
+              "target": "Patrick",
+              "polarity": "mixed",
+              "description": "Hazel views Patrick as a cautionary figure who uses his cancer survivor status to lead the support group."
+            },
+            {
+              "target": "Isaac",
+              "polarity": "mixed",
+              "description": "Hazel shares a moment of mutual disapproval with Isaac, indicating a bond of shared skepticism.; Hazel Grace perceives Isaac's emotional burden regarding his impending blindness."
+            },
+            {
+              "target": "the support group",
+              "polarity": "positive",
+              "description": "receives collective verbal support after disclosure"
+            },
+            {
+              "target": "Frannie",
+              "polarity": "mixed",
+              "description": "Hazel complies with her mother's expectations despite lacking personal investment in the activity."
+            },
+            {
+              "target": "Hazel's parents",
+              "polarity": "positive",
+              "description": "Hazel demonstrates concern for her parents' emotional well-being by encouraging them to take time away from caretaking"
+            },
+            {
+              "target": "Michael",
+              "polarity": "positive",
+              "description": "Hazel redirects Michael's attempt at connection toward his well-being."
+            },
+            {
+              "target": "herself",
+              "polarity": "negative",
+              "description": "Hazel experiences self-disapproval"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "scene_id": 18,
+      "scene_title": "EXT/INT. GUS'S HOUSE - SAME",
+      "characters": [
+        "Augustus Waters",
+        "Hazel Grace"
+      ],
+      "events": [
+        "Hazel reveals that her tumors have shrunk and her metastases have barely progressed, indicating a temporary medical stabilization despite ongoing lung issues.",
+        "An informal, intimate conversation between Hazel and Gus during a car ride, serving as emotional and informational bonding time.",
+        "Gus playfully attributes Hazel's sophistication to her being a college girl after learning she has her GED.",
+        "Hazel responds to Gus's joke with a light shove, signaling ease and growing intimacy.",
+        "Gus successfully drives and parks his car in his driveway, marking the end of the car ride and transition to a new location."
+      ],
+      "character_states": {
+        "Augustus Waters": {
+          "goal": [
+            "Augustus Waters engages in playful physical and verbal banter, indicating growing emotional comfort with Hazel.",
+            "Augustus engages in light, playful interaction with Hazel, indicating comfort and mutual ease."
+          ],
+          "belief": [
+            "Augustus Waters uses humor to frame his cancer-related challenges.",
+            "Augustus Waters is self-aware about his poor driving skills.",
+            "Augustus Waters demonstrates openness to personal disclosure by prompting Hazel to share her cancer story.",
+            "Augustus Waters shows self-awareness about his limitations by acknowledging his repeated failure to pass the driving test.",
+            "Augustus Waters uses humor to address serious topics, as seen in his 'cancer perk' remark.",
+            "Augustus Waters is impressed by Hazel's maturity and perceives her as sophisticated.",
+            "Augustus Waters displays affectionate and playful engagement in his interaction with Hazel.",
+            "Augustus is impressed and emotionally affected by Hazel's presence, showing growing affection.",
+            "Augustus Waters is genuinely impressed and emotionally affected by Hazel's medical progress and resilience."
+          ],
+          "knowledge": [
+            "I remember Hazel telling me that her tumors had shrunk and her metastases had barely progressed, which gave me some hope even though her lungs were still fragile.",
+            "I was driving the car with one eye on the road and the other on Hazel, and I remember feeling totally dazzled by her during that quiet, intimate conversation we had.",
+            "I called Hazel a college girl and said it explained her aura of sophistication, just to tease her a little.",
+            "I smiled at her after my joke, and she smiled back and gave me a light shove on the arm—I could feel us easing into each other.",
+            "I successfully drove us home and parked my car in the driveway, and I said, 'We're here,' marking the end of the ride and our arrival."
+          ],
+          "relationships": [
+            {
+              "target": "Hazel Grace",
+              "polarity": "positive",
+              "description": "Gus shares a personal vulnerability with Hazel, inviting mutual openness."
+            },
+            {
+              "target": "Hazel Grace",
+              "polarity": "positive",
+              "description": "Gus shares a personal vulnerability with Hazel, inviting mutual openness.; Gus and Hazel display mutual ease and growing intimacy through playful interaction; Gus shares a moment of playful ease with Hazel Grace during the transition; Augustus Waters shows deepened admiration and emotional engagement toward Hazel upon hearing her medical update"
+            }
+          ]
+        },
+        "Hazel Grace": {
+          "goal": [
+            "Hazel Grace's activities are limited due to her medical condition, as indicated by her inability to attend school."
+          ],
+          "belief": [
+            "Hazel Grace demonstrates resilience by enrolling in a low-efficacy experimental drug trial despite its poor success rate.",
+            "Hazel Grace exhibits self-awareness regarding her rare positive response to Phalanxifor, acknowledging it as an anomaly.",
+            "Hazel Grace has a fragile health condition with recently shrunk tumors and stable mets.",
+            "Hazel Grace displays a sense of modesty when receiving compliments, responding plainly to Gus's remark about her sophistication.",
+            "Hazel Grace is unable to attend traditional school due to medical constraints."
+          ],
+          "knowledge": [
+            "I told Gus that my tumors have shrunk and my metastases have hardly grown since the last scan, which means things are stable for now even though my lungs still aren't doing well.",
+            "I remember talking with Gus in the car, just the two of us, sharing quiet moments and words that felt close and real, like we were really seeing each other.",
+            "I remember Gus teasing me, saying I must be a college girl and that’s why I have this ‘aura of sophistication,’ after I told him I had my GED.",
+            "I smiled back at Gus and gave him a light shove on his arm, just playful enough to feel like we were really starting to ease into each other.",
+            "I was in the car with Gus when he pulled into his driveway, and I saw him park; he turned to me and said, 'We're here,' marking the end of the ride.",
+            "I told Augustus I got my GED, and he called me a college girl like it meant something—like I wasn’t just a sick kid skipping school. I remember the way he smiled, and how I shoved his arm, light and easy, like I wasn’t afraid to touch him."
+          ],
+          "relationships": [
+            {
+              "target": "Augustus Waters",
+              "polarity": "positive",
+              "description": "Hazel begins to form a personal connection with Augustus after his direct approach and compliment; Hazel's perception of Augustus shifts from disapproval to respect due to his symbolic use of the unlit cigarette."
+            },
+            {
+              "target": "Augustus Waters",
+              "polarity": "positive",
+              "description": "Hazel begins to form a personal connection with Augustus after his direct approach and compliment; Hazel's perception of Augustus shifts from disapproval to respect due to his symbolic use of the unlit cigarette.; Hazel responds to Gus's joke with physical playfulness, indicating growing ease and intimacy in their relationship."
+            },
+            {
+              "target": "the doctor",
+              "polarity": "mixed",
+              "description": "Hazel resists the doctor's diagnostic authority and uses sarcasm to deflect medical authority while remaining in a position of obligation."
+            },
+            {
+              "target": "Young Couple",
+              "polarity": "mixed",
+              "description": "Hazel observes the couple's interaction with detached curiosity but does not engage."
+            },
+            {
+              "target": "Patrick",
+              "polarity": "mixed",
+              "description": "Hazel views Patrick as a cautionary figure who uses his cancer survivor status to lead the support group."
+            },
+            {
+              "target": "Isaac",
+              "polarity": "mixed",
+              "description": "Hazel shares a moment of mutual disapproval with Isaac, indicating a bond of shared skepticism.; Hazel Grace perceives Isaac's emotional burden regarding his impending blindness."
+            },
+            {
+              "target": "the support group",
+              "polarity": "positive",
+              "description": "receives collective verbal support after disclosure"
+            },
+            {
+              "target": "Frannie",
+              "polarity": "mixed",
+              "description": "Hazel complies with her mother's expectations despite lacking personal investment in the activity."
+            },
+            {
+              "target": "Hazel's parents",
+              "polarity": "positive",
+              "description": "Hazel demonstrates concern for her parents' emotional well-being by encouraging them to take time away from caretaking"
+            },
+            {
+              "target": "Michael",
+              "polarity": "positive",
+              "description": "Hazel redirects Michael's attempt at connection toward his well-being."
+            },
+            {
+              "target": "herself",
+              "polarity": "negative",
+              "description": "Hazel experiences self-disapproval"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "scene_id": 19,
+      "scene_title": "INT. HAZEL'S BEDROOM - ANOTHER NIGHT",
+      "characters": [
+        "Augustus Waters",
+        "Frannie Lancaster",
+        "Hazel Grace"
+      ],
+      "events": [
+        "Gus rolls his eyes when explaining his parents' engraved plaques as 'encouragements', signaling mild embarrassment or affectionate mockery to Hazel.",
+        "Gus's parents are preparing dinner in the kitchen when Hazel arrives with Gus.",
+        "Gus brings Hazel into his house and introduces her to his parents, who are making dinner in the kitchen.",
+        "Hazel clarifies that she goes by 'Hazel', not 'Hazel Grace', asserting her preferred identity.",
+        "Gus abruptly ends the parental introduction and pulls Hazel downstairs, redirecting focus to private time together.",
+        "Gus leads Hazel downstairs to his basement bedroom, revealing personal space filled with video games, band posters, and basketball memorabilia.",
+        "Hazel struggles with breathing after descending stairs and standing, requiring rest on Gus's bed.",
+        "Hazel names 'An Imperial Affliction' as her favorite novel, describing it as deeply meaningful and spiritually significant to her.",
+        "Gus commits to reading 'An Imperial Affliction' despite initial skepticism, marking a shift in his attitude toward Hazel's inner world.",
+        "Gus gives Hazel a novelization of his favorite video game in exchange for her reading 'An Imperial Affliction', forming a symbolic pact.",
+        "Their hands briefly tangle when exchanging books, creating a moment of romantic tension and connection.",
+        "Gus and Hazel have an intimate conversation in his basement bedroom after being introduced to his parents.",
+        "Gus flirts with Hazel by saying he loves it when she talks medical, responding to her explanation of cold hands."
+      ],
+      "character_states": {
+        "Augustus Waters": {
+          "goal": [
+            "Augustus Waters engages in playful physical and verbal banter, indicating growing emotional comfort with Hazel.",
+            "Augustus engages in light, playful interaction with Hazel, indicating comfort and mutual ease.",
+            "Augustus Waters has physical limitations due to having one leg, though he manages mobility better than Hazel.",
+            "Augustus Waters demonstrates attentiveness to Hazel's physical condition by waiting for her breathing to stabilize before continuing conversation."
+          ],
+          "belief": [
+            "Augustus Waters is impressed by Hazel's maturity and perceives her as sophisticated.",
+            "Augustus Waters displays affectionate and playful engagement in his interaction with Hazel.",
+            "Augustus is impressed and emotionally affected by Hazel's presence, showing growing affection.",
+            "Augustus Waters is genuinely impressed and emotionally affected by Hazel's medical progress and resilience.",
+            "Augustus Waters uses humor and sarcasm to deflect seriousness, particularly around personal items related to his illness.",
+            "Augustus Waters values personal identity beyond illness, showing interest in Hazel's passions rather than her medical condition.",
+            "Augustus Waters rejects the idea of being defined by his illness and challenges others not to become their disease.",
+            "Augustus Waters shows initiative in forming reciprocal emotional connections, as seen in proposing a book exchange to deepen mutual understanding.",
+            "Augustus Waters is curious about others' personal interests beyond their illness.",
+            "Augustus Waters is attentive to Hazel's physical condition and waits for her to recover before engaging further.",
+            "Augustus Waters values personal passions and interests beyond medical identity.",
+            "Augustus Waters refers to his medical items as 'cancer perks' with a tone of irony or detachment.",
+            "Augustus Waters is physically capable despite having one leg, moving more easily than Hazel with her oxygen tank.",
+            "Augustus Waters is attentive to Hazel's physical state, checking if she is okay and waiting for her breathing to stabilize.",
+            "Augustus Waters rejects the idea of being defined by cancer and challenges others not to become their disease.",
+            "Augustus Waters is eager to share his personal interests, particularly his favorite book and video games, with Hazel.",
+            "Augustus Waters rejects the idea of being defined solely by cancer and challenges others not to become their disease."
+          ],
+          "knowledge": [
+            "I rolled my eyes when I told Hazel about my parents' engraved plaques being called 'encouragements,' not taking it too seriously.",
+            "I saw my parents in the kitchen getting dinner ready when Hazel came over with me.",
+            "I heard Hazel say her name was just 'Hazel,' not 'Hazel Grace,' when I introduced her to my parents.",
+            "I brought Hazel into my house and introduced her to my parents while they were making dinner in the kitchen.",
+            "I abruptly told my parents we were going downstairs and then pulled Hazel with me to my bedroom, wanting some privacy.",
+            "I led Hazel down to my basement bedroom, showing her around my space with the video games, band posters, and all my basketball stuff—I could tell she was taking it in.",
+            "I saw Hazel struggling to breathe after we got downstairs, so I stayed close when she sat on my bed and said she might faint—I waited with her until her breathing slowed down.",
+            "I remember Hazel telling me that her favorite novel was 'An Imperial Affliction,' and she called it her bible—something deeply meaningful that helped her make sense of being sick.",
+            "When I handed her the book, our hands got tangled for a brief moment, and I felt this sudden, quiet spark between us.",
+            "I gave her the novelization of my favorite video game and promised to read 'An Imperial Affliction' even though I wasn't sure I'd like it, making a kind of pact between us.",
+            "I flirted with her by saying I love it when she talks medical, after she explained why her hands were cold.",
+            "I sat with Hazel on my bed in the basement, asked her about her story, and we ended up talking deeply about her favorite book and even flirted a little.",
+            "I showed Hazel the trophies and autographed sneakers in my room, told her which ones were mine from basketball and which were just 'cancer perks'—she looked at them like they meant something, but I had to make it clear: those weren’t real victories.",
+            "I sat next to her on the bed after she needed to rest—her breathing was heavy, she joked about fainting—and when I asked if she was okay, she smiled, and for a second it felt like we were just two normal people, not patients."
+          ],
+          "relationships": [
+            {
+              "target": "Hazel Grace",
+              "polarity": "positive",
+              "description": "Gus shares a personal vulnerability with Hazel, inviting mutual openness.; Gus and Hazel display mutual ease and growing intimacy through playful interaction; Gus shares a moment of playful ease with Hazel Grace during the transition; Augustus Waters shows deepened admiration and emotional engagement toward Hazel upon hearing her medical update"
+            },
+            {
+              "target": "Hazel Grace",
+              "polarity": "positive",
+              "description": "Gus shares a personal vulnerability with Hazel, inviting mutual openness.; Gus and Hazel display mutual ease and growing intimacy through playful interaction; Gus flirts with Hazel by expressing attraction to her medical talk, creating a moment of romantic tension.; Gus initiates a shift from public to private space with Hazel, signaling intimacy and exclusivity; Gus initiates a reciprocal book exchange, creating a shared activity that deepens their connection.; Gus shares a moment of mutual humor with Hazel by rolling his eyes at his parents' 'encouragements'; Gus shows patient concern for Hazel's physical condition as she struggles to breathe"
+            },
+            {
+              "target": "Gus's mom",
+              "polarity": "positive",
+              "description": "Gus has a casually familiar dynamic with his parents, marked by mild teasing and comfort"
+            }
+          ]
+        },
+        "Frannie Lancaster": {
+          "goal": [
+            "Support and protect Hazel while encouraging her to engage socially and attend support group.",
+            "Aim: Discover how Hazel obtained the novella"
+          ],
+          "belief": [
+            "Frannie believes Hazel is emotionally withdrawn and needs external social interaction beyond doctors and reading."
+          ],
+          "knowledge": [],
+          "relationships": [
+            {
+              "target": "Hazel Grace",
+              "polarity": "positive",
+              "description": "Loving, protective mother dedicated to managing Hazel's care and emotional wellbeing."
+            }
+          ]
+        },
+        "Hazel Grace": {
+          "goal": [
+            "Hazel Grace's activities are limited due to her medical condition, as indicated by her inability to attend school.",
+            "Hazel Grace requires rest after physical activity and communicates her need to sit down when fatigued.",
+            "Hazel Grace's physical stamina is limited due to weak lungs, requiring frequent rest and sitting."
+          ],
+          "belief": [
+            "Hazel Grace has a fragile health condition with recently shrunk tumors and stable mets.",
+            "Hazel Grace displays a sense of modesty when receiving compliments, responding plainly to Gus's remark about her sophistication.",
+            "Hazel Grace is unable to attend traditional school due to medical constraints.",
+            "Hazel Grace experiences physical difficulty with mobility and exertion due to weak lungs and reliance on an oxygen tank.",
+            "Hazel Grace downplays her own significance, describing herself as 'un-extraordinary'.",
+            "Hazel Grace holds 'An Imperial Affliction' in high regard, describing it as her 'bible'.",
+            "Hazel Grace experiences physical limitations due to weak lungs and relies on an oxygen tank.",
+            "Hazel Grace uses self-deprecating humor to cope with her physical condition.",
+            "Hazel Grace has a self-deprecating sense of humor about her physical limitations.",
+            "Hazel Grace has a self-deprecating sense of humor about her physical limitations due to illness.",
+            "Hazel Grace feels defined by her illness but resists being reduced to it.",
+            "Hazel Grace is initially hesitant to share personal interests beyond her illness.",
+            "Hazel Grace resists being defined by her cancer diagnosis and distinguishes her identity from her illness.",
+            "Hazel Grace views 'An Imperial Affliction' as a deeply meaningful and personal book, almost sacred.",
+            "Hazel Grace holds 'An Imperial Affliction' in high regard, describing it as emotionally significant and intellectually resonant.",
+            "Hazel Grace identifies cancer as a defining aspect of her life but resists being reduced to it.",
+            "prefers to be called 'Hazel' rather than 'Hazel Grace'",
+            "Hazel allows Gus to witness her physical vulnerability, indicating a level of trust in him.",
+            "Hazel begins to trust Gus with something deeply personal by sharing her favorite book.",
+            "Hazel distinguishes her identity from her illness by redirecting Gus from her cancer story to her passions."
+          ],
+          "knowledge": [
+            "I saw Gus roll his eyes when he called his parents' plaques 'encouragements,' and I could tell he meant it affectionately but also a little mockingly.",
+            "When I arrived at Gus's house, I noticed his parents were already busy making dinner in the kitchen.",
+            "Gus introduced me to his parents in the kitchen, and I realized they didn’t seem surprised to see him with a girl, which I made a mental note of.",
+            "When Gus introduced me as 'Hazel Grace,' I corrected him and said it's just 'Hazel,' because that's what I go by.",
+            "After the quick introduction, Gus abruptly said we were going downstairs and then pulled me into the next room, leaving his parents behind.",
+            "I followed Gus downstairs to his basement bedroom, and I saw it was filled with video games, band posters, and basketball memorabilia—he even pointed out what was really his and what he called 'cancer perks.'",
+            "I struggled to breathe after walking down the stairs and had to sit on Gus's bed to recover—I told him I'd be fine unless I fainted, joking that I'm a bit of a Victorian lady that way.",
+            "I told Gus that 'An Imperial Affliction' is my favorite novel—my bible, really—and that its author understands what it’s like to be dying without having died, which means something deep to me.",
+            "I saw that Gus decided to read 'An Imperial Affliction' even though he wasn’t sure about it at first, and I realized he was trying to understand my world.",
+            "I gave Gus my copy of 'An Imperial Affliction' and he handed me a novelization of his favorite video game, and when I took it, our hands got tangled for a brief, charged moment—it felt like a real connection.",
+            "Down in his basement bedroom, I sat on the bed while Gus sat beside me, and we started talking—really talking—about my favorite book and what it means to me, and I remember feeling both exposed and seen.",
+            "I explained why my hands were cold, and Gus flirted with me, saying he loves it when I talk medical—he made me feel seen in a whole new way.",
+            "I told him 'An Imperial Affliction' was my favorite book, my voice a little unsteady, like saying it out loud made it too real.",
+            "Our hands brushed when he reached for the book, just a second too long, and he teased me about my cold hands—my skin tingled even after he pulled away."
+          ],
+          "relationships": [
+            {
+              "target": "Frannie",
+              "polarity": "mixed",
+              "description": "Hazel complies with her mother's expectations despite lacking personal investment in the activity."
+            },
+            {
+              "target": "Augustus Waters",
+              "polarity": "positive",
+              "description": "Hazel begins to form a personal connection with Augustus after his direct approach and compliment; Hazel's perception of Augustus shifts from disapproval to respect due to his symbolic use of the unlit cigarette.; Hazel responds to Gus's joke with physical playfulness, indicating growing ease and intimacy in their relationship."
+            },
+            {
+              "target": "Augustus Waters",
+              "polarity": "mixed",
+              "description": "Hazel begins to form a personal connection with Augustus after his direct approach and compliment; Hazel's perception of Augustus shifts from disapproval to respect due to his symbolic use of the unlit cigarette.; Hazel begins to trust Gus with something deeply personal by sharing her favorite book.; Hazel allows Gus to witness her physical vulnerability, indicating a level of trust in him.; Hazel responds to Gus's flirtation with embarrassment, indicating emerging romantic awareness.; shares a moment of nonverbal humor with Gus through his eye-rolling at his parents' behavior"
+            },
+            {
+              "target": "the doctor",
+              "polarity": "mixed",
+              "description": "Hazel resists the doctor's diagnostic authority and uses sarcasm to deflect medical authority while remaining in a position of obligation."
+            },
+            {
+              "target": "Young Couple",
+              "polarity": "mixed",
+              "description": "Hazel observes the couple's interaction with detached curiosity but does not engage."
+            },
+            {
+              "target": "Patrick",
+              "polarity": "mixed",
+              "description": "Hazel views Patrick as a cautionary figure who uses his cancer survivor status to lead the support group."
+            },
+            {
+              "target": "Isaac",
+              "polarity": "mixed",
+              "description": "Hazel shares a moment of mutual disapproval with Isaac, indicating a bond of shared skepticism.; Hazel Grace perceives Isaac's emotional burden regarding his impending blindness."
+            },
+            {
+              "target": "the support group",
+              "polarity": "positive",
+              "description": "receives collective verbal support after disclosure"
+            },
+            {
+              "target": "Hazel's parents",
+              "polarity": "positive",
+              "description": "Hazel demonstrates concern for her parents' emotional well-being by encouraging them to take time away from caretaking"
+            },
+            {
+              "target": "Michael",
+              "polarity": "positive",
+              "description": "Hazel redirects Michael's attempt at connection toward his well-being."
+            },
+            {
+              "target": "herself",
+              "polarity": "negative",
+              "description": "Hazel experiences self-disapproval"
+            },
+            {
+              "target": "Gus's parents",
+              "polarity": "positive",
+              "description": "has been introduced to Gus's parents in a casual family setting"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "scene_id": 20,
+      "scene_title": "INT. HAZEL'S DINING ROOM - NIGHT",
+      "characters": [
+        "Augustus Waters",
+        "Frannie Lancaster",
+        "Hazel Grace"
+      ],
+      "events": [
+        "Hazel is reading a novella written by Gus, indicating he gave her the book, which represents a personal and creative gesture.",
+        "Hazel insists she is not waiting for Gus to call, despite clear signs of anticipation.",
+        "Frannie observes the new book and comments on it, initiating a brief exchange about Gus.",
+        "Hazel reads Gus's novella in bed at night while Frannie briefly visits the room.",
+        "Hazel repeatedly checks her phone while engaging in daily activities, revealing her emotional preoccupation with hearing from Gus."
+      ],
+      "character_states": {
+        "Augustus Waters": {
+          "goal": [
+            "Augustus Waters has physical limitations due to having one leg, though he manages mobility better than Hazel.",
+            "Augustus Waters demonstrates attentiveness to Hazel's physical condition by waiting for her breathing to stabilize before continuing conversation."
+          ],
+          "belief": [
+            "Augustus Waters uses humor and sarcasm to deflect seriousness, particularly around personal items related to his illness.",
+            "Augustus Waters values personal identity beyond illness, showing interest in Hazel's passions rather than her medical condition.",
+            "Augustus Waters rejects the idea of being defined by his illness and challenges others not to become their disease.",
+            "Augustus Waters shows initiative in forming reciprocal emotional connections, as seen in proposing a book exchange to deepen mutual understanding.",
+            "Augustus Waters is curious about others' personal interests beyond their illness.",
+            "Augustus Waters is attentive to Hazel's physical condition and waits for her to recover before engaging further.",
+            "Augustus Waters values personal passions and interests beyond medical identity.",
+            "Augustus Waters refers to his medical items as 'cancer perks' with a tone of irony or detachment.",
+            "Augustus Waters is physically capable despite having one leg, moving more easily than Hazel with her oxygen tank.",
+            "Augustus Waters is attentive to Hazel's physical state, checking if she is okay and waiting for her breathing to stabilize.",
+            "Augustus Waters rejects the idea of being defined by cancer and challenges others not to become their disease.",
+            "Augustus Waters is eager to share his personal interests, particularly his favorite book and video games, with Hazel.",
+            "Augustus Waters rejects the idea of being defined solely by cancer and challenges others not to become their disease."
+          ],
+          "knowledge": [
+            "I think I gave Hazel the novella, and her reading it might mean she values what I wrote, though I'm not sure how much it really means to her.",
+            "I was reading my novella in bed one night when Frannie came into the room for a moment.",
+            "I told my mom I wasn't waiting for Gus to call, even though I knew I was hoping he would.",
+            "I kept checking my phone while brushing my teeth, watching TV, eating breakfast, and staring out the window, trying to pretend I didn't care if Gus called."
+          ],
+          "relationships": [
+            {
+              "target": "Hazel Grace",
+              "polarity": "positive",
+              "description": "Gus shares a personal vulnerability with Hazel, inviting mutual openness.; Gus and Hazel display mutual ease and growing intimacy through playful interaction; Gus flirts with Hazel by expressing attraction to her medical talk, creating a moment of romantic tension.; Gus initiates a shift from public to private space with Hazel, signaling intimacy and exclusivity; Gus initiates a reciprocal book exchange, creating a shared activity that deepens their connection.; Gus shares a moment of mutual humor with Hazel by rolling his eyes at his parents' 'encouragements'; Gus shows patient concern for Hazel's physical condition as she struggles to breathe"
+            },
+            {
+              "target": "Hazel Grace",
+              "polarity": "positive",
+              "description": "Gus shares a personal vulnerability with Hazel, inviting mutual openness.; Gus and Hazel display mutual ease and growing intimacy through playful interaction; Gus initiates a reciprocal book exchange, creating a shared activity that deepens their connection."
+            },
+            {
+              "target": "Gus's mom",
+              "polarity": "positive",
+              "description": "Gus has a casually familiar dynamic with his parents, marked by mild teasing and comfort"
+            },
+            {
+              "target": "Augustus Waters",
+              "polarity": "positive",
+              "description": "Hazel is emotionally preoccupied with Augustus Waters, indicating heightened relational interest."
+            }
+          ]
+        },
+        "Frannie Lancaster": {
+          "goal": [
+            "Support and protect Hazel while encouraging her to engage socially and attend support group."
+          ],
+          "belief": [
+            "Frannie believes Hazel is emotionally withdrawn and needs external social interaction beyond doctors and reading."
+          ],
+          "knowledge": [
+            "I saw Hazel with a new book, one I hadn’t seen before, and when I asked if it was from him, she joked about herpes like it was nothing—but I could tell she was trying too hard to act casual.",
+            "I saw Hazel's phone buzz. She looked excited, then disappointed. I said I was sure he'd call. She said she wasn't worried. I didn't say anything after that."
+          ],
+          "relationships": [
+            {
+              "target": "Hazel Grace",
+              "polarity": "positive",
+              "description": "Loving, protective mother dedicated to managing Hazel's care and emotional wellbeing."
+            }
+          ]
+        },
+        "Hazel Grace": {
+          "goal": [
+            "Hazel Grace requires rest after physical activity and communicates her need to sit down when fatigued.",
+            "Hazel Grace's physical stamina is limited due to weak lungs, requiring frequent rest and sitting.",
+            "Hazel Grace habitually checks her phone while attempting to suppress anticipation for Gus's contact.",
+            "Hazel attempts to suppress her urge to check her phone, indicating self-imposed emotional restraint."
+          ],
+          "belief": [
+            "Hazel Grace experiences physical difficulty with mobility and exertion due to weak lungs and reliance on an oxygen tank.",
+            "Hazel Grace downplays her own significance, describing herself as 'un-extraordinary'.",
+            "Hazel Grace holds 'An Imperial Affliction' in high regard, describing it as her 'bible'.",
+            "Hazel Grace experiences physical limitations due to weak lungs and relies on an oxygen tank.",
+            "Hazel Grace uses self-deprecating humor to cope with her physical condition.",
+            "Hazel Grace has a self-deprecating sense of humor about her physical limitations.",
+            "Hazel Grace has a self-deprecating sense of humor about her physical limitations due to illness.",
+            "Hazel Grace feels defined by her illness but resists being reduced to it.",
+            "Hazel Grace is initially hesitant to share personal interests beyond her illness.",
+            "Hazel Grace resists being defined by her cancer diagnosis and distinguishes her identity from her illness.",
+            "Hazel Grace views 'An Imperial Affliction' as a deeply meaningful and personal book, almost sacred.",
+            "Hazel Grace holds 'An Imperial Affliction' in high regard, describing it as emotionally significant and intellectually resonant.",
+            "Hazel Grace identifies cancer as a defining aspect of her life but resists being reduced to it.",
+            "Hazel Grace downplays her emotional investment in Gus to avoid vulnerability.",
+            "Hazel Grace exhibits anxiety and internal anticipation regarding communication from Gus, despite verbally denying it.",
+            "Hazel is emotionally preoccupied with Gus and anticipates contact from him."
+          ],
+          "knowledge": [
+            "I think Gus gave me this novella, and reading it feels like a personal thing, something he made just for me, though I'm not sure what it means.",
+            "I told my mom I'm not waiting for Gus to call—it's no big deal, we just hung out—but even as I said it, I could feel myself hoping my phone would buzz with his name.",
+            "Frannie noticed the new book and commented on it, asking if Gus gave it to me, and when I didn't answer, she just stayed quiet in a way that felt like she knew more than I wanted her to.",
+            "I was reading Gus's novella in bed at night when Frannie briefly came into the room, and I kept on not waiting for his call.",
+            "I kept checking my phone while brushing my teeth, eating breakfast, watching TV, and staring out at the rain, trying to pretend I wasn't desperate to hear from him, but I always ended up looking at it again."
+          ],
+          "relationships": [
+            {
+              "target": "Frannie",
+              "polarity": "mixed",
+              "description": "Hazel complies with her mother's expectations despite lacking personal investment in the activity."
+            },
+            {
+              "target": "Augustus Waters",
+              "polarity": "mixed",
+              "description": "Hazel begins to form a personal connection with Augustus after his direct approach and compliment; Hazel's perception of Augustus shifts from disapproval to respect due to his symbolic use of the unlit cigarette.; Hazel begins to trust Gus with something deeply personal by sharing her favorite book.; Hazel allows Gus to witness her physical vulnerability, indicating a level of trust in him.; Hazel responds to Gus's flirtation with embarrassment, indicating emerging romantic awareness.; shares a moment of nonverbal humor with Gus through his eye-rolling at his parents' behavior"
+            },
+            {
+              "target": "Augustus Waters",
+              "polarity": "mixed",
+              "description": "Hazel begins to form a personal connection with Augustus after his direct approach and compliment; Hazel's perception of Augustus shifts from disapproval to respect due to his symbolic use of the unlit cigarette.; Hazel begins to trust Gus with something deeply personal by sharing her favorite book.; Hazel downplays the emotional importance of her connection with Gus; Hazel is emotionally preoccupied with Gus and anticipates contact from him."
+            },
+            {
+              "target": "the doctor",
+              "polarity": "mixed",
+              "description": "Hazel resists the doctor's diagnostic authority and uses sarcasm to deflect medical authority while remaining in a position of obligation."
+            },
+            {
+              "target": "Young Couple",
+              "polarity": "mixed",
+              "description": "Hazel observes the couple's interaction with detached curiosity but does not engage."
+            },
+            {
+              "target": "Patrick",
+              "polarity": "mixed",
+              "description": "Hazel views Patrick as a cautionary figure who uses his cancer survivor status to lead the support group."
+            },
+            {
+              "target": "Isaac",
+              "polarity": "mixed",
+              "description": "Hazel shares a moment of mutual disapproval with Isaac, indicating a bond of shared skepticism.; Hazel Grace perceives Isaac's emotional burden regarding his impending blindness."
+            },
+            {
+              "target": "the support group",
+              "polarity": "positive",
+              "description": "receives collective verbal support after disclosure"
+            },
+            {
+              "target": "Hazel's parents",
+              "polarity": "positive",
+              "description": "Hazel demonstrates concern for her parents' emotional well-being by encouraging them to take time away from caretaking"
+            },
+            {
+              "target": "Michael",
+              "polarity": "positive",
+              "description": "Hazel redirects Michael's attempt at connection toward his well-being."
+            },
+            {
+              "target": "herself",
+              "polarity": "negative",
+              "description": "Hazel experiences self-disapproval"
+            },
+            {
+              "target": "Gus's parents",
+              "polarity": "positive",
+              "description": "has been introduced to Gus's parents in a casual family setting"
+            }
+          ]
+        }
+      }
+    }
+  ]
+}
