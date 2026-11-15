@@ -433,7 +433,7 @@ function drawGraph(graphData) {
     const innerText = getInnerNodeText(node, pos);
     if (innerText) {
       const textInner = document.createElementNS("http://www.w3.org/2000/svg", "text");
-      const isDark = node.type === "Scene" || node.type === "StateClaim" || node.type === "Development" || node.type === "PersonaPhase" || node.type === "Entity" || node.type === "Fact";
+      const isDark = node.type === "Scene" || node.type === "PersonaPhase" || node.type === "Entity" || node.type === "Fact";
       textInner.setAttribute("class", `node-label-inner ${isDark ? "dark" : ""}`);
       textInner.setAttribute("text-anchor", "middle");
       textInner.setAttribute("dominant-baseline", "central");

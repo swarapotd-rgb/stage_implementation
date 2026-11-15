@@ -1,61 +1,71 @@
 /* ==========================================================================
    StoryLens: STAGE Paper Implementation Demo
    Visual Identity: Subtle, Elegant Archival Editorial Interface
-   Color Palette (Human UI/UX Design System):
-     - Deep Wine Crimson / Pink Tone:  #861C2D
-     - Soft Dusty Rose / Light Pink:   #CDA393
-     - Warm Rich Chestnut / Brown Tone: #6D380D
-     - Warm Neutral Beige / Sand:      #B5A58E
-     - Light Ivory Parchment / Canvas:  #F8F5EE
-     - Pure White Panel Surface:       #FFFFFF
-     - Deep Espresso Text Ink:         #2C1810
+   Presentation Typography: Plus Jakarta Sans + Space Grotesk + JetBrains Mono
+   Harmonized Color Palette:
+     - Deep Ink Navy:   #142F40
+     - Crimson Rose:    #A6445D
+     - Muted Sky Teal:  #62929E
+     - Deep Olive Moss: #393A10
+     - Warm Parchment:  #E7DECD
+     - Wine Crimson:    #861C2D
+     - Dusty Rose:      #CDA393
+     - Rich Chestnut:   #6D380D
+     - Neutral Beige:   #B5A58E
+     - Light Ivory:     #F8F5EE
+     - Pure White:      #FFFFFF
+     - Espresso Ink:    #1A2530
    ========================================================================== */
 
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&family=Space+Grotesk:wght@500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap');
+
 :root {
-  /* Core Palette Tokens (Strictly from the palette) */
-  --crimson-pink:    #861C2D;  /* Pink Tone: Deep Wine Crimson */
-  --dusty-rose:      #CDA393;  /* Light Pink Tone: Soft Rose Blush */
-  --warm-chestnut:   #6D380D;  /* Brown Tone: Warm Rich Chestnut */
-  --neutral-beige:   #B5A58E;  /* Neutral Beige: Oatmeal Sand */
+  /* High-Distinction Deep Palette Tokens */
+  --deep-navy:       #142F40;  /* Focal navy */
+  --crimson-rose:    #A6445D;  /* Rose crimson */
+  --sky-teal:        #62929E;  /* Muted sky teal */
+  --olive-moss:      #393A10;  /* Deep olive moss */
+  --warm-parchment:  #E7DECD;  /* Warm parchment */
+
+  /* Complementary Natural Swatches */
+  --wine-crimson:    #861C2D;  /* Deep berry wine */
+  --dusty-rose:      #CDA393;  /* Soft dusty rose */
+  --rich-chestnut:   #6D380D;  /* Warm espresso chestnut */
+  --neutral-beige:   #B5A58E;  /* Oatmeal beige */
 
   /* Light Editorial Canvas Surfaces */
-  --page-bg:         #F8F5EE;  /* Subtle, elegant, comforting light ivory canvas */
-  --panel-bg:        #FFFFFF;  /* Clean, crisp white card surfaces */
-  --card-bg:         #FAF7F2;  /* Secondary warm inset card background */
-  --card-bg-hover:   #F3ECE2;  /* Gentle hover warm tint */
-  --card-inset:      #F4EFE6;  /* Deep inset for code/metadata */
+  --page-bg:         #F8F5EE;  /* Soft, warm, eye-comforting ivory canvas */
+  --panel-bg:        #FFFFFF;  /* Crisp white card panels */
+  --card-bg:         #FAF7F2;  /* Secondary inset background */
+  --card-bg-hover:   #F3EDE3;  /* Smooth hover tint */
+  --card-inset:      #F4EFE6;  /* Deep inset for timing/metadata */
 
-  /* Delicately Calibrated Borders */
-  --border-subtle:   rgba(181, 165, 142, 0.28);
-  --border-medium:   rgba(181, 165, 142, 0.55);
+  /* Borders & Dividers */
+  --border-subtle:   rgba(181, 165, 142, 0.32);
+  --border-medium:   rgba(181, 165, 142, 0.58);
   --border-strong:   #B5A58E;
-  --border-accent:   rgba(134, 28, 45, 0.45);
+  --border-navy:     rgba(20, 47, 64, 0.35);
 
-  /* High-Contrast, Eye-Comforting Typography (WCAG AAA) */
-  --text-primary:    #2C1810;  /* Deep espresso ink - soft, never stark black */
-  --text-secondary:  #5C4033;  /* Warm readable chestnut body copy */
-  --text-muted:      #7E6555;  /* Subtle archival metadata */
-  --text-inverse:    #FFFFFF;  /* Pure white text on dark accents */
+  /* Typography Colors (WCAG AAA High Contrast & Eye Comfort) */
+  --text-primary:    #16232F;  /* Deep ink espresso - ultra-legible, soft on the eyes */
+  --text-secondary:  #4E5B66;  /* Readable charcoal body text */
+  --text-muted:      #7B8792;  /* Archival metadata */
+  --text-inverse:    #FFFFFF;  /* Crisp white on deep accents */
 
-  /* Accent Tints & Washes */
-  --crimson-tint:    #F7EBE8;  /* Soft blush wash for tags and badges */
-  --chestnut-tint:   #F5EFEB;  /* Warm amber wash */
-  --beige-tint:      #F5F2EB;  /* Neutral sand wash */
+  /* Modern Presentation Typography System */
+  --font-heading: "Space Grotesk", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --font-sans: "Plus Jakarta Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
 
-  /* Typography Stacks */
-  --font-serif: "Playfair Display", "Baskerville", "Georgia", "Times New Roman", serif;
-  --font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", "Inter", "Helvetica Neue", Arial, sans-serif;
-  --font-mono: ui-monospace, SFMono-Regular, "Cascadia Code", Menlo, Monaco, Consolas, monospace;
-
-  /* Human-Crafted Geometry & Shadows */
-  --radius-panel:  8px;
-  --radius-card:   6px;
-  --radius-button: 5px;
+  /* Human-Calibrated Geometry & Shadows */
+  --radius-panel:  10px;
+  --radius-card:   8px;
+  --radius-button: 6px;
   --radius-badge:  4px;
 
-  --shadow-sm:     0 1px 3px rgba(109, 56, 13, 0.04), 0 1px 2px rgba(109, 56, 13, 0.02);
-  --shadow-md:     0 3px 8px rgba(109, 56, 13, 0.06), 0 1px 3px rgba(109, 56, 13, 0.04);
-  --shadow-lg:     0 8px 24px rgba(109, 56, 13, 0.08), 0 2px 6px rgba(109, 56, 13, 0.03);
+  --shadow-sm:     0 1px 3px rgba(20, 47, 64, 0.05), 0 1px 2px rgba(20, 47, 64, 0.03);
+  --shadow-md:     0 4px 12px rgba(20, 47, 64, 0.07), 0 1px 3px rgba(20, 47, 64, 0.04);
+  --shadow-lg:     0 10px 28px rgba(20, 47, 64, 0.09), 0 3px 8px rgba(20, 47, 64, 0.04);
 }
 
 /* Base Reset & Typography */
@@ -68,61 +78,61 @@
 body {
   background-color: var(--page-bg);
   background-image: 
-    radial-gradient(ellipse at 50% 0%, rgba(205, 163, 147, 0.15) 0%, transparent 70%),
+    radial-gradient(ellipse at 50% 0%, rgba(98, 146, 158, 0.12) 0%, transparent 65%),
     linear-gradient(180deg, rgba(181, 165, 142, 0.08) 1px, transparent 1px);
   background-size: 100% 100%, 100% 32px;
   color: var(--text-primary);
   font-family: var(--font-sans);
-  font-size: 14px;
+  font-size: 14.5px;
   line-height: 1.6;
-  padding: 28px 24px 48px;
+  padding: 28px 24px 50px;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 .container {
-  max-width: 1320px;
+  max-width: 1340px;
   margin: 0 auto;
 }
 
 /* ==========================================================================
-   Header & Archival Scope Provenance Banner
+   Header: Sleek Presentation Title & Film Badge
    ========================================================================== */
 
 header {
   border-bottom: 1px solid var(--border-medium);
-  padding-bottom: 22px;
+  padding-bottom: 20px;
   margin-bottom: 24px;
 }
 
 .header-title-row {
   display: flex;
   justify-content: space-between;
-  align-items: flex-start;
+  align-items: center;
   flex-wrap: wrap;
   gap: 16px;
 }
 
 h1 {
-  font-family: var(--font-serif);
-  font-size: 29px;
+  font-family: var(--font-heading);
+  font-size: 28px;
   font-weight: 700;
-  color: var(--crimson-pink);
-  letter-spacing: -0.01em;
+  color: var(--deep-navy);
+  letter-spacing: -0.02em;
   line-height: 1.25;
 }
 
 .subtitle {
   color: var(--text-secondary);
   font-size: 14px;
-  margin-top: 6px;
-  font-weight: 400;
+  margin-top: 5px;
+  font-weight: 500;
 }
 
 .movie-badge {
-  background: var(--card-bg);
-  border: 1px solid var(--border-strong);
-  color: var(--warm-chestnut);
+  background: var(--panel-bg);
+  border: 1.5px solid var(--deep-navy);
+  color: var(--deep-navy);
   padding: 6px 14px;
   border-radius: var(--radius-badge);
   font-family: var(--font-mono);
@@ -132,40 +142,7 @@ h1 {
   align-items: center;
   gap: 6px;
   box-shadow: var(--shadow-sm);
-}
-
-.provenance-banner {
-  background-color: var(--panel-bg);
-  border: 1px solid var(--border-subtle);
-  border-left: 4px solid var(--crimson-pink);
-  border-radius: var(--radius-panel);
-  padding: 16px 20px;
-  margin-top: 18px;
-  font-size: 13.5px;
-  color: var(--text-secondary);
-  box-shadow: var(--shadow-sm);
-}
-
-.provenance-banner strong {
-  color: var(--text-primary);
-  font-weight: 600;
-}
-
-.provenance-banner a {
-  color: var(--crimson-pink);
-  text-decoration: underline;
-  text-underline-offset: 3px;
-  font-weight: 500;
-}
-
-.scope-implemented {
-  color: var(--crimson-pink);
-  font-weight: 600;
-}
-
-.scope-unimplemented {
-  color: var(--text-muted);
-  font-weight: 600;
+  letter-spacing: -0.01em;
 }
 
 /* ==========================================================================
@@ -176,17 +153,17 @@ h1 {
   background-color: var(--panel-bg);
   border: 1px solid var(--border-subtle);
   border-radius: var(--radius-panel);
-  padding: 20px 22px;
+  padding: 20px 24px;
   margin-bottom: 22px;
   box-shadow: var(--shadow-sm);
 }
 
 .selector-panel h2 {
-  font-family: var(--font-serif);
-  font-size: 14px;
+  font-family: var(--font-heading);
+  font-size: 13.5px;
   text-transform: uppercase;
   letter-spacing: 0.08em;
-  color: var(--warm-chestnut);
+  color: var(--deep-navy);
   margin-bottom: 14px;
   font-weight: 700;
 }
@@ -201,14 +178,14 @@ h1 {
 .checkpoint-pill {
   background: var(--card-bg);
   border: 1px solid var(--border-medium);
-  color: var(--text-secondary);
+  color: var(--text-primary);
   padding: 8px 16px;
   border-radius: var(--radius-button);
   cursor: pointer;
   font-family: var(--font-sans);
-  font-size: 13px;
-  font-weight: 500;
-  transition: all 0.18s ease;
+  font-size: 13.5px;
+  font-weight: 600;
+  transition: all 0.18s cubic-bezier(0.16, 1, 0.3, 1);
   display: inline-flex;
   align-items: center;
   gap: 8px;
@@ -217,31 +194,32 @@ h1 {
 
 .checkpoint-pill:hover {
   background: var(--card-bg-hover);
-  border-color: var(--crimson-pink);
-  color: var(--crimson-pink);
+  border-color: var(--deep-navy);
+  color: var(--deep-navy);
   transform: translateY(-1px);
 }
 
 .checkpoint-pill.active {
-  background: var(--crimson-pink);
-  border-color: var(--crimson-pink);
+  background: var(--deep-navy);
+  border-color: var(--deep-navy);
   color: var(--text-inverse);
-  box-shadow: 0 2px 8px rgba(134, 28, 45, 0.35);
-  font-weight: 600;
+  box-shadow: 0 3px 10px rgba(20, 47, 64, 0.35);
+  font-weight: 700;
 }
 
 .pill-scene-badge {
-  background: rgba(181, 165, 142, 0.25);
-  border: 1px solid rgba(181, 165, 142, 0.45);
+  background: rgba(181, 165, 142, 0.3);
+  border: 1px solid rgba(181, 165, 142, 0.5);
   padding: 2px 7px;
   border-radius: var(--radius-badge);
   font-family: var(--font-mono);
   font-size: 11px;
+  font-weight: 600;
 }
 
 .checkpoint-pill.active .pill-scene-badge {
-  background: rgba(255, 255, 255, 0.2);
-  border-color: rgba(255, 255, 255, 0.35);
+  background: rgba(255, 255, 255, 0.22);
+  border-color: rgba(255, 255, 255, 0.4);
   color: #FFFFFF;
 }
 
@@ -256,10 +234,11 @@ h1 {
 }
 
 .custom-picker-label {
-  color: var(--text-muted);
+  color: var(--text-secondary);
   font-size: 13px;
   font-style: italic;
-  font-family: var(--font-serif);
+  font-family: var(--font-heading);
+  font-weight: 500;
 }
 
 .custom-controls {
@@ -277,46 +256,48 @@ h1 {
   border-radius: var(--radius-button);
   font-family: var(--font-mono);
   font-size: 13px;
+  font-weight: 500;
   transition: all 0.15s ease;
   box-shadow: var(--shadow-sm);
 }
 
 .custom-controls select:focus,
 .custom-controls input[type="number"]:focus {
-  border-color: var(--crimson-pink);
+  border-color: var(--deep-navy);
   outline: none;
-  box-shadow: 0 0 0 3px rgba(134, 28, 45, 0.15);
+  box-shadow: 0 0 0 3px rgba(20, 47, 64, 0.15);
 }
 
 .btn-secondary {
   background: var(--card-bg);
-  border: 1px solid var(--border-strong);
-  color: var(--warm-chestnut);
+  border: 1px solid var(--deep-navy);
+  color: var(--deep-navy);
   padding: 7px 16px;
   border-radius: var(--radius-button);
   cursor: pointer;
+  font-family: var(--font-sans);
   font-size: 13px;
-  font-weight: 600;
+  font-weight: 700;
   transition: all 0.18s ease;
   box-shadow: var(--shadow-sm);
 }
 
 .btn-secondary:hover {
-  background: var(--crimson-pink);
-  border-color: var(--crimson-pink);
+  background: var(--deep-navy);
+  border-color: var(--deep-navy);
   color: var(--text-inverse);
   transform: translateY(-1px);
 }
 
 /* ==========================================================================
-   Checkpoint Status Bar (Archival Ledger Strip)
+   Checkpoint Status Bar
    ========================================================================== */
 
 .checkpoint-status-bar {
   background: var(--panel-bg);
   border: 1px solid var(--border-subtle);
   border-radius: var(--radius-panel);
-  padding: 14px 20px;
+  padding: 14px 22px;
   margin-bottom: 22px;
   display: flex;
   justify-content: space-between;
@@ -333,20 +314,22 @@ h1 {
 }
 
 .status-main strong {
-  font-family: var(--font-serif);
-  font-size: 18px;
-  color: var(--text-primary);
+  font-family: var(--font-heading);
+  font-size: 19px;
+  font-weight: 700;
+  color: var(--deep-navy);
 }
 
 .status-meta {
   font-family: var(--font-mono);
   font-size: 12px;
+  font-weight: 500;
   color: var(--text-secondary);
 }
 
 .badge {
   display: inline-block;
-  padding: 3px 9px;
+  padding: 3px 10px;
   border-radius: var(--radius-badge);
   font-size: 11px;
   font-weight: 700;
@@ -355,26 +338,26 @@ h1 {
 }
 
 .badge-official {
-  background: var(--crimson-tint);
-  border: 1px solid var(--border-accent);
-  color: var(--crimson-pink);
+  background: rgba(57, 58, 16, 0.12);
+  border: 1px solid rgba(57, 58, 16, 0.45);
+  color: var(--olive-moss);
 }
 
 .badge-non-checkpoint {
-  background: var(--beige-tint);
-  border: 1px solid var(--border-strong);
-  color: var(--warm-chestnut);
+  background: rgba(166, 68, 93, 0.12);
+  border: 1px solid rgba(166, 68, 93, 0.45);
+  color: var(--crimson-rose);
 }
 
 /* ==========================================================================
-   Temporal Knowledge Graph Panel (Visual Centerpiece)
+   Temporal Knowledge Graph Panel (High Visual Distinction)
    ========================================================================== */
 
 .graph-panel {
   background-color: var(--panel-bg);
   border: 1px solid var(--border-subtle);
   border-radius: var(--radius-panel);
-  padding: 20px 22px;
+  padding: 22px;
   margin-bottom: 26px;
   box-shadow: var(--shadow-md);
 }
@@ -391,19 +374,20 @@ h1 {
 }
 
 .graph-title-group h2 {
-  font-family: var(--font-serif);
-  font-size: 20px;
+  font-family: var(--font-heading);
+  font-size: 21px;
   font-weight: 700;
-  color: var(--text-primary);
+  color: var(--deep-navy);
   display: flex;
   align-items: center;
   gap: 12px;
+  letter-spacing: -0.01em;
 }
 
 .count-pill {
   background: var(--card-bg);
   border: 1px solid var(--border-medium);
-  color: var(--warm-chestnut);
+  color: var(--deep-navy);
   padding: 3px 10px;
   border-radius: var(--radius-badge);
   font-family: var(--font-mono);
@@ -412,9 +396,10 @@ h1 {
 }
 
 .graph-subtitle {
-  font-size: 13px;
+  font-size: 13.5px;
   color: var(--text-secondary);
   margin-top: 4px;
+  font-weight: 400;
 }
 
 .graph-toolbar {
@@ -438,10 +423,10 @@ h1 {
 }
 
 .layer-filters-label {
-  font-family: var(--font-serif);
+  font-family: var(--font-heading);
   font-size: 12px;
   font-weight: 700;
-  color: var(--warm-chestnut);
+  color: var(--deep-navy);
   text-transform: uppercase;
   letter-spacing: 0.06em;
   margin-right: 4px;
@@ -453,8 +438,9 @@ h1 {
   color: var(--text-secondary);
   padding: 5px 12px;
   border-radius: var(--radius-button);
-  font-size: 12px;
-  font-weight: 500;
+  font-family: var(--font-sans);
+  font-size: 12.5px;
+  font-weight: 600;
   cursor: pointer;
   transition: all 0.15s ease;
   display: inline-flex;
@@ -465,15 +451,15 @@ h1 {
 
 .filter-btn:hover {
   background: var(--card-bg-hover);
-  color: var(--crimson-pink);
-  border-color: var(--crimson-pink);
+  color: var(--deep-navy);
+  border-color: var(--deep-navy);
 }
 
 .filter-btn.active {
-  background: var(--crimson-pink);
-  border-color: var(--crimson-pink);
+  background: var(--deep-navy);
+  border-color: var(--deep-navy);
   color: var(--text-inverse);
-  font-weight: 600;
+  font-weight: 700;
 }
 
 .zoom-controls {
@@ -485,7 +471,7 @@ h1 {
 .zoom-btn {
   background: var(--panel-bg);
   border: 1px solid var(--border-medium);
-  color: var(--text-secondary);
+  color: var(--text-primary);
   width: 30px;
   height: 30px;
   border-radius: var(--radius-button);
@@ -500,9 +486,9 @@ h1 {
 }
 
 .zoom-btn:hover {
-  background: var(--crimson-pink);
+  background: var(--deep-navy);
   color: var(--text-inverse);
-  border-color: var(--crimson-pink);
+  border-color: var(--deep-navy);
 }
 
 .graph-stage-wrapper {
@@ -525,17 +511,17 @@ h1 {
 .graph-canvas-box {
   background-color: #FAF8F4;
   background-image: 
-    linear-gradient(rgba(181, 165, 142, 0.16) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(181, 165, 142, 0.16) 1px, transparent 1px);
+    linear-gradient(rgba(98, 146, 158, 0.12) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(98, 146, 158, 0.12) 1px, transparent 1px);
   background-size: 28px 28px;
-  border: 1px solid var(--border-medium);
+  border: 1.5px solid var(--border-medium);
   border-radius: var(--radius-panel);
   position: relative;
   overflow: hidden;
   height: 100%;
   width: 100%;
   box-sizing: border-box;
-  box-shadow: inset 0 1px 4px rgba(109, 56, 13, 0.05);
+  box-shadow: inset 0 1px 4px rgba(20, 47, 64, 0.05);
 }
 
 .graph-svg {
@@ -551,16 +537,16 @@ h1 {
 
 /* SVG Graph Elements Styling */
 .graph-edge {
-  stroke: var(--neutral-beige);
+  stroke: var(--sky-teal);
   stroke-width: 1.5;
-  stroke-opacity: 0.75;
+  stroke-opacity: 0.65;
   fill: none;
   transition: stroke 0.15s ease, stroke-width 0.15s ease, stroke-opacity 0.15s ease;
 }
 
 .graph-edge.highlighted {
-  stroke: var(--crimson-pink);
-  stroke-width: 2.6;
+  stroke: var(--crimson-rose);
+  stroke-width: 2.8;
   stroke-opacity: 1;
 }
 
@@ -575,14 +561,14 @@ h1 {
 
 .graph-node:hover circle,
 .graph-node:hover rect {
-  filter: drop-shadow(0 2px 8px rgba(134, 28, 45, 0.45));
+  filter: drop-shadow(0 3px 9px rgba(20, 47, 64, 0.4));
 }
 
 .graph-node.selected circle,
 .graph-node.selected rect {
-  stroke: var(--crimson-pink) !important;
-  stroke-width: 3.2px !important;
-  filter: drop-shadow(0 0 10px rgba(134, 28, 45, 0.6));
+  stroke: var(--crimson-rose) !important;
+  stroke-width: 3.5px !important;
+  filter: drop-shadow(0 0 12px rgba(166, 68, 93, 0.7));
 }
 
 .graph-node.dimmed {
@@ -591,8 +577,8 @@ h1 {
 
 .node-label {
   font-family: var(--font-sans);
-  font-size: 9px;
-  font-weight: 600;
+  font-size: 9.5px;
+  font-weight: 700;
   fill: var(--text-primary);
   pointer-events: none;
   user-select: none;
@@ -614,20 +600,20 @@ h1 {
   font-weight: 800;
 }
 
-/* Palette Node Styles (Strictly harmonized across the 11 Node Types) */
-.node-story { fill: #861C2D; stroke: #6D380D; stroke-width: 1.5; }
-.node-character { fill: #861C2D; stroke: #6D380D; stroke-width: 2.5; }
-.node-scene { fill: #FFFFFF; stroke: #B5A58E; stroke-width: 2; }
-.node-checkpoint { fill: #6D380D; stroke: #B5A58E; stroke-width: 2; }
-.node-stateclaim { fill: #F4ECE8; stroke: #861C2D; stroke-width: 1.6; }
-.node-development { fill: #EFE6E1; stroke: #6D380D; stroke-width: 1.6; }
-.node-personaphase { fill: #F5F0E6; stroke: #B5A58E; stroke-width: 2; }
-.node-relationshipphase { fill: #CDA393; stroke: #861C2D; stroke-width: 1.6; }
-.node-entity { fill: #FAF7F2; stroke: #B5A58E; stroke-width: 1.6; stroke-dasharray: 2 2; }
-.node-memory { fill: #CDA393; stroke: #861C2D; stroke-width: 1.6; }
-.node-fact { fill: #FFFFFF; stroke: #6D380D; stroke-width: 1.3; }
+/* Distinct Node Palette Styles (Every node type is visually unique) */
+.node-story { fill: #861C2D; stroke: #E7DECD; stroke-width: 1.5; }
+.node-character { fill: #142F40; stroke: #A6445D; stroke-width: 2.8; }
+.node-scene { fill: #FFFFFF; stroke: #62929E; stroke-width: 2.5; }
+.node-checkpoint { fill: #393A10; stroke: #E7DECD; stroke-width: 2; }
+.node-stateclaim { fill: #A6445D; stroke: #142F40; stroke-width: 1.6; }
+.node-development { fill: #62929E; stroke: #142F40; stroke-width: 1.6; }
+.node-personaphase { fill: #E7DECD; stroke: #393A10; stroke-width: 2.2; }
+.node-relationshipphase { fill: #861C2D; stroke: #62929E; stroke-width: 1.8; }
+.node-entity { fill: #FFFFFF; stroke: #142F40; stroke-width: 1.6; stroke-dasharray: 2 2; }
+.node-memory { fill: #CDA393; stroke: #861C2D; stroke-width: 1.8; }
+.node-fact { fill: #FAF7F2; stroke: #6D380D; stroke-width: 1.4; }
 
-/* Node Inspector Panel (Archival Index Card) */
+/* Node Inspector Panel */
 .graph-inspector {
   background: var(--card-bg);
   border: 1px solid var(--border-medium);
@@ -661,9 +647,9 @@ h1 {
 }
 
 .inspector-title {
-  font-family: var(--font-serif);
+  font-family: var(--font-heading);
   font-size: 16px;
-  font-weight: 600;
+  font-weight: 700;
   color: var(--text-primary);
   line-height: 1.35;
 }
@@ -689,7 +675,7 @@ h1 {
   text-transform: uppercase;
   letter-spacing: 0.05em;
   margin-bottom: 3px;
-  font-weight: 600;
+  font-weight: 700;
 }
 
 .inspector-prop-val {
@@ -705,28 +691,28 @@ h1 {
   text-align: center;
   margin-top: 80px;
   font-style: italic;
-  font-family: var(--font-serif);
+  font-family: var(--font-heading);
   line-height: 1.6;
 }
 
 /* Legend */
 .graph-legend {
   margin-top: 16px;
-  padding: 12px 16px;
+  padding: 12px 18px;
   background: var(--card-bg);
   border: 1px solid var(--border-subtle);
   border-radius: var(--radius-button);
   display: flex;
   flex-wrap: wrap;
   gap: 16px;
-  font-size: 12px;
+  font-size: 12.5px;
   align-items: center;
 }
 
 .legend-title {
-  font-family: var(--font-serif);
+  font-family: var(--font-heading);
   font-weight: 700;
-  color: var(--warm-chestnut);
+  color: var(--deep-navy);
   text-transform: uppercase;
   letter-spacing: 0.06em;
   font-size: 11.5px;
@@ -736,8 +722,8 @@ h1 {
   display: inline-flex;
   align-items: center;
   gap: 7px;
-  color: var(--text-secondary);
-  font-weight: 500;
+  color: var(--text-primary);
+  font-weight: 600;
 }
 
 .legend-dot {
@@ -753,12 +739,12 @@ h1 {
   top: 12px;
   right: 12px;
   background: rgba(248, 245, 238, 0.95);
-  border: 1px dashed var(--crimson-pink);
-  color: var(--crimson-pink);
+  border: 1.5px dashed var(--crimson-rose);
+  color: var(--crimson-rose);
   padding: 6px 14px;
   border-radius: var(--radius-badge);
   font-size: 12px;
-  font-weight: 600;
+  font-weight: 700;
   pointer-events: none;
   z-index: 5;
   font-family: var(--font-mono);
@@ -799,21 +785,21 @@ h1 {
 }
 
 .panel-title {
-  font-family: var(--font-serif);
+  font-family: var(--font-heading);
   font-size: 17px;
-  font-weight: 600;
-  color: var(--text-primary);
+  font-weight: 700;
+  color: var(--deep-navy);
   display: flex;
   align-items: center;
   gap: 10px;
 }
 
 .section-subhead {
-  font-family: var(--font-serif);
-  font-size: 13px;
+  font-family: var(--font-heading);
+  font-size: 12.5px;
   text-transform: uppercase;
   letter-spacing: 0.06em;
-  color: var(--warm-chestnut);
+  color: var(--sky-teal);
   margin-bottom: 12px;
   font-weight: 700;
 }
@@ -836,17 +822,18 @@ h1 {
 }
 
 .card-title {
+  font-family: var(--font-heading);
   font-size: 14px;
-  font-weight: 600;
-  color: var(--text-primary);
+  font-weight: 700;
+  color: var(--deep-navy);
   margin-bottom: 8px;
   line-height: 1.45;
 }
 
 .evidence-tag {
-  background: var(--crimson-tint);
-  border: 1px solid var(--border-accent);
-  color: var(--crimson-pink);
+  background: rgba(166, 68, 93, 0.12);
+  border: 1px solid rgba(166, 68, 93, 0.35);
+  color: var(--crimson-rose);
   padding: 2px 8px;
   border-radius: var(--radius-badge);
   font-size: 11px;
@@ -866,7 +853,7 @@ h1 {
 
 /* Cumulative Memories Dossier */
 .memory-card {
-  border-left: 3.5px solid var(--crimson-pink);
+  border-left: 3.5px solid var(--sky-teal);
 }
 
 .memory-timing-grid {
@@ -888,7 +875,7 @@ h1 {
   text-transform: uppercase;
   letter-spacing: 0.05em;
   margin-bottom: 3px;
-  font-weight: 600;
+  font-weight: 700;
 }
 
 .timing-col-val {
@@ -908,26 +895,23 @@ h1 {
 }
 
 .access-witnessed {
-  background: var(--crimson-tint);
-  border: 1px solid var(--border-accent);
-  color: var(--crimson-pink);
+  background: var(--olive-moss);
+  color: #FFFFFF;
 }
 
 .access-involved {
-  background: var(--chestnut-tint);
-  border: 1px solid rgba(109, 56, 13, 0.4);
-  color: var(--warm-chestnut);
+  background: var(--deep-navy);
+  color: #FFFFFF;
 }
 
 .access-told {
-  background: var(--dusty-rose);
+  background: var(--crimson-rose);
   color: #FFFFFF;
 }
 
 .access-inferred {
-  background: var(--beige-tint);
-  border: 1px solid var(--border-strong);
-  color: var(--warm-chestnut);
+  background: var(--sky-teal);
+  color: #FFFFFF;
 }
 
 .grounded-facts-list {
@@ -944,21 +928,21 @@ h1 {
 
 /* Relationship Polarity Badges */
 .polarity-positive {
-  background: var(--crimson-tint);
-  color: var(--crimson-pink);
-  border: 1px solid var(--border-accent);
+  background: rgba(57, 58, 16, 0.12);
+  color: var(--olive-moss);
+  border: 1px solid rgba(57, 58, 16, 0.4);
 }
 
 .polarity-mixed {
-  background: var(--beige-tint);
-  color: var(--warm-chestnut);
-  border: 1px solid var(--border-strong);
+  background: rgba(98, 146, 158, 0.15);
+  color: var(--deep-navy);
+  border: 1px solid var(--sky-teal);
 }
 
 .polarity-negative {
-  background: rgba(134, 28, 45, 0.2);
-  color: var(--crimson-pink);
-  border: 1px solid var(--crimson-pink);
+  background: rgba(166, 68, 93, 0.15);
+  color: var(--crimson-rose);
+  border: 1px solid var(--crimson-rose);
 }
 
 .polarity-neutral {
@@ -977,7 +961,7 @@ h1 {
   color: var(--text-muted);
   font-size: 13.5px;
   font-style: italic;
-  font-family: var(--font-serif);
+  font-family: var(--font-heading);
 }
 
 .empty-notice strong {
@@ -1002,15 +986,16 @@ h1 {
   color: var(--text-primary);
   padding: 8px 14px;
   border-radius: var(--radius-button);
+  font-family: var(--font-sans);
   font-size: 13px;
   transition: all 0.15s ease;
   box-shadow: var(--shadow-sm);
 }
 
 .filter-input:focus {
-  border-color: var(--crimson-pink);
+  border-color: var(--deep-navy);
   outline: none;
-  box-shadow: 0 0 0 3px rgba(134, 28, 45, 0.15);
+  box-shadow: 0 0 0 3px rgba(20, 47, 64, 0.15);
 }
 
 .filter-select {
@@ -1019,15 +1004,16 @@ h1 {
   color: var(--text-primary);
   padding: 8px 14px;
   border-radius: var(--radius-button);
+  font-family: var(--font-sans);
   font-size: 13px;
   transition: all 0.15s ease;
   box-shadow: var(--shadow-sm);
 }
 
 .filter-select:focus {
-  border-color: var(--crimson-pink);
+  border-color: var(--deep-navy);
   outline: none;
-  box-shadow: 0 0 0 3px rgba(134, 28, 45, 0.15);
+  box-shadow: 0 0 0 3px rgba(20, 47, 64, 0.15);
 }
 
 /* Scrollbars */
@@ -1043,7 +1029,7 @@ h1 {
   border-radius: 4px;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: var(--dusty-rose);
+  background: var(--sky-teal);
 }
 
 /* Accessibility & Prefers Reduced Motion */

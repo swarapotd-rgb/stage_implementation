@@ -4,6 +4,9 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>StoryLens: Checkpoint State Viewer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&family=Space+Grotesk:wght@500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -16,15 +19,6 @@
         </div>
         <div>
           <span class="movie-badge" id="movie-badge">The Fault in Our Stars (2014) &bull; Scenes 1–20 Demo Scope</span>
-        </div>
-      </div>
-      <div class="provenance-banner">
-        <div style="margin-bottom: 6px;">
-          <strong>Scope &amp; Benchmark Provenance:</strong> This demo is an implementation of the <strong>STAGE benchmark paper</strong> (<a href="https://arxiv.org/abs/2601.08510" target="_blank" style="color:var(--teal);">arXiv:2601.08510</a>) over its released annotations for <em>The Fault in Our Stars</em>.
-        </div>
-        <div style="display: flex; gap: 24px; flex-wrap: wrap; margin-top: 8px; font-size: 12.5px;">
-          <div><span class="scope-implemented">&#10003; Implemented:</span> Task 1 checkpoint state claims &amp; developments; Task 3 character memories, persona phases, and relationship phases; as-of temporal story knowledge graph.</div>
-          <div><span class="scope-unimplemented">&#10007; Not Currently Implemented:</span> Raw screenplay text extraction (screenplay excluded from STAGE release), Task 2 QA evaluation, in-script role-playing, book&ndash;film comparison, or Navarasa detection.</div>
         </div>
       </div>
     </header>
@@ -92,10 +86,10 @@
           <svg id="graph-svg" class="graph-svg">
             <defs>
               <marker id="arrow" viewBox="0 0 10 10" refX="22" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
-                <path d="M 0 0 L 10 5 L 0 10 z" fill="#B5A58E" />
+                <path d="M 0 0 L 10 5 L 0 10 z" fill="#62929E" />
               </marker>
               <marker id="arrow-highlight" viewBox="0 0 10 10" refX="22" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
-                <path d="M 0 0 L 10 5 L 0 10 z" fill="#861C2D" />
+                <path d="M 0 0 L 10 5 L 0 10 z" fill="#A6445D" />
               </marker>
             </defs>
             <g id="graph-viewport">
@@ -117,17 +111,17 @@
 
       <div class="graph-legend">
         <span class="legend-title">Legend:</span>
-        <span class="legend-item"><span class="legend-dot" style="background:#861C2D; border:2px solid #6D380D;"></span> Character</span>
-        <span class="legend-item"><span class="legend-dot" style="background:#FFFFFF; border:2px solid #B5A58E;"></span> Scene</span>
-        <span class="legend-item"><span class="legend-dot" style="background:#6D380D; border:1.5px solid #B5A58E; transform:rotate(45deg); border-radius:1px;"></span> Checkpoint</span>
-        <span class="legend-item"><span class="legend-dot" style="background:#F4ECE8; border:1.5px solid #861C2D;"></span> State Claim</span>
-        <span class="legend-item"><span class="legend-dot" style="background:#EFE6E1; border:1.5px solid #6D380D;"></span> Development</span>
-        <span class="legend-item"><span class="legend-dot" style="background:#F5F0E6; border:2px solid #B5A58E;"></span> Persona Phase</span>
-        <span class="legend-item"><span class="legend-dot" style="background:#CDA393; border:1.5px solid #861C2D;"></span> Relationship Phase</span>
+        <span class="legend-item"><span class="legend-dot" style="background:#142F40; border:2px solid #A6445D;"></span> Character</span>
+        <span class="legend-item"><span class="legend-dot" style="background:#FFFFFF; border:2.5px solid #62929E;"></span> Scene</span>
+        <span class="legend-item"><span class="legend-dot" style="background:#393A10; border:1.5px solid #E7DECD; transform:rotate(45deg); border-radius:1px;"></span> Checkpoint</span>
+        <span class="legend-item"><span class="legend-dot" style="background:#A6445D; border:1.5px solid #142F40;"></span> State Claim</span>
+        <span class="legend-item"><span class="legend-dot" style="background:#62929E; border:1.5px solid #142F40;"></span> Development</span>
+        <span class="legend-item"><span class="legend-dot" style="background:#E7DECD; border:2px solid #393A10;"></span> Persona Phase</span>
+        <span class="legend-item"><span class="legend-dot" style="background:#861C2D; border:1.5px solid #62929E;"></span> Relationship Phase</span>
         <span class="legend-item"><span class="legend-dot" style="background:#CDA393; border:1.5px solid #861C2D;"></span> Memory</span>
-        <span class="legend-item"><span class="legend-dot" style="background:#FFFFFF; border:1.2px solid #6D380D; width:8px; height:8px;"></span> Grounded Fact</span>
-        <span class="legend-item"><span class="legend-dot" style="background:#FAF7F2; border:1.5px dashed #B5A58E;"></span> Target Entity</span>
-        <span class="legend-item"><span class="legend-dot" style="background:#861C2D; border:1px solid #6D380D; border-radius:2px;"></span> Story</span>
+        <span class="legend-item"><span class="legend-dot" style="background:#FAF7F2; border:1.5px solid #6D380D; width:8px; height:8px;"></span> Grounded Fact</span>
+        <span class="legend-item"><span class="legend-dot" style="background:#FFFFFF; border:1.5px dashed #142F40;"></span> Target Entity</span>
+        <span class="legend-item"><span class="legend-dot" style="background:#861C2D; border:1px solid #E7DECD; border-radius:2px;"></span> Story</span>
       </div>
     </section>
 
