@@ -746,6 +746,277 @@ function clearInspector() {
   `;
 }
 
+const SCENE_METADATA = {
+  "1": {
+    "title": "INT. DOCTOR'S OFFICE / EXAM ROOM - DAY",
+    "characters": [
+      "Frannie Lancaster",
+      "Hazel Grace"
+    ],
+    "events": [
+      "The doctor asserts that Hazel is depressed despite her repeated denials.",
+      "A medical appointment where Hazel's condition is discussed by her mother and the doctor.",
+      "Hazel narrates that her depression is not due to cancer but to the fact of dying.",
+      "Hazel repeatedly insists she is not depressed, countering the doctor's diagnosis.",
+      "Hazel briefly watches a playful couple at Starbucks before returning to her book."
+    ]
+  },
+  "2": {
+    "title": "INT. CHURCH BASEMENT - DAY",
+    "characters": [
+      "Frannie Lancaster",
+      "Hazel Grace"
+    ],
+    "events": [
+      "The doctor considers switching Hazel's medication to Zoloft or Lexapro with increased frequency.",
+      "Hazel sarcastically responds to the doctor's suggestion of increasing medication, comparing herself to Keith Richards.",
+      "A medical consultation involving Hazel, her mother Frannie, and the doctor, focusing on mental health and treatment options.",
+      "Hazel challenges the doctor's use of the word 'journey' to describe illness, showing resistance to euphemistic language.",
+      "The doctor raises the topic of Hazel attending the suggested support group, prompting resistance and skepticism.",
+      "The doctor dismisses Hazel's protest and insists she try the support group, appealing to personal obligation."
+    ]
+  },
+  "3": {
+    "title": "INT. CHURCH BASEMENT - SUPPORT GROUP",
+    "characters": [
+      "Hazel Grace"
+    ],
+    "events": [
+      "Hazel participates in a cancer support group meeting in a church basement, where members share their cancer stories.",
+      "Hazel and Isaac exchange a knowing look of disapproval toward Patrick's speech.",
+      "Patrick calls on Hazel to share her story during the support group session.",
+      "Hazel verbally discloses her thyroid cancer with lung metastases during the support group session.",
+      "The group collectively says 'We're here for you' after Hazel shares her story.",
+      "A gathering of young cancer patients in a church basement led by Patrick, where members share personal experiences with cancer."
+    ]
+  },
+  "4": {
+    "title": "INT. CHURCH BASEMENT - CIRCLE ROOM",
+    "characters": [
+      "Hazel Grace"
+    ],
+    "events": [
+      "Hazel comes out of the church and gets into the car without speaking, only exhaling in response to Frannie's silent question.",
+      "Frannie looks at Hazel with a questioning expression; Hazel responds only with an exhale, conveying ambivalence or fatigue.",
+      "A group session takes place inside the church, which Frannie waits for to end and Hazel participates in."
+    ]
+  },
+  "5": {
+    "title": "INT. CHURCH BASEMENT - MEETING CONTINUES",
+    "characters": [
+      "Hazel Grace"
+    ],
+    "events": [
+      "Frannie suggests Hazel call her friends, but Hazel dismisses the idea indifferently.",
+      "Hazel proposes that her parents go to a movie, encouraging them to take a break from staying home and attending to her.",
+      "Michael asks if Hazel wants to see a movie, but she redirects the idea to her parents instead.",
+      "A Friday night family gathering in the living room, centered around passive TV watching and unspoken concern for Hazel."
+    ]
+  },
+  "6": {
+    "title": "INT. CHURCH HALLWAY - LATER",
+    "characters": [
+      "Frannie Lancaster",
+      "Hazel Grace"
+    ],
+    "events": [
+      "A scheduled gathering for individuals with shared experiences to provide mutual support, which Hazel is being sent to attend.",
+      "Hazel's parents insist she attend a support group, overriding her objections.",
+      "Hazel sarcastically rejects the idea of attending support group and suggests getting a fake ID instead.",
+      "Frannie ends the discussion by ordering Hazel to get in the car."
+    ]
+  },
+  "7": {
+    "title": "INT. CHURCH - SAME",
+    "characters": [
+      "Augustus Waters",
+      "Frannie Lancaster",
+      "Hazel Grace"
+    ],
+    "events": [
+      "A church service taking place at an Episcopalian sanctuary in suburban Indianapolis.",
+      "Hazel goes to a church service at an Episcopalian sanctuary, not out of personal desire but to please her parents.",
+      "Frannie shouts a suggestion to Hazel to make friends before leaving."
+    ]
+  },
+  "8": {
+    "title": "INT. CHURCH HALLWAY / STAIRS - SAME",
+    "characters": [
+      "Augustus Waters",
+      "Hazel Grace"
+    ],
+    "events": [
+      "Hazel chooses to take the stairs instead of the elevator after encountering a very sick child.",
+      "After bumping into each other, Gus and Hazel exchange brief, polite apologies.",
+      "Hazel collides with Gus, a strikingly attractive boy, leading to a moment of mutual awareness and speechlessness."
+    ]
+  },
+  "9": {
+    "title": "INT. CHURCH BASEMENT - LATER",
+    "characters": [
+      "Augustus Waters",
+      "Frannie Lancaster",
+      "Hazel Grace"
+    ],
+    "events": [
+      "Augustus Waters shares his existential fear of oblivion during the support group meeting, prompting Hazel to respond.",
+      "Hazel looks in the mirror and reacts negatively to her own appearance, indicating self-disapproval or distress."
+    ]
+  },
+  "10": {
+    "title": "EXT. OUTSIDE THE CHURCH - LATER",
+    "characters": [
+      "Augustus Waters",
+      "Frannie Lancaster",
+      "Hazel Grace"
+    ],
+    "events": [
+      "A gathering of cancer patients in a church basement for sharing experiences and emotional support.",
+      "Isaac reveals he will undergo another surgery soon and will likely become blind as a result.",
+      "Hazel meets Augustus's persistent stare with equal intensity, initiating a silent contest of wills.",
+      "Hazel initiates and wins a silent staring contest with Augustus after feeling his persistent gaze.",
+      "Augustus reveals his name, age, and cancer history, including losing a leg to osteosarcoma and being in remission.",
+      "Augustus states that his greatest fear is oblivion, because he wants to live an extraordinary life and be remembered.",
+      "Hazel argues that oblivion is inevitable for everyone, and that fearing it is pointless because even great historical figures will eventually be forgotten.",
+      "Hazel publicly responds to Augustus's fear of oblivion by arguing it is inevitable and should be ignored."
+    ]
+  },
+  "11": {
+    "title": "EXT. OUTSIDE THE CHURCH - SIDEWALK - LATER",
+    "characters": [
+      "Augustus Waters",
+      "Hazel Grace"
+    ],
+    "events": [
+      "Augustus tells Hazel she is beautiful, marking the beginning of their romantic tension.",
+      "Hazel encounters Augustus (Gus) for the first time outside the church; he approaches her, compliments her, and initiates conversation that leads to a connection.",
+      "A casual gathering outside the church after an event, where teens socialize and couples interact.",
+      "Augustus invites Hazel to watch a movie immediately, proposing an impromptu outing.",
+      "Hazel criticizes Augustus for holding a cigarette, seeing it as self-destructive and hypocritical given his cancer history.",
+      "Augustus shocks Hazel by pulling out a cigarette but explains it is unlit and symbolic \u2014 representing control over one's fate despite danger.",
+      "Hazel declines her mother's offer to go home, choosing instead to follow through on impromptu plans with Augustus."
+    ]
+  },
+  "12": {
+    "title": "EXT. SUBURBAN STREET / CAR - LATER",
+    "characters": [
+      "Augustus Waters",
+      "Hazel Grace"
+    ],
+    "events": [
+      "Hazel reacts with sarcasm and dry humor to Gus's admission of being a bad driver.",
+      "Gus admits to failing his driving test multiple times and jokes about his poor driving being a 'cancer perk.'",
+      "Gus discloses that he failed his driving test multiple times and barely passed on the fourth attempt, with an instructor deeming his driving 'unpleasant but not technically unsafe.'",
+      "Hazel takes a deep breath and begins recounting the discovery of her cancer, signaling a moment of emotional significance.",
+      "A car ride during which Hazel and Gus engage in personal conversation while traveling together."
+    ]
+  },
+  "13": {
+    "title": "FLASHBACK - INT. HOSPITAL CLINIC - DAY",
+    "characters": [
+      "Hazel Grace"
+    ],
+    "events": [
+      "I remember the needle, the cold table, the pressure in my neck\u2014and then just one sentence, spoken like it was final: Stage IV thyroid cancer."
+    ]
+  },
+  "14": {
+    "title": "FLASHBACK - INT. HAZEL'S BEDROOM - NIGHT",
+    "characters": [
+      "Hazel Grace"
+    ],
+    "events": [
+      "Hazel experiences acute respiratory distress as fluid accumulates in her lungs, escalating into a medical emergency between initial diagnosis and intensive care hospitalization."
+    ]
+  },
+  "15": {
+    "title": "FLASHBACK - INT. HOSPITAL ICU - NIGHT",
+    "characters": [
+      "Frannie Lancaster",
+      "Hazel Grace"
+    ],
+    "events": [
+      "Dad calls emergency services as Hazel struggles to breathe.",
+      "Frannie comforts Hazel by running her fingers through her hair as Hazel prepares for a medical procedure.",
+      "Frannie tearfully asks Hazel if she is ready, likely referring to a medical procedure or transition.",
+      "Michael becomes overwhelmed with emotion and breaks down, unable to contain his feelings any longer."
+    ]
+  },
+  "16": {
+    "title": "FLASHBACK - INT. HOSPITAL ICU - MORNING",
+    "characters": [
+      "Hazel Grace"
+    ],
+    "events": [
+      "A morning period in the ICU where Hazel shows visible signs of recovery.",
+      "Hazel begins to recover from her illness as the antibiotics take effect and fluid is drained from her lungs."
+    ]
+  },
+  "17": {
+    "title": "INT. GUS'S CAR - SAME",
+    "characters": [
+      "Augustus Waters",
+      "Hazel Grace"
+    ],
+    "events": [
+      "During the drive to Gus's house, Hazel shares that her tumors have shrunk and her metastases have remained nearly unchanged, but she emphasizes that her lungs still do not function well. This revelation contextualizes her difficulty breathing as she descends the stairs to Gus's basement bedroom, where she labors noticeably while carrying her oxygen tank and needs time to recover once seated on the bed.",
+      "During the car ride to Gus's house, Hazel discusses her tumor stability and compromised lung capacity, explaining the physical reality of her breathing challenges."
+    ]
+  },
+  "18": {
+    "title": "EXT/INT. GUS'S HOUSE - SAME",
+    "characters": [
+      "Augustus Waters",
+      "Hazel Grace"
+    ],
+    "events": [
+      "Hazel reveals that her tumors have shrunk and her metastases have barely progressed, indicating a temporary medical stabilization despite ongoing lung issues.",
+      "An informal, intimate conversation between Hazel and Gus during a car ride, serving as emotional and informational bonding time.",
+      "Gus playfully attributes Hazel's sophistication to her being a college girl after learning she has her GED.",
+      "Hazel responds to Gus's joke with a light shove, signaling ease and growing intimacy.",
+      "Gus successfully drives and parks his car in his driveway, marking the end of the car ride and transition to a new location."
+    ]
+  },
+  "19": {
+    "title": "INT. HAZEL'S BEDROOM - ANOTHER NIGHT",
+    "characters": [
+      "Augustus Waters",
+      "Frannie Lancaster",
+      "Hazel Grace"
+    ],
+    "events": [
+      "Gus rolls his eyes when explaining his parents' engraved plaques as 'encouragements', signaling mild embarrassment or affectionate mockery to Hazel.",
+      "Gus's parents are preparing dinner in the kitchen when Hazel arrives with Gus.",
+      "Gus brings Hazel into his house and introduces her to his parents, who are making dinner in the kitchen.",
+      "Hazel clarifies that she goes by 'Hazel', not 'Hazel Grace', asserting her preferred identity.",
+      "Gus abruptly ends the parental introduction and pulls Hazel downstairs, redirecting focus to private time together.",
+      "Gus leads Hazel downstairs to his basement bedroom, revealing personal space filled with video games, band posters, and basketball memorabilia.",
+      "Hazel struggles with breathing after descending stairs and standing, requiring rest on Gus's bed.",
+      "Hazel names 'An Imperial Affliction' as her favorite novel, describing it as deeply meaningful and spiritually significant to her.",
+      "Gus commits to reading 'An Imperial Affliction' despite initial skepticism, marking a shift in his attitude toward Hazel's inner world.",
+      "Gus gives Hazel a novelization of his favorite video game in exchange for her reading 'An Imperial Affliction', forming a symbolic pact.",
+      "Their hands briefly tangle when exchanging books, creating a moment of romantic tension and connection.",
+      "Gus and Hazel have an intimate conversation in his basement bedroom after being introduced to his parents.",
+      "Gus flirts with Hazel by saying he loves it when she talks medical, responding to her explanation of cold hands."
+    ]
+  },
+  "20": {
+    "title": "INT. HAZEL'S DINING ROOM - NIGHT",
+    "characters": [
+      "Augustus Waters",
+      "Frannie Lancaster",
+      "Hazel Grace"
+    ],
+    "events": [
+      "Hazel is reading a novella written by Gus, indicating he gave her the book, which represents a personal and creative gesture.",
+      "Hazel insists she is not waiting for Gus to call, despite clear signs of anticipation.",
+      "Frannie observes the new book and comments on it, initiating a brief exchange about Gus.",
+      "Hazel reads Gus's novella in bed at night while Frannie briefly visits the room.",
+      "Hazel repeatedly checks her phone while engaging in daily activities, revealing her emotional preoccupation with hearing from Gus."
+    ]
+  }
+};
+
 function renderInspector(node) {
   const badge = document.getElementById("inspector-badge");
   const title = document.getElementById("inspector-title");
@@ -753,16 +1024,46 @@ function renderInspector(node) {
 
   badge.textContent = node.type;
   badge.className = `inspector-type-badge node-${node.type.toLowerCase()}`;
-  title.textContent = node.label;
-
-  let html = `<div style="margin-bottom:8px; font-family:var(--font-mono); font-size:11px; color:var(--text-muted); word-break:break-all;">ID: ${escapeHtml(node.id)}</div>`;
 
   const props = node.properties || {};
 
+  // Clean, unabridged, contextual title by node type
+  if (node.type === "Memory") {
+    const scNum = props.available_from ? props.available_from.scene_order : "1";
+    title.textContent = `Character Memory (Scene ${scNum})`;
+  } else if (node.type === "Fact") {
+    const scNum = props.fact_origin ? props.fact_origin.scene_order : "1";
+    title.textContent = `Grounded Narrative Fact (Scene ${scNum})`;
+  } else if (node.type === "Scene") {
+    const scNum = props.scene_order || parseInt(node.id.replace("scene:", ""), 10);
+    const meta = SCENE_METADATA[scNum] || {};
+    const titleText = props.scene_title || meta.title || `Scene ${scNum}`;
+    title.textContent = `Scene ${scNum}: ${titleText}`;
+  } else if (node.type === "StateClaim") {
+    title.textContent = "Task 1 Checkpoint State Claim";
+  } else if (node.type === "Development") {
+    title.textContent = "Narrative Development";
+  } else if (node.type === "PersonaPhase") {
+    title.textContent = "Persona Phase";
+  } else if (node.type === "RelationshipPhase") {
+    title.textContent = `Relationship: ${props.target || "Phase"}`;
+  } else if (node.type === "Checkpoint") {
+    title.textContent = `Official Checkpoint ${props.sequence_index || ""}`;
+  } else if (node.type === "Character") {
+    title.textContent = `Character: ${props.canonical_name || node.label}`;
+  } else {
+    title.textContent = node.label;
+  }
+
+  let html = `<div style="margin-bottom:10px; font-family:var(--font-mono); font-size:11px; color:var(--text-muted); word-break:break-all;">ID: ${escapeHtml(node.id)}</div>`;
+
   // Specialized detail views by node type
   if (node.type === "Memory") {
+    const memText = props.memory_text || (node.label.startsWith("Memory: ") ? node.label.slice(8) : node.label);
     html += `
-      <div style="font-size:13.5px; color:var(--text-primary); font-weight:500; margin-bottom:10px; line-height:1.5;">"${escapeHtml(props.memory_text)}"</div>
+      <div style="font-size:14px; color:var(--text-primary); font-weight:600; margin-bottom:12px; line-height:1.55; padding:12px 14px; background:var(--panel-bg); border:1px solid var(--border-medium); border-radius:6px; border-left:4px solid var(--color-burgundy); word-break:break-word;">
+        "${escapeHtml(memText)}"
+      </div>
       <div class="memory-timing-grid" style="margin-top:8px;">
         <div>
           <div class="timing-col-label">How Learned</div>
@@ -778,17 +1079,81 @@ function renderInspector(node) {
         </div>
       </div>
     `;
+
+    if (props.grounded_facts && props.grounded_facts.length > 0) {
+      html += `
+        <div style="margin-top:14px;">
+          <div class="inspector-prop-label" style="margin-bottom:6px;">Grounded Objective Facts (${props.grounded_facts.length})</div>
+          <div style="display:flex; flex-direction:column; gap:6px;">
+            ${props.grounded_facts.map(gf => `
+              <div style="font-size:12.5px; color:var(--text-primary); line-height:1.45; padding:8px 10px; background:var(--card-bg); border:1px solid var(--border-subtle); border-radius:4px;">
+                ${escapeHtml(gf)}
+              </div>
+            `).join("")}
+          </div>
+        </div>
+      `;
+    }
   } else if (node.type === "Fact") {
+    const factText = props.fact_text || (node.label.startsWith("Fact: ") ? node.label.slice(6) : node.label);
     html += `
-      <div style="font-size:13.5px; color:var(--text-primary); font-weight:500; margin-bottom:10px; line-height:1.5;">${escapeHtml(props.fact_text)}</div>
+      <div style="font-size:14px; color:var(--text-primary); font-weight:600; margin-bottom:12px; line-height:1.55; padding:12px 14px; background:var(--panel-bg); border:1px solid var(--border-medium); border-radius:6px; border-left:4px solid var(--color-warm-brown); word-break:break-word;">
+        ${escapeHtml(factText)}
+      </div>
       <div class="inspector-prop-row">
         <div class="inspector-prop-label">Event Scene Origin</div>
         <div class="inspector-prop-val">Scene ${props.fact_origin ? props.fact_origin.scene_order : "N/A"}</div>
       </div>
     `;
+    if (props.source_memory_text) {
+      html += `
+        <div style="margin-top:10px;">
+          <div class="inspector-prop-label" style="margin-bottom:4px;">Derived from Character Memory</div>
+          <div style="font-size:12.5px; color:var(--text-primary); font-style:italic; line-height:1.45; padding:8px 10px; background:var(--card-bg); border:1px solid var(--border-subtle); border-radius:4px;">
+            "${escapeHtml(props.source_memory_text)}"
+          </div>
+        </div>
+      `;
+    }
+  } else if (node.type === "Scene") {
+    const scNum = props.scene_order || parseInt(node.id.replace("scene:", ""), 10);
+    const meta = SCENE_METADATA[scNum] || {};
+    const titleText = props.scene_title || meta.title || `Scene ${scNum}`;
+    const events = (props.events && props.events.length > 0) ? props.events : (meta.events || []);
+    const characters = (props.characters && props.characters.length > 0) ? props.characters : (meta.characters || []);
+    const desc = props.description || (events.length > 0 ? events.join(" ") : `Scene ${scNum} of screenplay.`);
+
+    html += `
+      <div style="margin-bottom:12px;">
+        <div class="inspector-prop-label" style="margin-bottom:4px;">Setting / Script Location</div>
+        <div style="font-size:14px; font-weight:700; color:var(--color-burgundy);">${escapeHtml(titleText)}</div>
+      </div>
+
+      <div style="margin-bottom:12px;">
+        <div class="inspector-prop-label" style="margin-bottom:6px;">Scene Narrative & Events</div>
+        <div style="font-size:13px; line-height:1.55; color:var(--text-primary); background:var(--panel-bg); padding:10px 14px; border-radius:6px; border:1px solid var(--border-medium); border-left:4px solid var(--color-warm-brown);">
+          ${events.length > 0 
+            ? `<ul style="margin:0; padding-left:18px;">${events.map(ev => `<li style="margin-bottom:6px; color:var(--text-primary);">${escapeHtml(ev)}</li>`).join("")}</ul>`
+            : `<p style="margin:0; color:var(--text-primary);">${escapeHtml(desc)}</p>`}
+        </div>
+      </div>
+
+      ${characters.length > 0 ? `
+      <div class="inspector-prop-row" style="margin-bottom:10px;">
+        <div class="inspector-prop-label">Characters Present in Scene</div>
+        <div class="inspector-prop-val" style="display:flex; flex-wrap:wrap; gap:5px; margin-top:4px;">
+          ${characters.map(c => `<span style="font-size:11.5px; padding:3px 8px; border-radius:4px; background:var(--card-bg); border:1px solid var(--border-medium); color:var(--text-primary); font-weight:600;">${escapeHtml(c)}</span>`).join("")}
+        </div>
+      </div>` : ""}
+
+      <div class="inspector-prop-row">
+        <div class="inspector-prop-label">Screenplay Progression</div>
+        <div class="inspector-prop-val">Scene ${scNum} of 20</div>
+      </div>
+    `;
   } else if (node.type === "StateClaim") {
     html += `
-      <div style="font-size:13.5px; color:var(--text-primary); margin-bottom:10px; font-weight:600; line-height:1.45;">${escapeHtml(props.claim)}</div>
+      <div style="font-size:14px; color:var(--text-primary); margin-bottom:12px; font-weight:600; line-height:1.5; padding:10px 12px; background:var(--panel-bg); border:1px solid var(--border-medium); border-radius:6px; border-left:4px solid var(--color-burgundy);">${escapeHtml(props.claim)}</div>
       <div class="inspector-prop-row">
         <div class="inspector-prop-label">Supporting Evidence Scenes</div>
         <div class="inspector-prop-val">[${(props.evidence_scene_orders || []).join(", ")}]</div>
@@ -800,7 +1165,7 @@ function renderInspector(node) {
     `;
   } else if (node.type === "Development") {
     html += `
-      <div style="font-size:13.5px; color:var(--text-primary); margin-bottom:10px; font-weight:600; line-height:1.45;">${escapeHtml(props.claim)}</div>
+      <div style="font-size:14px; color:var(--text-primary); margin-bottom:12px; font-weight:600; line-height:1.5; padding:10px 12px; background:var(--panel-bg); border:1px solid var(--border-medium); border-radius:6px; border-left:4px solid var(--color-burgundy);">${escapeHtml(props.claim)}</div>
       <div class="inspector-prop-row">
         <div class="inspector-prop-label">Supporting Evidence Scenes</div>
         <div class="inspector-prop-val">[${(props.evidence_scene_orders || []).join(", ")}]</div>
@@ -849,13 +1214,6 @@ function renderInspector(node) {
         <div class="inspector-prop-val">Scene ${props.scene_order}</div>
       </div>
     `;
-  } else if (node.type === "Scene") {
-    html += `
-      <div class="inspector-prop-row">
-        <div class="inspector-prop-label">Screenplay Order</div>
-        <div class="inspector-prop-val">Scene ${props.scene_order}</div>
-      </div>
-    `;
   }
 
   // Provenance metadata
@@ -869,6 +1227,7 @@ function renderInspector(node) {
 
   body.innerHTML = html;
 }
+
 
 /* ==========================================================================
    Existing Character State & Content Renderers (Preserved)

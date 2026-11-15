@@ -35,6 +35,7 @@ class STAGELoader:
         self.legacy_roles: list[dict[str, Any]] = []
         self.task1_checkpoints: dict[tuple[str, int], dict[str, Any]] = {}
         self.all_task1_checkpoints_by_char: dict[str, list[dict[str, Any]]] = {}
+        self.movie_scenes: dict[int, dict[str, Any]] = {}
         self.global_flags: list[TimingFlag] = []
 
         self._load_metadata()
@@ -42,7 +43,7 @@ class STAGELoader:
         self._load_task1_reference_state_updates()
 
     def _load_metadata(self) -> None:
-        """Load movie metadata and info files."""
+        """Load movie metadata, info files, and processed scene records."""
         info_path = self.raw_data_dir / "info.json"
         if info_path.exists():
             with open(info_path, encoding="utf-8") as f:
@@ -52,6 +53,22 @@ class STAGELoader:
         if meta_path.exists():
             with open(meta_path, encoding="utf-8") as f:
                 self.movie_metadata = json.load(f)
+
+        # Load processed movie.json for rich scene metadata (titles, characters, events)
+        proc_candidates = [
+            self.raw_data_dir.parent / "processed" / "movie.json",
+            Path("input/STAGE/data/processed/movie.json"),
+            Path(__file__).resolve().parents[1] / "input" / "STAGE" / "data" / "processed" / "movie.json",
+        ]
+        for proc_path in proc_candidates:
+            if proc_path.exists():
+                with open(proc_path, encoding="utf-8") as f:
+                    proc_data = json.load(f)
+                    for sc in proc_data.get("scenes", []):
+                        sc_id = sc.get("scene_id")
+                        if sc_id is not None:
+                            self.movie_scenes[int(sc_id)] = sc
+                break
 
     def _load_task3_role_assets(self) -> None:
         """

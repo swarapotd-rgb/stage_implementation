@@ -194,13 +194,25 @@ class TemporalGraphBuilder:
         # --- B. Scene Nodes (1 .. effective_scene) & Temporal Sequence Edges ---
         for sc in range(1, effective_scene + 1):
             sc_id = self._scene_node_id(sc)
+            sc_data = self.loader.movie_scenes.get(sc, {})
+            sc_title = sc_data.get("scene_title", f"Scene {sc}")
+            sc_characters = sc_data.get("characters", [])
+            sc_events = sc_data.get("events", [])
+            sc_desc = " ".join(sc_events) if sc_events else f"Scene {sc} of screenplay."
+
             add_node(
                 GraphNode(
                     id=sc_id,
                     type="Scene",
-                    label=f"Scene {sc}",
-                    properties={"scene_order": sc},
-                    source_file="data/raw/info.json",
+                    label=f"Scene {sc}: {sc_title}" if sc_title != f"Scene {sc}" else f"Scene {sc}",
+                    properties={
+                        "scene_order": sc,
+                        "scene_title": sc_title,
+                        "characters": sc_characters,
+                        "events": sc_events,
+                        "description": sc_desc,
+                    },
+                    source_file="data/processed/movie.json" if sc_data else "data/raw/info.json",
                     source_record_id=f"scene_{sc}",
                 )
             )
@@ -246,13 +258,14 @@ class TemporalGraphBuilder:
                 GraphNode(
                     id=mem_node_id,
                     type="Memory",
-                    label=f"Memory: {mem.memory_text[:45]}...",
+                    label=f"Memory: {mem.memory_text}",
                     properties={
                         "memory_text": mem.memory_text,
                         "access_type": mem.access_type,
                         "fact_origin": mem.fact_origin,
                         "available_from": mem.available_from,
                         "importance": mem.importance,
+                        "grounded_facts": mem.grounded_facts,
                     },
                     source_file=mem.source_file,
                     source_record_id=mem.source_memory_id,
@@ -281,11 +294,12 @@ class TemporalGraphBuilder:
                     GraphNode(
                         id=fact_node_id,
                         type="Fact",
-                        label=f"Fact: {fact_str[:40]}...",
+                        label=f"Fact: {fact_str}",
                         properties={
                             "fact_text": fact_str,
                             "fact_origin": mem.fact_origin,
                             "access_type": mem.access_type,
+                            "source_memory_text": mem.memory_text,
                         },
                         source_file=mem.source_file,
                         source_record_id=mem.source_memory_id,
@@ -416,7 +430,7 @@ class TemporalGraphBuilder:
                     GraphNode(
                         id=claim_node_id,
                         type="StateClaim",
-                        label=f"State Claim: {cs.claim[:40]}...",
+                        label=f"State Claim: {cs.claim}",
                         properties={
                             "claim": cs.claim,
                             "evidence_scene_orders": cs.evidence_scene_orders,
@@ -444,7 +458,7 @@ class TemporalGraphBuilder:
                     GraphNode(
                         id=dev_node_id,
                         type="Development",
-                        label=f"Development: {dev.claim[:40]}...",
+                        label=f"Development: {dev.claim}",
                         properties={
                             "claim": dev.claim,
                             "evidence_scene_orders": dev.evidence_scene_orders,
