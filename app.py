@@ -16,7 +16,7 @@ import json
 import mimetypes
 import sys
 from http import HTTPStatus
-from http.server import HTTPServer, SimpleHTTPRequestHandler
+from http.server import HTTPServer, SimpleHTTPRequestHandler, ThreadingHTTPServer
 from pathlib import Path
 from urllib.parse import parse_qs, urlparse
 
@@ -125,6 +125,7 @@ class StoryLensRequestHandler(SimpleHTTPRequestHandler):
         self.send_header("Content-Type", "application/json; charset=utf-8")
         self.send_header("Content-Length", str(len(json_bytes)))
         self.send_header("Access-Control-Allow-Origin", "*")
+        self.send_header("Connection", "close")
         self.end_headers()
         self.wfile.write(json_bytes)
 
@@ -149,7 +150,7 @@ class StoryLensRequestHandler(SimpleHTTPRequestHandler):
 
 def run_server(port: int = 8000) -> None:
     server_address = ("127.0.0.1", port)
-    httpd = HTTPServer(server_address, StoryLensRequestHandler)
+    httpd = ThreadingHTTPServer(server_address, StoryLensRequestHandler)
     print("\n==================================================================")
     print(" StoryLens Demo Interface Running Locally")
     print("==================================================================")

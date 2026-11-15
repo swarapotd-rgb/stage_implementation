@@ -164,20 +164,45 @@ async function loadStateAndGraph(character, sceneOrder) {
     btn.classList.toggle("active", match);
   });
 
-  document.getElementById("char-select").value = character;
-  document.getElementById("scene-input").value = sceneOrder;
+  const charSelect = document.getElementById("char-select");
+  if (charSelect) charSelect.value = character;
+  const sceneInput = document.getElementById("scene-input");
+  if (sceneInput) sceneInput.value = sceneOrder;
 
-  // 1. Load Character State
-  await loadState(character, sceneOrder);
+  // 1. Immediate synchronous render of Graph from preloaded dataset (0ms latency, impossible to fail)
+  const key = `${character}_${sceneOrder}`;
+  if (window.STORYLENS_PRELOADED && window.STORYLENS_PRELOADED.graphs && window.STORYLENS_PRELOADED.graphs[key]) {
+    currentGraphData = window.STORYLENS_PRELOADED.graphs[key];
+    renderGraph(currentGraphData);
+  }
 
-  // 2. Load Corresponding As-Of Temporal Knowledge Graph
-  await loadGraph(character, sceneOrder);
+  // 2. Immediate synchronous render of State from preloaded checkpoints
+  const matchCp = (window.STORYLENS_PRELOADED?.checkpoints || preloadedCheckpoints || []).find(
+    cp => cp.character === character && cp.scene_order === sceneOrder
+  );
+  if (matchCp) {
+    currentState = matchCp;
+    renderAll(currentState);
+  }
+
+  // 3. Concurrently fetch live updates in background if backend server is active (with 1.5s timeout)
+  try {
+    await Promise.all([
+      loadState(character, sceneOrder),
+      loadGraph(character, sceneOrder)
+    ]);
+  } catch (err) {
+    // Already cleanly rendered from preloaded data
+  }
 }
 
 async function loadState(character, sceneOrder) {
   try {
+    const controller = new AbortController();
+    const timeoutId = setTimeout(() => controller.abort(), 1500);
     const apiUrl = `/api/state?character=${encodeURIComponent(character)}&scene=${sceneOrder}`;
-    const res = await fetch(apiUrl);
+    const res = await fetch(apiUrl, { signal: controller.signal });
+    clearTimeout(timeoutId);
     if (res.ok) {
       currentState = await res.json();
       renderAll(currentState);
@@ -187,7 +212,7 @@ async function loadState(character, sceneOrder) {
     // API not responding or local file mode
   }
 
-  const match = preloadedCheckpoints.find(
+  const match = (window.STORYLENS_PRELOADED?.checkpoints || preloadedCheckpoints || []).find(
     cp => cp.character === character && cp.scene_order === sceneOrder
   );
 
@@ -243,9 +268,14 @@ async function loadState(character, sceneOrder) {
 }
 
 async function loadGraph(character, sceneOrder) {
+  const key = `${character}_${sceneOrder}`;
+
   try {
+    const controller = new AbortController();
+    const timeoutId = setTimeout(() => controller.abort(), 1500);
     const apiUrl = `/api/graph?character=${encodeURIComponent(character)}&scene=${sceneOrder}`;
-    const res = await fetch(apiUrl);
+    const res = await fetch(apiUrl, { signal: controller.signal });
+    clearTimeout(timeoutId);
     if (res.ok) {
       currentGraphData = await res.json();
       renderGraph(currentGraphData);
@@ -255,7 +285,6 @@ async function loadGraph(character, sceneOrder) {
     // API not responding or local file mode
   }
 
-  const key = `${character}_${sceneOrder}`;
   if (window.STORYLENS_PRELOADED && window.STORYLENS_PRELOADED.graphs && window.STORYLENS_PRELOADED.graphs[key]) {
     currentGraphData = window.STORYLENS_PRELOADED.graphs[key];
     renderGraph(currentGraphData);
@@ -555,46 +584,46 @@ function computeNodePositions(nodes, metadata, edges = []) {
   const memories = nodes.filter(n => n.type === "Memory");
   const facts = nodes.filter(n => n.type === "Fact");
 
-  // 1. Horizontal Timeline Spine for Scenes at y = 320
+  // Dynamic scene step so the timeline stays beautifully compact and centered
   const sceneCount = scenes.length;
-  const sceneStartX = 230;
-  const sceneStep = 100;
+  const sceneStartX = 200;
+  const sceneStep = sceneCount <= 6 ? 90 : (sceneCount <= 12 ? 65 : 45);
 
   const sceneXMap = {};
   scenes.forEach((scNode, idx) => {
     const x = sceneStartX + idx * sceneStep;
-    const y = 320;
+    const y = 300;
     positions[scNode.id] = { x, y };
     sceneXMap[scNode.properties.scene_order] = x;
   });
 
   // 2. Left Flank: Story, Characters, PersonaPhases
   if (story) {
-    positions[story.id] = { x: 75, y: 75 };
+    positions[story.id] = { x: 75, y: 70 };
   }
 
   if (focalChar) {
-    positions[focalChar.id] = { x: 75, y: 190 };
+    positions[focalChar.id] = { x: 75, y: 180 };
   }
 
   otherChars.forEach((cNode, idx) => {
-    positions[cNode.id] = { x: 75, y: 290 + idx * 80 };
+    positions[cNode.id] = { x: 75, y: 280 + idx * 70 };
   });
 
   personas.forEach((pNode, idx) => {
-    positions[pNode.id] = { x: 155, y: 160 + idx * 65 };
+    positions[pNode.id] = { x: 140, y: 150 + idx * 60 };
   });
 
   // 3. Right Flank: RelationshipPhases and Target Entities
   const maxSceneX = sceneCount > 0 ? (sceneStartX + (sceneCount - 1) * sceneStep) : sceneStartX;
-  const rightFlankX = Math.max(maxSceneX + 130, 580);
+  const rightFlankX = Math.max(maxSceneX + 90, 520);
 
   rels.forEach((rNode, idx) => {
-    positions[rNode.id] = { x: rightFlankX, y: 60 + idx * 46 };
+    positions[rNode.id] = { x: rightFlankX, y: 55 + idx * 44 };
   });
 
   entities.forEach((eNode, idx) => {
-    positions[eNode.id] = { x: rightFlankX + 130, y: 60 + idx * 52 };
+    positions[eNode.id] = { x: rightFlankX + 110, y: 55 + idx * 48 };
   });
 
   // 4. Top Tier: Checkpoint, StateClaims, Developments
@@ -602,25 +631,25 @@ function computeNodePositions(nodes, metadata, edges = []) {
   const cpX = sceneXMap[cpScene] || (sceneCount > 0 ? sceneStartX + (sceneCount - 1) * sceneStep : 400);
 
   if (checkpoint) {
-    positions[checkpoint.id] = { x: cpX, y: 170 };
+    positions[checkpoint.id] = { x: cpX, y: 160 };
   }
 
-  // State Claims arranged in two clean staggered rows above Checkpoint
+  // State Claims arranged in clean rows above Checkpoint
   claims.forEach((clNode, idx) => {
     const row = Math.floor(idx / 4);
     const col = idx % 4;
     const numInRow = Math.min(4, claims.length - row * 4);
-    const colOffset = (col - (numInRow - 1) / 2) * 65;
+    const colOffset = (col - (numInRow - 1) / 2) * 58;
     positions[clNode.id] = {
       x: cpX + colOffset,
-      y: 55 + row * 48,
+      y: 50 + row * 44,
       claimIdx: idx + 1
     };
   });
 
   // Developments placed to the left of the Checkpoint
   developments.forEach((devNode, idx) => {
-    positions[devNode.id] = { x: cpX - 90 - idx * 60, y: 170 };
+    positions[devNode.id] = { x: Math.max(80, cpX - 75 - idx * 55), y: 160 };
   });
 
   // 5. Bottom Tier: Memories & Grounded Facts
@@ -651,7 +680,7 @@ function computeNodePositions(nodes, metadata, edges = []) {
 
     memList.forEach((mNode, mIdx) => {
       const memX = colBaseX - 22;
-      const memY = 380 + mIdx * 46;
+      const memY = 360 + mIdx * 44;
       positions[mNode.id] = { x: memX, y: memY, colIdx: mIdx };
 
       // Grounded child facts
@@ -672,7 +701,7 @@ function computeNodePositions(nodes, metadata, edges = []) {
       } else {
         const s = fNode.properties.fact_origin ? fNode.properties.fact_origin.scene_order : 1;
         const colBaseX = sceneXMap[s] || sceneStartX;
-        positions[fNode.id] = { x: colBaseX + 22, y: 380 + idx * 24, colIdx: idx };
+        positions[fNode.id] = { x: colBaseX + 22, y: 360 + idx * 24, colIdx: idx };
       }
     }
   });
