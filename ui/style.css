@@ -46,11 +46,11 @@
   --border-strong:   #B5A58E;
   --border-navy:     rgba(20, 47, 64, 0.35);
 
-  /* Typography Colors (WCAG AAA High Contrast & Eye Comfort) */
+  /* Typography Colors (WCAG AAA High Contrast & Eye Comfort - Strict Non-White) */
   --text-primary:    #16232F;  /* Deep ink espresso - ultra-legible, soft on the eyes */
   --text-secondary:  #4E5B66;  /* Readable charcoal body text */
   --text-muted:      #7B8792;  /* Archival metadata */
-  --text-inverse:    #FFFFFF;  /* Crisp white on deep accents */
+  --text-inverse:    #16232F;  /* Dark ink for active elements */
 
   /* Modern Presentation Typography System */
   --font-heading: "Space Grotesk", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
@@ -200,11 +200,11 @@ h1 {
 }
 
 .checkpoint-pill.active {
-  background: var(--deep-navy);
-  border-color: var(--deep-navy);
-  color: var(--text-inverse);
-  box-shadow: 0 3px 10px rgba(20, 47, 64, 0.35);
-  font-weight: 700;
+  background: #E4ECF2;
+  border: 2px solid var(--deep-navy);
+  color: var(--deep-navy);
+  box-shadow: 0 3px 10px rgba(20, 47, 64, 0.2);
+  font-weight: 800;
 }
 
 .pill-scene-badge {
@@ -218,9 +218,10 @@ h1 {
 }
 
 .checkpoint-pill.active .pill-scene-badge {
-  background: rgba(255, 255, 255, 0.22);
-  border-color: rgba(255, 255, 255, 0.4);
-  color: #FFFFFF;
+  background: rgba(20, 47, 64, 0.12);
+  border-color: rgba(20, 47, 64, 0.35);
+  color: var(--deep-navy);
+  font-weight: 700;
 }
 
 .custom-picker-row {
@@ -283,9 +284,9 @@ h1 {
 }
 
 .btn-secondary:hover {
-  background: var(--deep-navy);
+  background: #E4ECF2;
   border-color: var(--deep-navy);
-  color: var(--text-inverse);
+  color: var(--deep-navy);
   transform: translateY(-1px);
 }
 
@@ -456,10 +457,10 @@ h1 {
 }
 
 .filter-btn.active {
-  background: var(--deep-navy);
-  border-color: var(--deep-navy);
-  color: var(--text-inverse);
-  font-weight: 700;
+  background: #E4ECF2;
+  border: 1.5px solid var(--deep-navy);
+  color: var(--deep-navy);
+  font-weight: 800;
 }
 
 .zoom-controls {
@@ -486,8 +487,8 @@ h1 {
 }
 
 .zoom-btn:hover {
-  background: var(--deep-navy);
-  color: var(--text-inverse);
+  background: #E4ECF2;
+  color: var(--deep-navy);
   border-color: var(--deep-navy);
 }
 
@@ -587,8 +588,8 @@ h1 {
 .node-label-inner {
   font-family: var(--font-mono);
   font-size: 8.5px;
-  font-weight: 700;
-  fill: #FFFFFF;
+  font-weight: 800;
+  fill: var(--text-primary) !important;
   text-anchor: middle;
   dominant-baseline: central;
   pointer-events: none;
@@ -600,18 +601,18 @@ h1 {
   font-weight: 800;
 }
 
-/* Distinct Node Palette Styles (Every node type is visually unique) */
-.node-story { fill: #861C2D; stroke: #E7DECD; stroke-width: 1.5; }
-.node-character { fill: #142F40; stroke: #A6445D; stroke-width: 2.8; }
+/* Distinct Node Palette Styles (High-contrast, light soft tints with bold dark borders) */
+.node-story { fill: #F5EAEF; stroke: #861C2D; stroke-width: 2; }
+.node-character { fill: #E3EBF1; stroke: #142F40; stroke-width: 3; }
 .node-scene { fill: #FFFFFF; stroke: #62929E; stroke-width: 2.5; }
-.node-checkpoint { fill: #393A10; stroke: #E7DECD; stroke-width: 2; }
-.node-stateclaim { fill: #A6445D; stroke: #142F40; stroke-width: 1.6; }
-.node-development { fill: #62929E; stroke: #142F40; stroke-width: 1.6; }
-.node-personaphase { fill: #E7DECD; stroke: #393A10; stroke-width: 2.2; }
-.node-relationshipphase { fill: #861C2D; stroke: #62929E; stroke-width: 1.8; }
+.node-checkpoint { fill: #EBECE1; stroke: #393A10; stroke-width: 2.5; }
+.node-stateclaim { fill: #F5EAEF; stroke: #A6445D; stroke-width: 2; }
+.node-development { fill: #E9F1F3; stroke: #62929E; stroke-width: 2; }
+.node-personaphase { fill: #F5F0E6; stroke: #393A10; stroke-width: 2; }
+.node-relationshipphase { fill: #F7EBE8; stroke: #861C2D; stroke-width: 2; }
 .node-entity { fill: #FFFFFF; stroke: #142F40; stroke-width: 1.6; stroke-dasharray: 2 2; }
-.node-memory { fill: #CDA393; stroke: #861C2D; stroke-width: 1.8; }
-.node-fact { fill: #FAF7F2; stroke: #6D380D; stroke-width: 1.4; }
+.node-memory { fill: #F4E8E3; stroke: #CDA393; stroke-width: 2; }
+.node-fact { fill: #FAF7F2; stroke: #6D380D; stroke-width: 1.5; }
 
 /* Node Inspector Panel */
 .graph-inspector {
@@ -895,23 +896,27 @@ h1 {
 }
 
 .access-witnessed {
-  background: var(--olive-moss);
-  color: #FFFFFF;
+  background: rgba(57, 58, 16, 0.14);
+  border: 1px solid var(--olive-moss);
+  color: var(--olive-moss);
 }
 
 .access-involved {
-  background: var(--deep-navy);
-  color: #FFFFFF;
+  background: rgba(20, 47, 64, 0.14);
+  border: 1px solid var(--deep-navy);
+  color: var(--deep-navy);
 }
 
 .access-told {
-  background: var(--crimson-rose);
-  color: #FFFFFF;
+  background: rgba(166, 68, 93, 0.14);
+  border: 1px solid var(--crimson-rose);
+  color: var(--crimson-rose);
 }
 
 .access-inferred {
-  background: var(--sky-teal);
-  color: #FFFFFF;
+  background: rgba(98, 146, 158, 0.18);
+  border: 1px solid var(--sky-teal);
+  color: var(--deep-navy);
 }
 
 .grounded-facts-list {

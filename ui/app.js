@@ -762,7 +762,7 @@ function renderInspector(node) {
   // Specialized detail views by node type
   if (node.type === "Memory") {
     html += `
-      <div style="font-size:13px; color:#fff; margin-bottom:10px;">"${escapeHtml(props.memory_text)}"</div>
+      <div style="font-size:13.5px; color:var(--text-primary); font-weight:500; margin-bottom:10px; line-height:1.5;">"${escapeHtml(props.memory_text)}"</div>
       <div class="memory-timing-grid" style="margin-top:8px;">
         <div>
           <div class="timing-col-label">How Learned</div>
@@ -774,13 +774,13 @@ function renderInspector(node) {
         </div>
         <div>
           <div class="timing-col-label">Known By Character From</div>
-          <div class="timing-col-val" style="color:var(--accent-emerald);">Scene ${props.available_from ? props.available_from.scene_order : "N/A"}</div>
+          <div class="timing-col-val" style="color:var(--text-primary); font-weight:700;">Scene ${props.available_from ? props.available_from.scene_order : "N/A"}</div>
         </div>
       </div>
     `;
   } else if (node.type === "Fact") {
     html += `
-      <div style="font-size:13px; color:#fff; margin-bottom:10px;">${escapeHtml(props.fact_text)}</div>
+      <div style="font-size:13.5px; color:var(--text-primary); font-weight:500; margin-bottom:10px; line-height:1.5;">${escapeHtml(props.fact_text)}</div>
       <div class="inspector-prop-row">
         <div class="inspector-prop-label">Event Scene Origin</div>
         <div class="inspector-prop-val">Scene ${props.fact_origin ? props.fact_origin.scene_order : "N/A"}</div>
@@ -788,7 +788,7 @@ function renderInspector(node) {
     `;
   } else if (node.type === "StateClaim") {
     html += `
-      <div style="font-size:13px; color:var(--accent-emerald); margin-bottom:10px; font-weight:500;">${escapeHtml(props.claim)}</div>
+      <div style="font-size:13.5px; color:var(--text-primary); margin-bottom:10px; font-weight:600; line-height:1.45;">${escapeHtml(props.claim)}</div>
       <div class="inspector-prop-row">
         <div class="inspector-prop-label">Supporting Evidence Scenes</div>
         <div class="inspector-prop-val">[${(props.evidence_scene_orders || []).join(", ")}]</div>
@@ -800,7 +800,7 @@ function renderInspector(node) {
     `;
   } else if (node.type === "Development") {
     html += `
-      <div style="font-size:13px; color:var(--accent-cyan); margin-bottom:10px; font-weight:500;">${escapeHtml(props.claim)}</div>
+      <div style="font-size:13.5px; color:var(--text-primary); margin-bottom:10px; font-weight:600; line-height:1.45;">${escapeHtml(props.claim)}</div>
       <div class="inspector-prop-row">
         <div class="inspector-prop-label">Supporting Evidence Scenes</div>
         <div class="inspector-prop-val">[${(props.evidence_scene_orders || []).join(", ")}]</div>
@@ -814,7 +814,7 @@ function renderInspector(node) {
       </div>
       <div class="inspector-prop-row">
         <div class="inspector-prop-label">Behavioral Constraints</div>
-        <div class="inspector-prop-val" style="color:var(--accent-amber);">${(props.behavioral_constraints || []).map(b => escapeHtml(b)).join("; ") || "None"}</div>
+        <div class="inspector-prop-val" style="color:var(--text-secondary);">${(props.behavioral_constraints || []).map(b => escapeHtml(b)).join("; ") || "None"}</div>
       </div>
       <div class="inspector-prop-row">
         <div class="inspector-prop-label">Validity Window</div>
@@ -824,10 +824,10 @@ function renderInspector(node) {
   } else if (node.type === "RelationshipPhase") {
     html += `
       <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:8px;">
-        <strong style="color:#fff;">Target: ${escapeHtml(props.target)}</strong>
+        <strong style="color:var(--text-primary); font-size:14px;">Target: ${escapeHtml(props.target)}</strong>
         <span class="badge polarity-${props.polarity}">${props.polarity}</span>
       </div>
-      <div style="font-size:13px; color:#fff; margin-bottom:10px;">${escapeHtml(props.description)}</div>
+      <div style="font-size:13.5px; color:var(--text-primary); margin-bottom:10px; line-height:1.45;">${escapeHtml(props.description)}</div>
       <div class="inspector-prop-row">
         <div class="inspector-prop-label">Validity Window</div>
         <div class="inspector-prop-val">Scene ${props.valid_from ? props.valid_from.scene_order : "1"} &rarr; ${props.valid_until ? props.valid_until.scene_order : "Open-ended"}</div>
@@ -983,7 +983,7 @@ function renderDevelopments(state) {
     card.className = "card";
     const evScenes = (item.evidence_scene_orders || []).join(", ");
     card.innerHTML = `
-      <div class="card-title" style="color:var(--accent-cyan);">${idx + 1}. ${escapeHtml(item.claim)}</div>
+      <div class="card-title">${idx + 1}. ${escapeHtml(item.claim)}</div>
       <div>
         <span class="evidence-tag">Evidence Scenes: [${evScenes}]</span>
         <span class="provenance-tag">ID: ${item.source_development_id}</span>
@@ -1062,13 +1062,13 @@ function renderMemories(state) {
         </div>
         <div>
           <div class="timing-col-label">Known By Character From</div>
-          <div class="timing-col-val" style="color:var(--accent-emerald);">Scene ${availScene} <span style="font-size:11px; color:var(--text-muted);">(char ${availOffset})</span></div>
+          <div class="timing-col-val" style="color:var(--text-primary); font-weight:700;">Scene ${availScene} <span style="font-size:11px; color:var(--text-muted);">(char ${availOffset})</span></div>
         </div>
       </div>
       <div style="margin-top:8px;">
         <span class="provenance-tag">ID: ${mem.source_memory_id}</span>
         <span class="provenance-tag">Role: ${mem.source_role_id}</span>
-        <span class="provenance-tag" style="color:var(--accent-emerald);">Spoiler-Safe &le; Scene ${state.scene_order}</span>
+        <span class="provenance-tag" style="color:var(--text-secondary); font-weight:600;">Spoiler-Safe &le; Scene ${state.scene_order}</span>
       </div>
     `;
     container.appendChild(card);
@@ -1097,7 +1097,7 @@ function renderPersonaAndRelationships(state) {
         traitsHtml += `<div style="font-size:13px; margin-bottom:4px;"><strong>Traits:</strong> ${p.traits.map(t => escapeHtml(t)).join("; ")}</div>`;
       }
       if (p.behavioral_constraints && p.behavioral_constraints.length > 0) {
-        traitsHtml += `<div style="font-size:13px; margin-bottom:4px; color:var(--accent-amber);"><strong>Constraints:</strong> ${p.behavioral_constraints.map(b => escapeHtml(b)).join("; ")}</div>`;
+        traitsHtml += `<div style="font-size:13px; margin-bottom:4px; color:var(--text-secondary);"><strong>Constraints:</strong> ${p.behavioral_constraints.map(b => escapeHtml(b)).join("; ")}</div>`;
       }
       if (p.speaking_style && p.speaking_style.length > 0) {
         traitsHtml += `<div style="font-size:13px; color:var(--text-secondary);"><strong>Style:</strong> ${p.speaking_style.map(s => escapeHtml(s)).join("; ")}</div>`;
@@ -1127,7 +1127,7 @@ function renderPersonaAndRelationships(state) {
 
       card.innerHTML = `
         <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:6px;">
-          <strong style="color:#fff; font-size:14px;">${escapeHtml(r.target)}</strong>
+          <strong style="color:var(--text-primary); font-size:14px;">${escapeHtml(r.target)}</strong>
           <span class="badge ${polarityClass}">${r.polarity}</span>
         </div>
         <div style="font-size:13px; color:var(--text-primary);">${escapeHtml(r.description)}</div>
