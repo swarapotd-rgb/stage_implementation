@@ -148,15 +148,30 @@ class StoryLensRequestHandler(SimpleHTTPRequestHandler):
         sys.stderr.write(f"[{self.log_date_time_string()}] {format % args}\n")
 
 
-def run_server(port: int = 8000) -> None:
-    server_address = ("127.0.0.1", port)
-    httpd = ThreadingHTTPServer(server_address, StoryLensRequestHandler)
+def run_server(port: int = 8080) -> None:
+    httpd = None
+    target_port = port
+    candidate_ports = [port] + [p for p in (8080, 8001, 8888, 5000, 3000) if p != port]
+    for p in candidate_ports:
+        try:
+            server_address = ("127.0.0.1", p)
+            httpd = ThreadingHTTPServer(server_address, StoryLensRequestHandler)
+            target_port = p
+            break
+        except OSError:
+            continue
+
+    if httpd is None:
+        print("Error: Could not bind to any free port.")
+        return
+
     print("\n==================================================================")
     print(" StoryLens Demo Interface Running Locally")
     print("==================================================================")
-    print(f" Web UI:  http://localhost:{port}")
-    print(f" API:     http://localhost:{port}/api/checkpoints")
-    print(f" State:   http://localhost:{port}/api/state?character=Hazel%20Grace&scene=10")
+    print(f" Web UI:  http://127.0.0.1:{target_port}")
+    print(f" Web UI:  http://localhost:{target_port}")
+    print(f" API:     http://127.0.0.1:{target_port}/api/checkpoints")
+    print(f" State:   http://127.0.0.1:{target_port}/api/state?character=Hazel%20Grace&scene=10")
     print(" Press Ctrl+C to stop the server.")
     print("==================================================================\n")
     try:
@@ -169,7 +184,7 @@ def run_server(port: int = 8000) -> None:
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="StoryLens Local Demo Server")
-    parser.add_argument("--port", type=int, default=8000, help="Port to listen on (default: 8000)")
+    parser.add_argument("--port", type=int, default=8080, help="Port to listen on (default: 8080)")
     args = parser.parse_args()
     run_server(port=args.port)
 
