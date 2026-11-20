@@ -1,6 +1,6 @@
-# StoryLens: STAGE Paper Implementation Demo
+ STAGE Paper Implementation Demo
 
-A StoryLens capstone prototype implementing character epistemic state tracking and temporal narrative knowledge graphs based on the released annotations from the **STAGE research paper** (*State Tracking and Agent Generation Evaluation in Screenplays*, [arXiv:2601.08510](https://arxiv.org/abs/2601.08510)).
+Implementing character epistemic state tracking and temporal narrative knowledge graphs based on the released annotations from the **STAGE research paper** (*State Tracking and Agent Generation Evaluation in Screenplays*, [arXiv:2601.08510](https://arxiv.org/abs/2601.08510)).
 
 ---
 
